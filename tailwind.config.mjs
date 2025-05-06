@@ -24,17 +24,14 @@ export default {
         red: {
           500: "#ce3732",
           700: "#7b211e",
-          
         },
       },
 
-      opacity:{
-        40: '.40', 
-        60: '.60', 
-        80: '.80',   
-
-    },
-
+      opacity: {
+        40: ".40",
+        60: ".60",
+        80: ".80",
+      },
 
       spacing: {
         spacebard136: "136px",
@@ -50,9 +47,9 @@ export default {
       },
 
       fontWeight: {
-        light:"300",
+        light: "300",
         regular: "400",
-        medium:"500",
+        medium: "500",
         semibold: "600",
         bold: "700",
       },
@@ -61,149 +58,294 @@ export default {
         DEFAULT: "1px",
       },
 
-    
-
       fontSize: {
         "h1-mobil": [
           "40px",
-          { lineHeight: "120", fontWeight: "400", fontFamily: "gloock", textTransform: 'uppercase' },
+          {
+            lineHeight: "120",
+            fontWeight: "400",
+            fontFamily: "gloock",
+            textTransform: "uppercase",
+          },
         ],
         "h2-mobil": [
           "20px",
-          { lineHeight: "120", fontWeight: "400", fontFamily: "gloock", textTransform: 'uppercase' },
+          {
+            lineHeight: "120",
+            fontWeight: "400",
+            fontFamily: "gloock",
+            textTransform: "uppercase",
+          },
         ],
         "h3-mobil": [
           "15px",
-          { lineHeight: "39", fontWeight: "400", fontFamily: "dmsans", textTransform: 'uppercase' },
+          {
+            lineHeight: "39",
+            fontWeight: "400",
+            fontFamily: "dmsans",
+            textTransform: "uppercase",
+          },
         ],
         "h4-mobil": [
           "15px",
-          { lineHeight: "39", fontWeight: "400", fontFamily: "dmsans", textTransform: 'lowercase' },
+          {
+            lineHeight: "39",
+            fontWeight: "400",
+            fontFamily: "dmsans",
+            textTransform: "lowercase",
+          },
         ],
         "h5-mobil": [
           "15px",
-          { lineHeight: "31", fontWeight: "700", fontFamily: "dmsans", textTransform: 'uppercase' },
+          {
+            lineHeight: "31",
+            fontWeight: "700",
+            fontFamily: "dmsans",
+            textTransform: "uppercase",
+          },
         ],
         "h6-mobil": [
           "15px",
-          { lineHeight: "31", fontWeight: "700", fontFamily: "dmsans", textTransform: 'lowercase' },
+          {
+            lineHeight: "31",
+            fontWeight: "700",
+            fontFamily: "dmsans",
+            textTransform: "lowercase",
+          },
         ],
-"h7-mobil": [
+        "h7-mobil": [
           "12px",
-          { lineHeight: "31", fontWeight: "400", fontFamily: "dmsans", textTransform: '' },
+          {
+            lineHeight: "31",
+            fontWeight: "400",
+            fontFamily: "dmsans",
+            textTransform: "",
+          },
         ],
 
         "p-regular-mobil": [
           "20px",
-          { lineHeight: "140%", fontWeight: "400", fontFamily: "dmsans", textTransform: '' },
+          {
+            lineHeight: "140%",
+            fontWeight: "400",
+            fontFamily: "dmsans",
+            textTransform: "",
+          },
         ],
-"p-small-mobil": [
+        "p-small-mobil": [
           "16px",
-          { lineHeight: "140%", fontWeight: "400", fontFamily: "dmsans", textTransform: '' },
+          {
+            lineHeight: "140%",
+            fontWeight: "400",
+            fontFamily: "dmsans",
+            textTransform: "",
+          },
         ],
 
         "caption-mobil": [
           "12px",
-          { lineHeight: "140%", fontWeight: "300", fontFamily: "dmsans", textTransform: '' },
+          {
+            lineHeight: "140%",
+            fontWeight: "300",
+            fontFamily: "dmsans",
+            textTransform: "",
+          },
         ],
 
         "label-mobil": [
           "16px",
-          { lineHeight: "140%", fontWeight: "700", fontFamily: "dmsans", textTransform: '' },
+          {
+            lineHeight: "140%",
+            fontWeight: "700",
+            fontFamily: "dmsans",
+            textTransform: "",
+          },
         ],
 
         "input-mobil": [
           "16px",
-          { lineHeight: "140%", fontWeight: "500", fontFamily: "dmsans", textTransform: '' },
+          {
+            lineHeight: "140%",
+            fontWeight: "500",
+            fontFamily: "dmsans",
+            textTransform: "",
+          },
         ],
 
         "link-mobil": [
           "16px",
-          { lineHeight: "140%", fontWeight: "700", fontFamily: "dmsans", textTransform: '' },
+          {
+            lineHeight: "140%",
+            fontWeight: "700",
+            fontFamily: "dmsans",
+            textTransform: "",
+          },
         ],
 
         "button-primary-mobil": [
           "16px",
-          { lineHeight: "140%", fontWeight: "700", fontFamily: "dmsans", textTransform: 'uppercase' },
+          {
+            lineHeight: "140%",
+            fontWeight: "700",
+            fontFamily: "dmsans",
+            textTransform: "uppercase",
+          },
         ],
 
         "link-menu-mobil": [
           "16px",
-          { lineHeight: "140%", fontWeight: "700", fontFamily: "dmsans", textTransform: 'uppercase' },
+          {
+            lineHeight: "140%",
+            fontWeight: "700",
+            fontFamily: "dmsans",
+            textTransform: "uppercase",
+          },
         ],
 
-
-
+        // desktop fonte
 
         "h1-desktop": [
           "130px",
-          { lineHeight: "120", fontWeight: "400", fontFamily: "gloock", textTransform: 'uppercase' },
+          {
+            lineHeight: "120",
+            fontWeight: "400",
+            fontFamily: "gloock",
+            textTransform: "uppercase",
+          },
         ],
         "h2-desktop": [
           "56px",
-          { lineHeight: "120", fontWeight: "400", fontFamily: "gloock", textTransform: 'uppercase' },
+          {
+            lineHeight: "120",
+            fontWeight: "400",
+            fontFamily: "gloock",
+            textTransform: "uppercase",
+          },
         ],
         "h3-desktop": [
           "30px",
-          { lineHeight: "39", fontWeight: "400", fontFamily: "dmsans", textTransform: 'uppercase' },
+          {
+            lineHeight: "39",
+            fontWeight: "400",
+            fontFamily: "dmsans",
+            textTransform: "uppercase",
+          },
         ],
         "h4-desktop": [
           "30px",
-          { lineHeight: "39", fontWeight: "400", fontFamily: "dmsans", textTransform: 'lowercase' },
+          {
+            lineHeight: "39",
+            fontWeight: "400",
+            fontFamily: "dmsans",
+            textTransform: "lowercase",
+          },
         ],
         "h5-desktop": [
           "24px",
-          { lineHeight: "31", fontWeight: "700", fontFamily: "dmsans", textTransform: 'uppercase' },
+          {
+            lineHeight: "31",
+            fontWeight: "700",
+            fontFamily: "dmsans",
+            textTransform: "uppercase",
+          },
         ],
         "h6-desktop": [
           "24px",
-          { lineHeight: "31", fontWeight: "700", fontFamily: "dmsans", textTransform: 'lowercase' },
+          {
+            lineHeight: "31",
+            fontWeight: "700",
+            fontFamily: "dmsans",
+            textTransform: "lowercase",
+          },
         ],
-"h7-desktop": [
+        "h7-desktop": [
           "24px",
-          { lineHeight: "31", fontWeight: "400", fontFamily: "dmsans", textTransform: '' },
+          {
+            lineHeight: "31",
+            fontWeight: "400",
+            fontFamily: "dmsans",
+            textTransform: "",
+          },
         ],
 
         "p-regular-desktop": [
           "20px",
-          { lineHeight: "140%", fontWeight: "400", fontFamily: "dmsans", textTransform: '' },
+          {
+            lineHeight: "140%",
+            fontWeight: "400",
+            fontFamily: "dmsans",
+            textTransform: "",
+          },
         ],
-"p-small-desktop": [
+        "p-small-desktop": [
           "20px",
-          { lineHeight: "140%", fontWeight: "400", fontFamily: "dmsans", textTransform: '' },
+          {
+            lineHeight: "140%",
+            fontWeight: "400",
+            fontFamily: "dmsans",
+            textTransform: "",
+          },
         ],
 
         "caption-desktop": [
           "14px",
-          { lineHeight: "140%", fontWeight: "300", fontFamily: "dmsans", textTransform: '' },
+          {
+            lineHeight: "140%",
+            fontWeight: "300",
+            fontFamily: "dmsans",
+            textTransform: "",
+          },
         ],
 
         "label-desktop": [
           "16px",
-          { lineHeight: "140%", fontWeight: "700", fontFamily: "dmsans", textTransform: '' },
+          {
+            lineHeight: "140%",
+            fontWeight: "700",
+            fontFamily: "dmsans",
+            textTransform: "",
+          },
         ],
 
         "input-desktop": [
           "16px",
-          { lineHeight: "140%", fontWeight: "500", fontFamily: "dmsans", textTransform: '' },
+          {
+            lineHeight: "140%",
+            fontWeight: "500",
+            fontFamily: "dmsans",
+            textTransform: "",
+          },
         ],
 
         "link-desktop": [
           "16px",
-          { lineHeight: "140%", fontWeight: "700", fontFamily: "dmsans", textTransform: '' },
+          {
+            lineHeight: "140%",
+            fontWeight: "700",
+            fontFamily: "dmsans",
+            textTransform: "",
+          },
         ],
 
         "button-primary-desktop": [
           "16px",
-          { lineHeight: "140%", fontWeight: "700", fontFamily: "dmsans", textTransform: 'uppercase' },
+          {
+            lineHeight: "140%",
+            fontWeight: "700",
+            fontFamily: "dmsans",
+            textTransform: "uppercase",
+          },
         ],
 
         "link-menu-desktop": [
           "16px",
-          { lineHeight: "140%", fontWeight: "700", fontFamily: "dmsans", textTransform: 'uppercase' },
+          {
+            lineHeight: "140%",
+            fontWeight: "700",
+            fontFamily: "dmsans",
+            textTransform: "uppercase",
+          },
         ],
-
-       
       },
 
       gridTemplateColumns: {
