@@ -62,7 +62,7 @@ export default {
         "h1-mobil": [
           "40px",
           {
-            lineHeight: "120",
+            lineHeight: "auto",
             fontWeight: "400",
             fontFamily: "gloock",
             textTransform: "uppercase",
@@ -183,7 +183,7 @@ export default {
         ],
 
         "button-primary-mobil": [
-          "16px",
+          "12px",
           {
             lineHeight: "140%",
             fontWeight: "700",
@@ -373,4 +373,6 @@ export default {
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/container-queries"),
   ],
+
 };
+
