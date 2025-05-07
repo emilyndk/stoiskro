@@ -1,5 +1,23 @@
 ---
-// Henter parametrene fra Astro.props
-const { href="#", target="_self"} = Astro.props; 
+const { href = "#", variant = "primary", input } = Astro.props;
+
+const linkStyling =
+  "transition-all duration-300 ease-in-out text-center hover:underline font-dmsans underline-offset-4 text-link-mobile lg:text-link-desktop";
+
+const variantClasses = {
+  primary: "text-green-500 hover:decoration-red-500 font-bold  ",
+  navigation: "text-beige-500 font-bold uppercase",
+  navigationthin: "text-beige-500 font-light",
+};
+
+
+
 ---
-<a href={href} class="underline" target={target}><slot /></a>
+
+<a
+  href={href}
+  class:list={[linkStyling, variantClasses[variant]]}
+  
+>
+  {input}
+</a>

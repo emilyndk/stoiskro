@@ -200,6 +200,20 @@ export default {
             fontFamily: "dmsans",
             textTransform: "uppercase",
           },
+
+          
+        ],
+
+        "link-menu-thin-mobil": [
+          "14px",
+          {
+            lineHeight: "140%",
+            fontWeight: "300",
+            fontFamily: "dmsans",
+            textTransform: "",
+          },
+
+          
         ],
 
         // desktop fonte
@@ -345,6 +359,18 @@ export default {
             fontFamily: "dmsans",
             textTransform: "uppercase",
           },
+        ],
+
+        "link-menu-thin-mobil": [
+          "14px",
+          {
+            lineHeight: "140%",
+            fontWeight: "300",
+            fontFamily: "dmsans",
+            textTransform: "",
+          },
+
+          
         ],
       },
 
