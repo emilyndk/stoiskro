@@ -5,6 +5,7 @@ import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 import IconButton from "../components/Button.astro";
+import Inputfield from '../components/Inputfield.astro';
 
 ---
 
@@ -38,6 +39,25 @@ import IconButton from "../components/Button.astro";
 	<IconButton text="" variant="secondary-iconOnly" size="large">
 			
 	</IconButton>
+
+	<form class="max-w-sm">
+		<Inputfield 
+		id="navn"
+		label="Navn"
+		placeholder="Hanne Hansen"
+		helpText="Her må du gerne skrive dit fulde navn"
+		variant="primary"
+		size="large"
+		/>
+	  
+		<Inputfield 
+		id="tlf"
+		label="Telefon"
+		placeholder="22334455"
+		helpText="Her skriver du det nummer du vil ringes op på"
+		variant="secondary"
+		size="small"
+		/>
 	
 </MainLayout>
 
