@@ -9,7 +9,7 @@ const {
   href = null,
 } = Astro.props;
 
-const base = "inline-flex items-center gap-5 font-dmsans uppercase rounded-full pr-4 transition-colors";
+const base = "inline-flex items-center gap-5 font-dmsans uppercase rounded-full pl-2 pr-4 transition-colors";
 
 const sizeStyles = {
   small: {
@@ -29,75 +29,117 @@ const sizeStyles = {
   },
 };
 
-
 const variantStyles = {
   primary: {
     button: "bg-green-500 text-beige-500 hover:bg-green-900",
     iconCircle: "bg-transparent text-beige-500",
+
   },
   "primary-negative": {
     button: "bg-beige-500 text-green-500 hover:bg-green-500 hover:border hover:border-beige-500 hover:text-beige-500",
     iconCircle: "bg-transparent text-green-500 hover:text-beige-500",
+
   },
   secondaryLeft: {
     button: "bg-transparent text-green-500",
     iconCircle: "bg-red-500 text-beige-500 hover:bg-red-700",
-  },
-  "secondary-negative": {
-    button: "bg-transparent text-beige-500",
-    iconCircle: "bg-beige-500 text-green-500 hover:bg-green-500 hover:border hover:border-beige-500 hover:text-beige-500",
+   
   },
   "secondary-right": {
     button: "bg-transparent text-green-500",
     iconCircle: "bg-red-500 text-beige-500 hover:bg-red-700",
+    arrowDirection: "rotate-180", // Pil roterer 180 grader ved hover
+  },
+  "secondary-negative": {
+    button: "bg-transparent text-beige-500",
+    iconCircle: "bg-beige-500 text-green-500 hover:bg-green-500 hover:border hover:border-beige-500 hover:text-beige-500",
+  
   },
   "secondary-iconOnly": {
     button: "",
     iconCircle: "bg-red-500 text-beige-500 hover:bg-red-700",
+   
   },
 };
 
 
----
 
+
+
+---
 {href ? (
-    <a href={href} class={`group ${base} ${sizeStyles[size].text} ${variantStyles[variant].button}`}>
-      <span class={`flex items-center justify-center rounded-full ${variantStyles[variant].iconCircle} ${sizeStyles[size].iconCircle} overflow-hidden`}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 25 20" stroke="currentColor" class="arrow-wrapper">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l4-4m0 0l-4-4m4 4H3" />
+    <a href={href} class={`group ${variant} ${base} ${sizeStyles[size].text} ${variantStyles[variant].button}`}>
+      <span class={`flex items-center justify-center rounded-full ${variantStyles[variant].iconCircle} ${variantStyles[variant].arrowDirection} ${sizeStyles[size].iconCircle} overflow-hidden`}>
+        <svg width="40" height="23" viewBox="0 0 40 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow-wrapper">
+          <g clip-path="url(#clip0_544_26897)">
+            <path d="M25.4358 5.13816L31.3668 11.0691L5 11.0691L5 12.9591L31.3978 12.9591L25.4358 18.9211L26.7722 20.2574L35 12.0296L26.7721 3.8018L25.4358 5.13816Z" fill="currentColor" />
+          </g>
+          <defs>
+            <clipPath id="clip0_544_26897">
+              <rect width="40" height="23" fill="white" />
+            </clipPath>
+          </defs>
         </svg>
       </span>
       <span>{text}</span>
     </a>
   ) : (
-    <button class={`group ${base} ${sizeStyles[size].text} ${variantStyles[variant].button}`}>
-      <span class={`flex items-center justify-center rounded-full ${variantStyles[variant].iconCircle} ${sizeStyles[size].iconCircle} overflow-hidden`}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 25 20" stroke="currentColor" class="arrow-wrapper">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l4-4m0 0l-4-4m4 4H3" />
+    <button class={`group ${variant} ${base} ${sizeStyles[size].text} ${variantStyles[variant].button}`}>
+      <span class={`flex items-center justify-center rounded-full ${variantStyles[variant].iconCircle} ${variantStyles[variant].arrowDirection} ${sizeStyles[size].iconCircle} overflow-hidden`}>
+        <svg width="40" height="23" viewBox="0 0 40 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow-wrapper arrow">
+          <g clip-path="url(#clip0_544_26897)">
+            <path d="M25.4358 5.13816L31.3668 11.0691L5 11.0691L5 12.9591L31.3978 12.9591L25.4358 18.9211L26.7722 20.2574L35 12.0296L26.7721 3.8018L25.4358 5.13816Z" fill="currentColor" />
+          </g>
+          <defs>
+            <clipPath id="clip0_544_26897">
+              <rect width="40" height="23" fill="white" />
+            </clipPath>
+          </defs>
         </svg>
       </span>
       <span>{text}</span>
     </button>
   )}
   
+  
+  
+  
+  
+  
   <style>
+
+.arrow-wrapper {
+  display: block; /* Sørg for, at SVG'en er i blok for at få animationen */
+  transition: transform 0.3s ease; /* Glidende overgang for rotation */
+}
     .group:hover .arrow-wrapper {
-      animation: arrow-slide 1s infinite;
+      animation: arrow-slide 1.3s infinite;
     }
   
     /* Animation keyframes */
     @keyframes arrow-slide {
       0% {
-        transform: translateX(-140%);
+        transform: translateX(-100%);
       }
       100% {
-        transform: translateX(140%);
+        transform: translateX(100%);
       }
     }
   
-    .arrow-wrapper {
-      display: block; /* Sørg for, at SVG'en er i blok for at få animationen */
-      transition: transform 0.3s ease;
-    }
   </style>
+
+  <style>
+    <style>
+.arrow-wrapper {
+  display: block;
+  transition: transform 1s ease;
+}
+
+/* Gælder kun for knapper med klassen .secondary-right */
+.secondary-right:hover .arrow-wrapper {
+  transform: rotate(180deg);
+}
+</style>
+
+
   
