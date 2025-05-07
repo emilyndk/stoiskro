@@ -1,2 +1,103 @@
 ---
+import ArrowIcon from './ArrowIcon.astro';
+
+const {
+  text = "Button",
+  icon,
+  variant = "primary",
+  size = "medium",
+  href = null,
+} = Astro.props;
+
+const base = "inline-flex items-center gap-5 font-dmsans uppercase rounded-full pr-4 transition-colors";
+
+const sizeStyles = {
+  small: {
+    text: "text-button-primary-mobil",    // Responsiv tekststørrelse
+    iconCircle: "sm:w-10 sm:h-10",   // Responsiv størrelse på cirklen
+    icon: "sm:w-4 sm:h-4",   // Responsiv størrelse på ikonet
+  },
+  medium: {
+    text: "text-base h-10",    // Responsiv tekststørrelse
+    iconCircle: "sm:w-8 sm:h-8",   // Responsiv størrelse på cirklen
+    icon: "md:w-6 md:h-6",   // Responsiv størrelse på ikonet
+  },
+  large: {
+    text: "text-button-primary-desktop",    // Responsiv tekststørrelse
+    iconCircle: "sm:w-12 sm:h-12",   // Responsiv størrelse på cirklen
+    icon: "lg:w-8 lg:h-8",   // Responsiv størrelse på ikonet
+  },
+};
+
+
+const variantStyles = {
+  primary: {
+    button: "bg-green-500 text-beige-500 hover:bg-green-900",
+    iconCircle: "bg-transparent text-beige-500",
+  },
+  "primary-negative": {
+    button: "bg-beige-500 text-green-500 hover:bg-green-500 hover:border hover:border-beige-500 hover:text-beige-500",
+    iconCircle: "bg-transparent text-green-500 hover:text-beige-500",
+  },
+  secondaryLeft: {
+    button: "bg-transparent text-green-500",
+    iconCircle: "bg-red-500 text-beige-500 hover:bg-red-700",
+  },
+  "secondary-negative": {
+    button: "bg-transparent text-beige-500",
+    iconCircle: "bg-beige-500 text-green-500 hover:bg-green-500 hover:border hover:border-beige-500 hover:text-beige-500",
+  },
+  "secondary-right": {
+    button: "bg-transparent text-green-500",
+    iconCircle: "bg-red-500 text-beige-500 hover:bg-red-700",
+  },
+  "secondary-iconOnly": {
+    button: "",
+    iconCircle: "bg-red-500 text-beige-500 hover:bg-red-700",
+  },
+};
+
+
 ---
+
+{href ? (
+    <a href={href} class={`group ${base} ${sizeStyles[size].text} ${variantStyles[variant].button}`}>
+      <span class={`flex items-center justify-center rounded-full ${variantStyles[variant].iconCircle} ${sizeStyles[size].iconCircle} overflow-hidden`}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 25 20" stroke="currentColor" class="arrow-wrapper">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l4-4m0 0l-4-4m4 4H3" />
+        </svg>
+      </span>
+      <span>{text}</span>
+    </a>
+  ) : (
+    <button class={`group ${base} ${sizeStyles[size].text} ${variantStyles[variant].button}`}>
+      <span class={`flex items-center justify-center rounded-full ${variantStyles[variant].iconCircle} ${sizeStyles[size].iconCircle} overflow-hidden`}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 25 20" stroke="currentColor" class="arrow-wrapper">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l4-4m0 0l-4-4m4 4H3" />
+        </svg>
+      </span>
+      <span>{text}</span>
+    </button>
+  )}
+  
+  <style>
+    .group:hover .arrow-wrapper {
+      animation: arrow-slide 1s infinite;
+    }
+  
+    /* Animation keyframes */
+    @keyframes arrow-slide {
+      0% {
+        transform: translateX(-140%);
+      }
+      100% {
+        transform: translateX(140%);
+      }
+    }
+  
+    .arrow-wrapper {
+      display: block; /* Sørg for, at SVG'en er i blok for at få animationen */
+      transition: transform 0.3s ease;
+    }
+  </style>
+  
