@@ -1,0 +1,163 @@
+---
+import Inputfield from "../components/Inputfield.astro"
+import IconButton from "../components/Button.astro"
+---
+
+
+
+<form class="grid gap-4 grid-cols-1 md:grid-cols-2">
+
+    <div class="">
+
+     <div class="block lg:hidden">  
+
+    <Inputfield 
+    id="navn"
+    label="Navn"
+    placeholder="Hanne"
+    helpText="Her må du gerne skrive dit fornavn"
+    variant="secondary"
+    size="small"
+    />
+
+     </div> 
+
+     <div class="hidden lg:block">
+
+    <Inputfield 
+    id="navn"
+    label="Navn"
+    placeholder="Hanne"
+    helpText="Her må du gerne skrive dit fornavn"
+    variant="secondary"
+    size="large"
+    />
+
+    </div>
+
+    <div class="block lg:hidden">
+
+    <Inputfield 
+    id="e-mail"
+    label="E-mail"
+    placeholder="Hanne@hansen.com"
+    helpText="Her må du gerne skrive din E-mail adresse"
+    variant="secondary"
+    size="small"
+    />
+    </div>
+
+    <div class="hidden md:block">
+    <Inputfield 
+    id="e-mail"
+    label="E-mail"
+    placeholder="Hanne@hansen.com"
+    helpText="Her må du gerne skrive din E-mail adresse"
+    variant="secondary"
+    size="large"
+    />
+
+    </div>
+
+    </div>
+
+    <div class="">
+
+     <div class="block lg:hidden">
+    <Inputfield 
+    id="efternavn"
+    label="Efternavn"
+    placeholder="Hansen"
+    helpText="Her må du gerne skrive dit efternavn"
+    variant="secondary"
+    size="small"
+    />
+
+    </div>
+
+    <div class="hidden md:block">
+        <Inputfield 
+        id="efternavn"
+        label="Efternavn"
+        placeholder="Hansen"
+        helpText="Her må du gerne skrive dit efternavn"
+        variant="secondary"
+        size="large"
+        />
+    
+    </div>
+
+<div class="block lg:hidden">
+    <Inputfield 
+    id="tlf"
+    label="Telefon"
+    placeholder="22334455"
+    helpText="Her må du gerne skrive dit telefonnummer"
+    variant="secondary"
+    size="small"
+    />
+
+</div>
+
+<div class="hidden md:block">
+    <Inputfield 
+    id="tlf"
+    label="Telefon"
+    placeholder="22334455"
+    helpText="Her må du gerne skrive dit telefonnummer"
+    variant="secondary"
+    size="large"
+    />
+
+</div>
+
+    </div>
+
+    <div class="md:col-span-2">
+    <div class="block lg:hidden">
+
+    <Inputfield 
+    id="besked"
+    label="Hvad kan jeg hjælpe med?"
+    placeholder="Jeg vil gerne i et individuelt forløb.."
+    helpText="Skriv en kort besked omkring det du ønsker hjælp med"
+    variant="secondary"
+    size="small"
+    />
+
+</div>
+</div>
+
+<div class="md:col-span-2">
+    <div class="hidden md:block">
+
+    <Inputfield 
+    id="besked"
+    label="Hvad kan jeg hjælpe med?"
+    placeholder="Jeg vil gerne i et individuelt forløb.."
+    helpText="Skriv en kort besked omkring det du ønsker hjælp med"
+    variant="secondary"
+    size="large"
+    />
+</div>
+</div>
+
+<div class="lg:col-start-2 flex flex-row-reverse">
+
+<div class="block lg:hidden">
+
+<IconButton text="Send" variant="primary-negative" size="small">
+</IconButton>
+
+</div>
+
+<div class="hidden lg:inline-block">
+
+    <IconButton text="Send" variant="primary-negative" size="large">
+    </IconButton>
+    
+    </div>
+
+</div>
+
+</form>

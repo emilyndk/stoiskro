@@ -5,6 +5,9 @@ import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 import IconButton from "../components/Button.astro";
+import Kontaktform from '../components/Kontaktform.astro';
+import Forsamtale from "../components/Forsamtale.astro"
+
 import Inputfield from '../components/Inputfield.astro';
 import Overskrift from "../components/Overskrift.astro";
 import Textbox from "../components/Textbox.astro";
@@ -17,16 +20,31 @@ import Textbox from "../components/Textbox.astro";
 	<h1 class="font-gloock">Gloock</h1>
 	<p class="text-p-desktop">P desktop style</p>
 
-	<IconButton text="Send" variant="primary" size="small">
+	<!-- Skriv her hvilken variant og størrelse du skal bruge ex. primary large -->
+
+	<IconButton text="Send" variant="primary" size="large">
     </IconButton>
+
+	<!-- Kontaktform sat op i forhold til grid -->
+
+<section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500">
+
+    <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6">
+     <Kontaktform></Kontaktform>
+	</div>
+</section>
+
+<section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500">
+
+    <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6">
+     <Forsamtale></Forsamtale>
+	</div>
+</section>	 
+
+
+
 		
-
-    <IconButton text="Kontakt" variant="primary-negative" size="large">
 	
-	</IconButton>
-
-	<IconButton text="Læs mere" variant="secondaryLeft" size="large">
-
     </IconButton>
 
 	<IconButton text="Hør mere" variant="secondary-right" size="large">
