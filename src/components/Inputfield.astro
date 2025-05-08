@@ -34,7 +34,7 @@ const variantStyles = {
   },
   secondary: {
     label: "text-beige-500",
-    input: "border-b-beige-500 text-beige-500 placeholder-beige-300 focus:border-b-beige-500 focus:border-b-2 hover:border-b-2",
+    input: "border-b-beige-500 text-beige-500 placeholder-beige-300-40 focus:border-b-beige-500 focus:border-b-2 hover:border-b-2",
     helpText: "text-beige-500",
   },
 };
@@ -52,7 +52,7 @@ const variantStyles = {
       type={type}
       placeholder={placeholder}
       required={required}
-      class={`w-full border-0 border-b ${variantStyles[variant].input} ${sizeStyles[size].input} focus:outline-none focus:ring-0 focus:shadow-none`}
+      class={`w-full border-0 border-b bg-transparent ${variantStyles[variant].input} ${sizeStyles[size].input} focus:outline-none focus:ring-0 focus:shadow-none`}
     />
   
     {helpText && (
