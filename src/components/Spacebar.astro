@@ -1,0 +1,33 @@
+---
+const { variant = "lg", visibility = "all" } = Astro.props;
+
+// Højder
+const spacing = {
+  sm: "h-16px w-full",
+  md: "h-32px",
+  lg: "h-64px",
+  xl: "h-32px",
+  xxl: "h-136px",
+}[variant] || "h-8";
+
+// Synlighedsklasser
+const visibilityClasses = {
+  all: "block",
+  mobileOnly: "block md:hidden",
+  desktopOnly: "hidden md:block",
+}[visibility] || "block";
+---
+
+<!-- Semantisk tom spacer -->
+<div class={`${spacing} ${visibilityClasses}`} aria-hidden="true" role="presentation"></div>
+
+
+<!-- Almindelig spacer (vises altid) -->
+<!-- <Spacebar variant="md" /> -->
+
+<!-- Kun til mobil -->
+<!-- <Spacebar variant="sm" visibility="mobileOnly" />  -->
+
+<!-- Kun til desktop -->
+<!-- <Spacebar variant="lg" visibility="desktopOnly" />  -->
+
