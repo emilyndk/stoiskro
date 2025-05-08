@@ -8,22 +8,22 @@ const {
   href = null,
 } = Astro.props;
 
-const base = "inline-flex items-center gap-5 font-dmsans uppercase rounded-full pl-2 pr-4 transition-colors";
+const base = "inline-flex items-center gap-5 font-dmsans uppercase rounded-full py-2 px-4 lg:py-0 lg:px-4 transition-colors";
 
 const sizeStyles = {
   small: {
     text: "text-button-primary-mobil",    // Responsiv tekststørrelse
-    iconCircle: "sm:w-10 sm:h-10",   // Responsiv størrelse på cirklen
+    iconCircle: "sm:w-6 sm:h-6",   // Responsiv størrelse på cirklen
     icon: "sm:w-4 sm:h-4",   // Responsiv størrelse på ikonet
   },
   medium: {
     text: "text-base h-10",    // Responsiv tekststørrelse
-    iconCircle: "sm:w-8 sm:h-8",   // Responsiv størrelse på cirklen
+    iconCircle: "md:w-8 md:h-8",   // Responsiv størrelse på cirklen
     icon: "md:w-6 md:h-6",   // Responsiv størrelse på ikonet
   },
   large: {
     text: "text-button-primary-desktop",    // Responsiv tekststørrelse
-    iconCircle: "sm:w-12 sm:h-12",   // Responsiv størrelse på cirklen
+    iconCircle: "lg:w-12 lg:h-12",   // Responsiv størrelse på cirklen
     icon: "lg:w-8 lg:h-8",   // Responsiv størrelse på ikonet
   },
 };
