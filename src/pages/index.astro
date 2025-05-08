@@ -8,6 +8,9 @@ import IconButton from "../components/Button.astro";
 import Kontaktform from '../components/Kontaktform.astro';
 import Forsamtale from "../components/Forsamtale.astro"
 
+import Inputfield from '../components/Inputfield.astro';
+import Overskrift from "../components/Overskrift.astro";
+import Textbox from "../components/Textbox.astro";
 ---
 
 <MainLayout title="Stoisk Ro">
@@ -15,7 +18,7 @@ import Forsamtale from "../components/Forsamtale.astro"
 
 	<h1 class="text-h1-mobil uppercase lg:font-gloock font-bold text-green-500">DM sans</h1>
 	<h1 class="font-gloock">Gloock</h1>
-	<h1 class="text-p-desktop">P desktop style</h1>
+	<p class="text-p-desktop">P desktop style</p>
 
 	<!-- Skriv her hvilken variant og størrelse du skal bruge ex. primary large -->
 
@@ -44,6 +47,42 @@ import Forsamtale from "../components/Forsamtale.astro"
 
 		
 	
+    </IconButton>
+
+	<IconButton text="Hør mere" variant="secondary-right" size="large">
+		
+	</IconButton>
+
+	<IconButton text="Læs mere" variant="secondary-negative" size="large">
+	
+	</IconButton>
+
+	<IconButton text="" variant="secondary-iconOnly" size="large">
+			
+	</IconButton>
+	<Overskrift text="Mit navn er Artjom"></Overskrift>
+	<Textbox subheader="jeg er samtaleterapeut"></Textbox>
+<!-- <UnderoverskriftText 
+	underoverskrift="jeg er samtaleterapeut" 
+	text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti 
+sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum."></UnderoverskriftText>  -->
+
+	<form class="max-w-sm">
+		<Inputfield 
+		id="navn"
+		label="Navn"
+		placeholder="Hanne Hansen"
+		helpText="Her må du gerne skrive dit fulde navn"
+		variant="primary"
+		size="large"
+		/>
+	  
+		<Inputfield 
+		id="tlf"
+		label="Telefon"
+		placeholder="22334455"
+		helpText="Her skriver du det nummer du vil ringes op på"
+		variant="secondary"
+		size="small"
+		/>
 </MainLayout>
-
-
