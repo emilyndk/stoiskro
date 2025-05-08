@@ -1,0 +1,66 @@
+---
+const {
+  id = "input-id",
+  label = "Label",
+  helpText = "",
+  type = "text",
+  required = false,
+  placeholder = "",
+  variant = "primary", // "primary" eller "secondary"
+  size = "small", // "small" eller "large"
+} = Astro.props;
+
+// Størrelse-styling
+const sizeStyles = {
+  small:{
+    label: "text-label-mobi",
+    input: "text-input-mobil lowercase",
+    helpText: "text-caption-mobil text-bold",
+  },
+
+  large: {
+    label: "text-label-desktop",
+    input: "text-input-mobil lowercase",
+    helpText: "text-caption-desktop text-bold",
+  },
+};
+
+// Variant-styling opdelt
+const variantStyles = {
+  primary: {
+    label: "text-green-500",
+    input: "border-b-green-500 text-green-500 placeholder-red-900-40 focus:border-b-green-500 focus:border-b-2 hover:border-b-2",
+    helpText: "text-green-500",
+  },
+  secondary: {
+    label: "text-beige-500",
+    input: "border-b-beige-500 text-beige-500 placeholder-beige-300-40 focus:border-b-beige-500 focus:border-b-2 hover:border-b-2",
+    helpText: "text-beige-500",
+  },
+};
+
+---
+
+<div class="mb-4">
+    <label for={id} class={`${variantStyles[variant].label} ${sizeStyles[size].label}`}>
+      {label}
+      {required && <span class="text-red-500">*</span>}
+    </label>
+  
+    <input
+      id={id}
+      type={type}
+      placeholder={placeholder}
+      required={required}
+      class={`w-full border-0 border-b bg-transparent ${variantStyles[variant].input} ${sizeStyles[size].input} focus:outline-none focus:ring-0 focus:shadow-none`}
+    />
+  
+    {helpText && (
+      <p class={`mt-1 ${variantStyles[variant].helpText} ${sizeStyles[size].helpText}`}>
+        {helpText}
+      </p>
+    )}
+  </div>
+  
+  
+

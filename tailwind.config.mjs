@@ -24,6 +24,7 @@ export default {
         red: {
           500: "#ce3732",
           700: "#7b211e",
+          900: "#2A0B0A",
         },
       },
 
@@ -62,7 +63,7 @@ export default {
         "h1-mobil": [
           "40px",
           {
-            lineHeight: "120",
+            lineHeight: "auto",
             fontWeight: "400",
             fontFamily: "gloock",
             textTransform: "uppercase",
@@ -71,7 +72,7 @@ export default {
         "h2-mobil": [
           "20px",
           {
-            lineHeight: "120",
+            lineHeight: "120%",
             fontWeight: "400",
             fontFamily: "gloock",
             textTransform: "uppercase",
@@ -80,7 +81,6 @@ export default {
         "h3-mobil": [
           "15px",
           {
-            lineHeight: "39",
             fontWeight: "400",
             fontFamily: "dmsans",
             textTransform: "uppercase",
@@ -124,7 +124,7 @@ export default {
         ],
 
         "p-regular-mobil": [
-          "20px",
+          "16px",
           {
             lineHeight: "140%",
             fontWeight: "400",
@@ -183,7 +183,7 @@ export default {
         ],
 
         "button-primary-mobil": [
-          "16px",
+          "12px",
           {
             lineHeight: "140%",
             fontWeight: "700",
@@ -200,8 +200,6 @@ export default {
             fontFamily: "dmsans",
             textTransform: "uppercase",
           },
-
-          
         ],
 
         "link-menu-thin-mobil": [
@@ -212,8 +210,6 @@ export default {
             fontFamily: "dmsans",
             textTransform: "",
           },
-
-          
         ],
 
         // desktop fonte
@@ -221,7 +217,7 @@ export default {
         "h1-desktop": [
           "130px",
           {
-            lineHeight: "120",
+            lineHeight: "120%",
             fontWeight: "400",
             fontFamily: "gloock",
             textTransform: "uppercase",
@@ -230,7 +226,7 @@ export default {
         "h2-desktop": [
           "56px",
           {
-            lineHeight: "120",
+            lineHeight: "120%",
             fontWeight: "400",
             fontFamily: "gloock",
             textTransform: "uppercase",
@@ -239,7 +235,6 @@ export default {
         "h3-desktop": [
           "30px",
           {
-            lineHeight: "39",
             fontWeight: "400",
             fontFamily: "dmsans",
             textTransform: "uppercase",
@@ -369,8 +364,6 @@ export default {
             fontFamily: "dmsans",
             textTransform: "",
           },
-
-          
         ],
       },
 
@@ -393,10 +386,5 @@ export default {
       },
     },
   },
-  plugins: [
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/aspect-ratio"),
-    require("@tailwindcss/container-queries"),
-  ],
+  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
 };
