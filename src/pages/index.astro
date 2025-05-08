@@ -6,7 +6,8 @@ import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 import IconButton from "../components/Button.astro";
 import Inputfield from '../components/Inputfield.astro';
-
+import Overskrift from "../components/Overskrift.astro";
+import Textbox from "../components/Textbox.astro";
 ---
 
 <MainLayout title="Stoisk Ro">
@@ -14,7 +15,7 @@ import Inputfield from '../components/Inputfield.astro';
 
 	<h1 class="text-h1-mobil uppercase lg:font-gloock font-bold text-green-500">DM sans</h1>
 	<h1 class="font-gloock">Gloock</h1>
-	<h1 class="text-p-desktop">P desktop style</h1>
+	<p class="text-p-desktop">P desktop style</p>
 
 	<IconButton text="Send" variant="primary" size="small">
     </IconButton>
@@ -39,6 +40,12 @@ import Inputfield from '../components/Inputfield.astro';
 	<IconButton text="" variant="secondary-iconOnly" size="large">
 			
 	</IconButton>
+	<Overskrift text="Mit navn er Artjom"></Overskrift>
+	<Textbox subheader="jeg er samtaleterapeut"></Textbox>
+<!-- <UnderoverskriftText 
+	underoverskrift="jeg er samtaleterapeut" 
+	text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti 
+sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum."></UnderoverskriftText>  -->
 
 	<form class="max-w-sm">
 		<Inputfield 
@@ -58,7 +65,4 @@ import Inputfield from '../components/Inputfield.astro';
 		variant="secondary"
 		size="small"
 		/>
-	
 </MainLayout>
-
-
