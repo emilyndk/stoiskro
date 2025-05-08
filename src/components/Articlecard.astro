@@ -1,5 +1,6 @@
 ---
 import Button from "./Button.astro";
+import IconButton from "../components/Button.astro";
 const { text, url = "#", btnurl ="#", imgSrc = "", alt = "", h4 } = Astro.props;
 ---
 
@@ -12,8 +13,9 @@ const { text, url = "#", btnurl ="#", imgSrc = "", alt = "", h4 } = Astro.props;
           class=""
         />
         <!-- Overlay + knap -->
-    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-        <Button href={btnurl} />
+    <div class="absolute bg-black/20 inset-0 flex items-center justify-center opacity-5 group-hover:opacity-100 transition-opacity duration-300 z-10">
+       <div class="w-4 h-4 bg-red-400"></div>
+       
       </div>
     </div>
 
@@ -24,7 +26,7 @@ const { text, url = "#", btnurl ="#", imgSrc = "", alt = "", h4 } = Astro.props;
     {text}
   </p>
   <div class="lg:hidden">
-<Button href={btnurl}></Button>
+<Button text="" size="large" variant="secondary-iconOnly" href={btnurl}></Button>
 </div>
 
 </a>
