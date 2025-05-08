@@ -89,7 +89,7 @@ export default {
         "h4-mobil": [
           "15px",
           {
-            lineHeight: "39",
+            lineHeight: "auto",
             fontWeight: "400",
             fontFamily: "dmsans",
             textTransform: "lowercase",
@@ -133,7 +133,7 @@ export default {
           },
         ],
         "p-small-mobil": [
-          "16px",
+          "14px",
           {
             lineHeight: "140%",
             fontWeight: "400",
@@ -248,7 +248,7 @@ export default {
         "h4-desktop": [
           "30px",
           {
-            lineHeight: "39",
+            lineHeight: "auto",
             fontWeight: "400",
             fontFamily: "dmsans",
             textTransform: "lowercase",
@@ -292,7 +292,7 @@ export default {
           },
         ],
         "p-small-desktop": [
-          "20px",
+          "16px",
           {
             lineHeight: "140%",
             fontWeight: "400",

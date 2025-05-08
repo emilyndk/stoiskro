@@ -2,22 +2,16 @@
 const { href = "#", variant = "primary", input } = Astro.props;
 
 const linkStyling =
-  "transition-all duration-300 ease-in-out text-center hover:underline font-dmsans underline-offset-4 text-link-mobile lg:text-link-desktop";
+  "transition-all duration-300 ease-in-out text-start hover:underline font-dmsans underline-offset-4 text-link-mobil lg:text-link-desktop ";
 
 const variantClasses = {
   primary: "text-green-500 hover:decoration-red-500 font-bold  ",
   navigation: "text-beige-500 font-bold uppercase",
-  navigationthin: "text-beige-500 font-light",
+  navigationthin:
+    "text-beige-500 font-light text-caption-mobil lg:text-caption-desktop",
 };
-
-
-
 ---
 
-<a
-  href={href}
-  class:list={[linkStyling, variantClasses[variant]]}
-  
->
+<a href={href} class:list={[linkStyling, variantClasses[variant]]}>
   {input}
 </a>
