@@ -6,6 +6,7 @@ import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 import IconButton from "../components/Button.astro";
 import Kontaktform from '../components/Kontaktform.astro';
+import Forsamtale from "../components/Forsamtale.astro"
 
 ---
 
@@ -30,7 +31,12 @@ import Kontaktform from '../components/Kontaktform.astro';
 	</div>
 </section>
 
-	 
+<section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500">
+
+    <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6">
+     <Forsamtale></Forsamtale>
+	</div>
+</section>	 
 
 
 

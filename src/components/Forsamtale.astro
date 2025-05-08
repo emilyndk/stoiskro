@@ -1,0 +1,79 @@
+---
+import Inputfield from "../components/Inputfield.astro"
+import IconButton from "../components/Button.astro"
+---
+
+
+<form class="grid gap-4 grid-cols-1">
+
+    
+
+     <div class="block lg:hidden">  
+
+    <Inputfield 
+    id="navn"
+    label="Navn"
+    placeholder="Hanne Hansen"
+    helpText="Her må du gerne skrive dit fulde navn"
+    variant="secondary"
+    size="small"
+    />
+
+     </div> 
+
+     <div class="hidden lg:block">
+
+    <Inputfield 
+    id="navn"
+    label="Navn"
+    placeholder="Hanne Hansen"
+    helpText="Her må du gerne skrive dit fulde navn"
+    variant="secondary"
+    size="large"
+    />
+
+    </div>
+
+
+<div class="block lg:hidden">
+    <Inputfield 
+    id="tlf"
+    label="Telefon"
+    placeholder="22334455"
+    helpText="Her må du gerne skrive dit telefonnummer"
+    variant="secondary"
+    size="small"
+    />
+
+</div>
+
+<div class="hidden md:block">
+    <Inputfield 
+    id="tlf"
+    label="Telefon"
+    placeholder="22334455"
+    helpText="Her må du gerne skrive dit telefonnummer"
+    variant="secondary"
+    size="large"
+    />
+
+</div>
+
+<div class="flex flex-row-reverse">
+
+<div class="block lg:hidden">
+
+<IconButton text="Send" variant="primary-negative" size="small">
+</IconButton>
+
+</div>
+
+<div class="hidden lg:inline-block">
+
+    <IconButton text="Send" variant="primary-negative" size="large">
+    </IconButton>
+    
+    </div>
+
+</div>
+</form>
