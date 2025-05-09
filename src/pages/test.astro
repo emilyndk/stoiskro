@@ -16,46 +16,93 @@ import Textbox from "../components/Textbox.astro";
 import TextDot from "../components/TextDot.astro";
 ---
 
-<Articlecard
-  url="/"
-  imgSrc="/img/selvvaerd.svg"
-  alt="Illustration"
-  h4="Selvvard"
-  text="Jorem ipsum dolor sit amet, consectetur adipiscing elitjj jbkbklklknn. "
-  btnurl="/"
-/>
+<MainLayout>
+  <Articlecard
+    url="/"
+    imgSrc="/img/selvvaerd.svg"
+    alt="Illustration"
+    h4="Selvvard"
+    text="Jorem ipsum dolor sit amet, consectetur adipiscing elitjj jbkbklklknn. "
+    btnurl="/"
+  />
 
-<section id="jegkanhjalpe"
+  <section
+    id="jeg-kan-hjalpe"
     class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop"
-    >
+  >
     <div class="col-start-2 col-span-10">
-        
-    <Overskrift text="jeg kan hjælpe"></Overskrift>
-  
+      <Overskrift text="jeg kan hjælpe" />
 
-        <div class="flex flex-col items-start gap-[16px] lg:gap-[32px] ">
+      <div class="flex flex-col items-start gap-[16px] lg:gap-[32px]">
         <h6
-            class="font-dmsans text-h7-mobil lg:text-h7-desktop text-green-500 uppercase"
+          class="font-dmsans text-h7-mobil lg:text-h7-desktop text-green-500 uppercase"
         >
-            med problematikker indenfor
+          med problematikker indenfor
         </h6>
         <div class="flex flex-row justify-between lg:w-full items-start">
-        <div class="flex flex-wrap gap-[8px] max-w-[179px] lg:max-w-[500px]">
-        <TextDot input="depression"></TextDot>
-        <TextDot input="angst"></TextDot>
-        <TextDot input="ptsd"></TextDot>
-        <TextDot input="parforhold"></TextDot>
-        <TextDot input="traume"></TextDot>
-        <TextDot input="selvvard"></TextDot>
-        <TextDot input="vrede"></TextDot>
-        <TextDot input="livskrise"></TextDot>
-        <TextDot input="stress"></TextDot>
-        <TextDot input="ledelse"></TextDot>
+          <div class="flex flex-wrap gap-[8px] max-w-[179px] lg:max-w-[500px]">
+            <TextDot input="depression" />
+            <TextDot input="angst" />
+            <TextDot input="ptsd" />
+            <TextDot input="parforhold" />
+            <TextDot input="traume" />
+            <TextDot input="selvvard" />
+            <TextDot input="vrede" />
+            <TextDot input="livskrise" />
+            <TextDot input="stress" />
+            <TextDot input="ledelse" />
+          </div>
+          <img
+            class="lg:hidden"
+            src="/img/stress.svg"
+            alt="Stress Illustration"
+          />
+          <img
+            class="hidden lg:block"
+            src="/img/stress-d.svg"
+            alt="Stress Illustration"
+          />
         </div>
-    <img class="lg:hidden" src="/img/stress.svg" alt="Stress Illustration">
-    <img class="hidden lg:block" src="/img/stress-d.svg" alt="Stress Illustration">
+      </div>
+    </div>
+  </section>
 
-        </div>
+  <section
+    id="nyeste-artikler"
+    class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop"
+  >
+    <div class="col-start-2 col-span-10">
+      <Overskrift text="nyeste artikler" />
+      
+      <div class="flex flex-col lg:flex-row items-start gap-[16px] lg:gap-[32px]">
+       <div class="flex flex-col items-start gap-[32px] justify-start"> 
+        <Textbox subheader="lorem ipsum" />
+        <div class="hidden lg:block">
+            <Button text="se alle" size="large" variant="secondaryLeft" href="/" />
         </div>
     </div>
-    </section>
+        <div class="flex flex-col lg:flex-row lg:gap-[8px] items-start justify-start">
+          <Articlecard
+            url="/"
+            imgSrc="/img/selvvaerd.svg"
+            alt="Illustration"
+            h4="Selvvard"
+            text="Jorem ipsum dolor sit amet, consectetur adipiscing elitjj jbkbklklknn. "
+            btnurl="/"
+          />
+          <Articlecard
+            url="/"
+            imgSrc="/img/selvvaerd.svg"
+            alt="Illustration"
+            h4="Selvvard"
+            text="Jorem ipsum dolor sit amet, consectetur adipiscing elitjj jbkbklklknn. "
+            btnurl="/"
+          />
+        </div>
+<div class="lg:hidden">
+        <Button text="se alle" size="small" variant="secondaryLeft" href="/" />
+    </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>

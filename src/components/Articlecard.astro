@@ -22,11 +22,11 @@ const { text, url = "#", btnurl ="#", imgSrc = "", alt = "", h4 } = Astro.props;
 
   </div>
   <h4 class="text-h4-desktop font-dmsans text-green-500">{h4}</h1>
-  <p class="text-p-small-mobil lg:text-p-small-desktop font-dmsans text-green-500 font-regular transition-hover duration-300 ease-in-out group-hover:border-b border-green-500 pb-[8px] ">
+  <p class="text-p-small-mobil lg:text-p-small-desktop font-dmsans text-red-900 font-regular transition-hover duration-300 ease-in-out group-hover:border-b border-green-500 pb-[8px] ">
     {text}
   </p>
   <div class="lg:hidden">
-<Button text="" size="large" variant="secondary-iconOnly" href={btnurl}></Button>
+<Button text="læs her" size="large" variant="secondaryLeft" href={btnurl}></Button>
 </div>
 
 </a>
