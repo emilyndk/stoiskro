@@ -108,7 +108,19 @@ import PriceList from "../components/PriceList.astro";
 	<!-- Kontaktform sat op i forhold til grid -->
 
 <section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500">
-
+	<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+		<Overskrift text="Kontakt mig" color="beige" />
+	</div>
+			<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3">
+			<Textbox subheader="" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque." color="beige" />
+			
+			<div class="pb-[32px] pt-[32px] lg:pb-0 text-beige-500 font-dmsans text-caption-mobil lg:text-caption-desktop">
+			<p>Mulighedsvej 45</p>
+			<p>2300 København S</p>
+			<p>+45 45454545</p>
+			<p>johndoe@gmail.com</p>
+		    </div>
+		</div>
     <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6">
      <Kontaktform></Kontaktform>
 	</div>
