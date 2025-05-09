@@ -1,7 +1,15 @@
 ---
-const {subheader,text}= Astro.props;
+const {
+  subheader,
+  text,
+  color = "green", // "green" eller "beige"
+} = Astro.props;
+
+// Dynamiske farveklasser
+const headerColor = color === "beige" ? "text-beige-500" : "text-green-500";
+const textColor = color === "beige" ? "text-beige-500" : "text-red-900";
 ---
 <div class="grid gap-4">
-<h3 class="sm:text-h3-mobil uppercase text-green-500 lg:text-h3-desktop">{subheader}</h3>
-<p class="sm:text-p-regular-mobil text-red-900 lg:text-p-regular-desktop">{text}</p>
+  <h3 class={`sm:text-h3-mobil uppercase lg:text-h3-desktop ${headerColor}`}>{subheader}</h3>
+  <p class={`sm:text-p-regular-mobil lg:text-p-regular-desktop ${textColor}`}>{text}</p>
 </div>

@@ -23,7 +23,7 @@ import PriceList from "../components/PriceList.astro";
 ---
 
 <MainLayout title="Stoisk Ro">
-	<section id="nyeste-artikler" class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
+<section id="nyeste-artikler" class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
 
         <div class="col-start-2 col-span-10">
             <Overskrift text="nyeste artikler"></Overskrift>
@@ -90,13 +90,6 @@ import PriceList from "../components/PriceList.astro";
     </div>
     </section>
 
-
-
-
-	<h1 class="text-h1-mobil uppercase lg:font-gloock font-bold text-green-500">DM sans</h1>
-	<h1 class="font-gloock">Gloock</h1>
-	<p class="text-p-desktop">P desktop style</p>
-
 	<!-- Skriv her hvilken variant og størrelse du skal bruge ex. primary large -->
 
 	<IconButton text="Send" variant="primary" size="large">
@@ -121,28 +114,12 @@ import PriceList from "../components/PriceList.astro";
 </section>	 
 
 
-	<Overskrift text="Mit navn er Artjom"></Overskrift>
+<Overskrift text="Min overskrift" color="beige" />
+
 	<Textbox subheader="jeg er samtaleterapeut" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti "></Textbox>
 <PriceList title="parterapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit " time="55 min" price="1000 kr.">
 </PriceList>
-	<form class="max-w-sm">
-		<Inputfield 
-		id="navn"
-		label="Navn"
-		placeholder="Hanne Hansen"
-		helpText="Her må du gerne skrive dit fulde navn"
-		variant="primary"
-		size="large"
-		/>
-	  
-		<Inputfield 
-		id="tlf"
-		label="Telefon"
-		placeholder="22334455"
-		helpText="Her skriver du det nummer du vil ringes op på"
-		variant="secondary"
-		size="small"
-		/>
+
 	<Textbox subheader="jeg er samtaleterapeut"></Textbox>
 <!-- <UnderoverskriftText 
 	underoverskrift="jeg er samtaleterapeut" 
@@ -151,8 +128,12 @@ sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitu
 
 
 <section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500">
+	<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+		<Overskrift text="Terapi og forløb" color="beige" />
+		<Textbox subheader="lorem ipsum" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque." color="beige" />
 
-<div class="col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
+</div>
+<div class="col-start-2 span-10 lg:col-start-8 col-span-4">
 	<AccordionService>
 
 </AccordionService>
@@ -173,13 +154,17 @@ sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitu
 
 <section class="lg:pt-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop">
 
+	<div>
+
+	</div>
+
 	<div class="col-start-2 col-span-10">
 	
 	<AccordionTerapi></AccordionTerapi>
 	
 	</div>
 	
-	</section>
+</section>
 
 <a href="/test"> tets </a>
 
