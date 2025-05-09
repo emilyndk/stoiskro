@@ -98,7 +98,6 @@ export default {
         "h5-mobil": [
           "15px",
           {
-            lineHeight: "31",
             fontWeight: "700",
             fontFamily: "dmsans",
             textTransform: "uppercase",
@@ -252,7 +251,6 @@ export default {
         "h5-desktop": [
           "24px",
           {
-            lineHeight: "31",
             fontWeight: "700",
             fontFamily: "dmsans",
             textTransform: "uppercase",
@@ -261,7 +259,6 @@ export default {
         "h6-desktop": [
           "24px",
           {
-            lineHeight: "31",
             fontWeight: "700",
             fontFamily: "dmsans",
             textTransform: "lowercase",

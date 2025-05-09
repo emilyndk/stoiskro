@@ -1,0 +1,76 @@
+---
+// Importér knap-komponenten
+import IconButton from './Button.astro';
+
+// Props med unikke navne
+const {
+  Title3 = "Accordion 3 Titel",
+  LeftSections3 = [
+    { heading: "Overskrift 1", text: "Dette er første tekstafsnit." },
+    { heading: "Overskrift 2", text: "Dette er andet tekstafsnit." },
+    { heading: "Overskrift 3", text: "Dette er tredje tekstafsnit." },
+  ],
+  RightHeading3 = "Overskrift i højre kolonne",
+  BulletPoints3 = ["Første punkt", "Andet punkt", "Tredje punkt"],
+  ImageUrl3 = "/path/to/image.jpg",
+  ButtonText3 = "Læs mere",
+} = Astro.props;
+---
+
+<!-- Accordion-knap -->
+<button
+  class="accordion3-btn w-full p-4 text-left border-t border-green-500 flex items-center justify-between focus:outline-none text-green-500 text-h2-mobil uppercase font-gloock lg:text-h2-desktop"
+>
+  <div>{Title3}</div>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 transform transition-transform duration-300 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+  </svg>
+</button>
+
+<!-- Accordion-panel -->
+<div class="accordion3-panel hidden transition-all duration-300 bg-transparent p-4">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+  <!-- Venstre kolonne -->
+<div class="flex flex-col gap-6">
+    {LeftSections3.map((section) => (
+      <div>
+        {section.heading && (
+          <h3 class=" lg:pt-spacebar32 text-green-500 font-dmsans uppercase text-h5-mobil lg:text-h5-desktop mb-2">{section.heading}</h3>
+        )}
+        <p class="text-red-900 text-p-regular-mobil lg:text-p-regular-desktop">{section.text}</p>
+      </div>
+    ))}
+  
+  
+      <div class="mt-4">
+        <IconButton text={ButtonText3} variant="primary" size="large" />
+      </div>
+    </div>
+
+    <!-- Højre kolonne -->
+    <div class="lg:pt-spacebar32 flex flex-col gap-10">
+      <h3 class="text-green-500 font-bold text-lg lg:text-h6-desktop font-dmsans">{RightHeading3}</h3>
+      <ul class="list-disc text-red-900 list-outside marker:text-red-500 text-p-small-mobil lg:text-p-small-desktop space-y-4">
+        {BulletPoints3.map((point) => (
+          <li>{point}</li>
+        ))}
+      </ul>
+      <img src={ImageUrl3} alt="Accordion billede" class="justify-self-end w-[200px] h-auto rounded-lg self-center" />
+    </div>
+
+  </div>
+</div>
+
+<!-- Toggle-script -->
+<script>
+  document.querySelectorAll(".accordion3-btn").forEach((acc) => {
+    const panel = acc.nextElementSibling;
+    const icon = acc.querySelector("svg");
+
+    acc.addEventListener("click", function () {
+      panel?.classList.toggle("hidden");
+      icon?.classList.toggle("rotate-180");
+    });
+  });
+</script>

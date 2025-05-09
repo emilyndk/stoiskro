@@ -14,6 +14,8 @@ import Inputfield from '../components/Inputfield.astro';
 import Overskrift from "../components/Overskrift.astro";
 import Textbox from "../components/Textbox.astro";
 import AccordionService from "../components/AccordionService.astro"
+import AccordionTerapi from "../components/AccordionTerapi.astro"
+import AccordionVirksomhed from "../components/AccordionVirksomhed.astro";
 
 
 ---
@@ -63,16 +65,35 @@ sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitu
 
 
 <section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500">
+
 <div class="col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
 	<AccordionService>
 
 </AccordionService>
 </div>
+
 </section>
 
-  
 
+<section class="lg:pt-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop">
 
+<div class="col-start-2 col-span-10">
+
+<AccordionVirksomhed></AccordionVirksomhed>
+
+</div>
+
+</section>
+
+<section class="lg:pt-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop">
+
+	<div class="col-start-2 col-span-10">
+	
+	<AccordionTerapi></AccordionTerapi>
+	
+	</div>
+	
+	</section>
 
 <a href="/test"> tets </a>
 
