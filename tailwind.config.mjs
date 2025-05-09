@@ -87,9 +87,9 @@ export default {
           },
         ],
         "h4-mobil": [
-          "15px",
+          "20px",
           {
-            lineHeight: "39",
+            lineHeight: "auto",
             fontWeight: "400",
             fontFamily: "dmsans",
             textTransform: "lowercase",
@@ -243,7 +243,7 @@ export default {
         "h4-desktop": [
           "30px",
           {
-            lineHeight: "39",
+            lineHeight: "auto",
             fontWeight: "400",
             fontFamily: "dmsans",
             textTransform: "lowercase",
