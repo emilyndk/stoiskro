@@ -63,7 +63,6 @@ export default {
         "h1-mobil": [
           "40px",
           {
-            lineHeight: "auto",
             fontWeight: "400",
             fontFamily: "gloock",
             textTransform: "uppercase",
@@ -72,7 +71,6 @@ export default {
         "h2-mobil": [
           "20px",
           {
-            lineHeight: "120%",
             fontWeight: "400",
             fontFamily: "gloock",
             textTransform: "uppercase",
@@ -89,7 +87,6 @@ export default {
         "h4-mobil": [
           "15px",
           {
-            lineHeight: "39",
             fontWeight: "400",
             fontFamily: "dmsans",
             textTransform: "lowercase",
@@ -98,16 +95,14 @@ export default {
         "h5-mobil": [
           "15px",
           {
-            lineHeight: "31",
             fontWeight: "700",
             fontFamily: "dmsans",
             textTransform: "uppercase",
           },
         ],
         "h6-mobil": [
-          "15px",
+          "16px",
           {
-            lineHeight: "31",
             fontWeight: "700",
             fontFamily: "dmsans",
             textTransform: "lowercase",
@@ -116,7 +111,6 @@ export default {
         "h7-mobil": [
           "12px",
           {
-            lineHeight: "31",
             fontWeight: "400",
             fontFamily: "dmsans",
             textTransform: "",
@@ -217,7 +211,6 @@ export default {
         "h1-desktop": [
           "130px",
           {
-            lineHeight: "120%",
             fontWeight: "400",
             fontFamily: "gloock",
             textTransform: "uppercase",
@@ -226,7 +219,6 @@ export default {
         "h2-desktop": [
           "56px",
           {
-            lineHeight: "120%",
             fontWeight: "400",
             fontFamily: "gloock",
             textTransform: "uppercase",
@@ -243,7 +235,6 @@ export default {
         "h4-desktop": [
           "30px",
           {
-            lineHeight: "39",
             fontWeight: "400",
             fontFamily: "dmsans",
             textTransform: "lowercase",
@@ -252,16 +243,14 @@ export default {
         "h5-desktop": [
           "24px",
           {
-            lineHeight: "31",
             fontWeight: "700",
             fontFamily: "dmsans",
             textTransform: "uppercase",
           },
         ],
         "h6-desktop": [
-          "24px",
+          "22px",
           {
-            lineHeight: "31",
             fontWeight: "700",
             fontFamily: "dmsans",
             textTransform: "lowercase",
@@ -270,7 +259,6 @@ export default {
         "h7-desktop": [
           "24px",
           {
-            lineHeight: "31",
             fontWeight: "400",
             fontFamily: "dmsans",
             textTransform: "",
@@ -280,7 +268,6 @@ export default {
         "p-regular-desktop": [
           "20px",
           {
-            lineHeight: "140%",
             fontWeight: "400",
             fontFamily: "dmsans",
             textTransform: "",
@@ -289,7 +276,6 @@ export default {
         "p-small-desktop": [
           "20px",
           {
-            lineHeight: "140%",
             fontWeight: "400",
             fontFamily: "dmsans",
             textTransform: "",
