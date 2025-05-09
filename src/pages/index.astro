@@ -4,17 +4,91 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
+import Articlecard from "../components/Articlecard.astro";
+
 import IconButton from "../components/Button.astro";
 import Kontaktform from '../components/Kontaktform.astro';
 import Forsamtale from "../components/Forsamtale.astro"
 
 import Inputfield from '../components/Inputfield.astro';
 import Overskrift from "../components/Overskrift.astro";
+import TextDot from "../components/TextDot.astro";
 import Textbox from "../components/Textbox.astro";
+
 import PriceList from "../components/PriceList.astro";
+import AccordionService from "../components/AccordionService.astro"
+
 ---
 
 <MainLayout title="Stoisk Ro">
+	<section id="nyeste-artikler" class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
+
+        <div class="col-start-2 col-span-10">
+            <Overskrift text="nyeste artikler"></Overskrift>
+            <div class="flex flex-col items-start gap-[16px] lg:gap-[32px] ">
+                <Textbox subheader="lorem ipsum"></Textbox>
+<div class="flex flex-col items-start justify-start">
+    <Articlecard
+  url="/"
+  imgSrc="/img/selvvaerd.svg"
+  alt="Illustration"
+  h4="Selvvard"
+  text="Jorem ipsum dolor sit amet, consectetur adipiscing elitjj jbkbklklknn. "
+  btnurl="/"
+/>
+<Articlecard
+  url="/"
+  imgSrc="/img/selvvaerd.svg"
+  alt="Illustration"
+  h4="Selvvard"
+  text="Jorem ipsum dolor sit amet, consectetur adipiscing elitjj jbkbklklknn. "
+  btnurl="/"
+/>
+</div>
+
+            
+            </div>
+           
+            </div>
+
+    </section>
+   
+    <section
+    class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop"
+    >
+    <div class="col-start-2 col-span-10">
+        
+    <Overskrift text="jeg kan hjælpe"></Overskrift>
+  
+
+        <div class="flex flex-col items-start gap-[16px] lg:gap-[32px] ">
+        <h6
+            class="font-dmsans text-h7-mobil lg:text-h7-desktop text-green-500 uppercase"
+        >
+            med problematikker indenfor
+        </h6>
+        <div class="flex flex-row justify-between lg:w-full items-start">
+        <div class="flex flex-wrap gap-[8px] max-w-[179px] lg:max-w-[500px]">
+        <TextDot input="depression"></TextDot>
+        <TextDot input="angst"></TextDot>
+        <TextDot input="ptsd"></TextDot>
+        <TextDot input="parforhold"></TextDot>
+        <TextDot input="traume"></TextDot>
+        <TextDot input="selvvard"></TextDot>
+        <TextDot input="vrede"></TextDot>
+        <TextDot input="livskrise"></TextDot>
+        <TextDot input="stress"></TextDot>
+        <TextDot input="ledelse"></TextDot>
+        </div>
+    <img class="lg:hidden" src="/img/stress.svg" alt="Stress Illustration">
+    <img class="hidden lg:block" src="/img/stress-d.svg" alt="Stress Illustration">
+
+        </div>
+        </div>
+    </div>
+    </section>
+
+
 
 
 	<h1 class="text-h1-mobil uppercase lg:font-gloock font-bold text-green-500">DM sans</h1>
@@ -35,30 +109,16 @@ import PriceList from "../components/PriceList.astro";
 	</div>
 </section>
 
-<section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500">
+	<!-- forsamtale sat op i forhold til grid -->
 
-    <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6">
+<section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-beige-500">
+
+    <div class="col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
      <Forsamtale></Forsamtale>
 	</div>
 </section>	 
 
 
-
-		
-	
-    </IconButton>
-
-	<IconButton text="Hør mere" variant="secondary-right" size="large">
-		
-	</IconButton>
-
-	<IconButton text="Læs mere" variant="secondary-negative" size="large">
-	
-	</IconButton>
-
-	<IconButton text="" variant="secondary-iconOnly" size="large">
-			
-	</IconButton>
 	<Overskrift text="Mit navn er Artjom"></Overskrift>
 	<Textbox subheader="jeg er samtaleterapeut" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti "></Textbox>
 <PriceList title="parterapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit " time="55 min" price="1000 kr.">
@@ -81,4 +141,30 @@ import PriceList from "../components/PriceList.astro";
 		variant="secondary"
 		size="small"
 		/>
+	<Textbox subheader="jeg er samtaleterapeut"></Textbox>
+<!-- <UnderoverskriftText 
+	underoverskrift="jeg er samtaleterapeut" 
+	text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti 
+sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum."></UnderoverskriftText>  -->
+
+
+<section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500">
+<div class="col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
+	<AccordionService>
+
+</AccordionService>
+</div>
+</section>
+
+  
+
+
+
+<a href="/test"> tets </a>
+
+
 </MainLayout>
+
+
+  
+  

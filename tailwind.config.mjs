@@ -85,7 +85,7 @@ export default {
           },
         ],
         "h4-mobil": [
-          "15px",
+          "20px",
           {
             fontWeight: "400",
             fontFamily: "dmsans",
@@ -274,7 +274,7 @@ export default {
           },
         ],
         "p-small-desktop": [
-          "20px",
+          "16px",
           {
             fontWeight: "400",
             fontFamily: "dmsans",

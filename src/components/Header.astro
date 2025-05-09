@@ -47,7 +47,7 @@ import Button from "./Button.astro";
   class="bg-red-500 lg:hidden opacity-0 pointer-events-none transition-opacity duration-300 w-screen h-screen fixed z-40 top-0 pt-[32px]"
 >
   <div class="flex flex-col justify-around w-screen h-screen">
-    <div class="flex flex-col gap-[32px]">
+    <div class="flex flex-col items-center gap-[32px]">
       <Link href="/om" input="om" variant="navigation" />
       <Link href="/terapi" input="terapi" variant="navigation" />
       <Link href="/priser" input="priser og kontakt" variant="navigation" />
@@ -63,12 +63,12 @@ import Button from "./Button.astro";
 </div>
 
 
-<div id="overlay-d" class="fixed hidden lg:block z-50 -top-10 -right-52 translate-x-full transition-transform duration-500 ease-in-out">
+<div id="overlay-d" class="fixed hidden lg:block z-50 -top-20 -right-52 translate-x-full transition-transform duration-500 ease-in-out">
     <div class="flex flex-col justify-center  items-center rounded-full bg-red-500 h-[593px] w-[593px]">
-        <div class="relative right-10">
+        <div class="relative right-16">
        <div class="flex flex-col items-end gap-[32px] justify-center">
         <img
-        id="icon-close"
+        id="icon-close-d"
         class=" cursor-pointer hover:opacity-85 transition-opacity ease-in-out duration-500"
         src="/img/icon-closed.svg"
         alt="Luk menu ikon"
@@ -136,12 +136,14 @@ import Button from "./Button.astro";
 <script>
 const overlayD = document.getElementById("overlay-d");
 const iconOpen = document.getElementById("icon-open");
+const iconClose = document.getElementById("icon-close-d");
 
 function toggleMenu(show) {
   overlayD.classList.toggle("translate-x-0", show);
   overlayD.classList.toggle("translate-x-full", !show);
 }
 
+// Åbn/luk med iconOpen
 iconOpen.addEventListener("click", (e) => {
   if (window.innerWidth >= 1024) {
     e.stopPropagation();
@@ -150,6 +152,12 @@ iconOpen.addEventListener("click", (e) => {
   }
 });
 
+// Luk med iconClose
+iconClose.addEventListener("click", () => {
+  toggleMenu(false);
+});
+
+// Klik udenfor lukker (kun desktop)
 document.addEventListener("click", (e) => {
   if (
     window.innerWidth >= 1024 &&
@@ -159,5 +167,6 @@ document.addEventListener("click", (e) => {
     toggleMenu(false);
   }
 });
+
 
   </script>

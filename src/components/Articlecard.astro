@@ -1,0 +1,32 @@
+---
+import Button from "./Button.astro";
+import IconButton from "../components/Button.astro";
+const { text, url = "#", btnurl ="#", imgSrc = "", alt = "", h4 } = Astro.props;
+---
+
+<a href={url} class="flex flex-col items-start justify-start gap-[8px] max-w-[212px] group ">
+  <div class="relative overflow-hidden bg-beige-50 flex flex-col items-center justify-center py-[32px]">
+    
+        <img
+          src={imgSrc}
+          alt={alt || "Illustration"}
+          class=""
+        />
+        <!-- Overlay + knap -->
+    <div class="absolute bg-black/20 inset-0 flex items-center justify-center opacity-5 group-hover:opacity-100 transition-opacity duration-300 z-10">
+       <div class="w-4 h-4 bg-red-400"></div>
+       
+      </div>
+    </div>
+
+
+  </div>
+  <h4 class="text-h4-desktop font-dmsans text-green-500">{h4}</h1>
+  <p class="text-p-small-mobil lg:text-p-small-desktop font-dmsans text-red-900 font-regular transition-hover duration-300 ease-in-out group-hover:border-b border-green-500 pb-[8px] ">
+    {text}
+  </p>
+  <div class="lg:hidden">
+<Button text="læs her" size="large" variant="secondaryLeft" href={btnurl}></Button>
+</div>
+
+</a>
