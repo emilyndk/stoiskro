@@ -20,6 +20,7 @@ import AccordionVirksomhed from "../components/AccordionVirksomhed.astro";
 import PriceList from "../components/PriceList.astro";
 
 
+
 ---
 
 <MainLayout title="Stoisk Ro">
@@ -54,6 +55,15 @@ import PriceList from "../components/PriceList.astro";
             </div>
 
     </section>
+
+
+
+
+
+
+
+
+	</section>
    
     <section
     class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop"
@@ -107,10 +117,16 @@ import PriceList from "../components/PriceList.astro";
 	<!-- forsamtale sat op i forhold til grid -->
 
 <section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-beige-500">
-
-    <div class="col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
+	<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+	<Overskrift text="Passer kemien?" color="green" />
+</div>
+		<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+		<Textbox subheader="lorem ipsum" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque." color="green" />
+	</div>
+	<div class="pt-16 lg:pt-0 col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
      <Forsamtale></Forsamtale>
 	</div>
+	
 </section>	 
 
 
