@@ -14,8 +14,9 @@ import Inputfield from '../components/Inputfield.astro';
 import Overskrift from "../components/Overskrift.astro";
 import TextDot from "../components/TextDot.astro";
 import Textbox from "../components/Textbox.astro";
-import AccordionService from "../components/AccordionService.astro"
 
+import PriceList from "../components/PriceList.astro";
+import AccordionService from "../components/AccordionService.astro"
 
 ---
 
@@ -119,6 +120,27 @@ import AccordionService from "../components/AccordionService.astro"
 
 
 	<Overskrift text="Mit navn er Artjom"></Overskrift>
+	<Textbox subheader="jeg er samtaleterapeut" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti "></Textbox>
+<PriceList title="parterapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit " time="55 min" price="1000 kr.">
+</PriceList>
+	<form class="max-w-sm">
+		<Inputfield 
+		id="navn"
+		label="Navn"
+		placeholder="Hanne Hansen"
+		helpText="Her må du gerne skrive dit fulde navn"
+		variant="primary"
+		size="large"
+		/>
+	  
+		<Inputfield 
+		id="tlf"
+		label="Telefon"
+		placeholder="22334455"
+		helpText="Her skriver du det nummer du vil ringes op på"
+		variant="secondary"
+		size="small"
+		/>
 	<Textbox subheader="jeg er samtaleterapeut"></Textbox>
 <!-- <UnderoverskriftText 
 	underoverskrift="jeg er samtaleterapeut" 
