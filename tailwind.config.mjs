@@ -87,7 +87,7 @@ export default {
           },
         ],
         "h4-mobil": [
-          "15px",
+          "20px",
           {
             lineHeight: "auto",
             fontWeight: "400",

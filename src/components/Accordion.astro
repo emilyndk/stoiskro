@@ -1,0 +1,57 @@
+---
+import IconButton from './Button.astro';
+
+const {
+  variant = "primary",
+  title = "Klik for at åbne",
+  content = "Dette er standardtekst.",
+} = Astro.props;
+---
+
+<!-- Accordion-knap -->
+<button
+  class={`accordion w-full p-4 text-left border-t flex items-center justify-between focus:outline-none
+    ${variant === 'primary'
+      ? 'text-beige-500 text-h4-mobil lowercase lg:text-h4-desktop bg-transparent'
+      : 'text-green-500 text-h5-mobil lowercase lg:text-h5-desktop bg-transparent'}
+  `}
+>
+<div class="">
+  {title}
+</div>
+
+  <svg id="accordion-icon" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+  </svg>
+</button>
+
+<!-- Indholdet der vises når accordion åbnes -->
+<div class="panel bg-transparent p-4 transition-all duration-300 hidden">
+  <p class="mb-4 text-beige-500 text-p-small-mobil lg:text-p-small-desktop">
+    {content}
+  </p>
+
+<div class="block lg:hidden">
+  <IconButton text="Læs mere" variant="secondary-negative" size="small">
+  </IconButton>
+</div>
+
+<div class="hidden lg:block">
+  <IconButton text="Læs mere" variant="secondary-negative" size="large">
+  </IconButton>
+</div>
+</div>
+
+<!-- JavaScript: Toggle panel -->
+<script>
+  document.querySelectorAll(".accordion").forEach((acc) => {
+    const panel = acc.nextElementSibling;
+    const icon = acc.querySelector("svg"); // eller brug en unik klasse hvis du har flere SVG'er
+
+    acc.addEventListener("click", function () {
+      panel?.classList.toggle("hidden");
+      icon?.classList.toggle("rotate-180");
+    });
+  });
+</script>
+
