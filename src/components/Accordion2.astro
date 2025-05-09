@@ -16,8 +16,8 @@ const {
 <button
   class={`accordion w-full p-4 text-left border-t border-t-green-500 flex items-center justify-between focus:outline-none
     ${variant === 'primary'
-      ? 'text-green-500 text-h2-mobil uppercase font-gloock lg:text-h2-desktop bg-transparent'
-      : 'text-green-500 text-h2-mobil font-gloock uppercase lg:text-h2-desktop bg-transparent'}
+      ? 'text-green-500 text-h2-mobil uppercase font-gloock lg:text-h2-desktop bg-transparent pl-0'
+      : 'text-green-500 text-h2-mobil font-gloock uppercase lg:text-h2-desktop bg-transparent pl-0'}
   `}
 >
   <div>{title2}</div>
@@ -40,7 +40,7 @@ const {
 
 
 <!-- Panel med 2 kolonner -->
-<div class="panel hidden transition-all duration-300 bg-transparent p-4">
+<div class="panel hidden transition-all duration-300 bg-transparent px-0 py-4">
   <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-10">
     
     <!-- Venstre kolonne -->

@@ -12,43 +12,41 @@ const {
 <button
   class={`accordion w-full p-4 text-left border-t flex items-center justify-between focus:outline-none
     ${variant === 'primary'
-      ? 'text-beige-500 text-h4-mobil lowercase lg:text-h4-desktop bg-transparent'
-      : 'text-green-500 text-h5-mobil lowercase lg:text-h5-desktop bg-transparent'}
+      ? 'text-beige-500 text-h4-mobil lowercase lg:text-h4-desktop bg-transparent pl-0'
+      : 'text-green-500 text-h5-mobil lowercase lg:text-h5-desktop bg-transparent pl-0'}
   `}
 >
-<div class="">
-  {title}
-</div>
-<svg 
-  xmlns="http://www.w3.org/2000/svg" 
-  viewBox="0 0 22 14" 
-  fill="none" 
-  class="h-6 w-6 lg:h-8 lg:w-8 transform transition-transform duration-300 text-beige-500"
->
-  <path 
-    d="M21 1.54065L11 11.5406L1 1.54065" 
-    stroke="currentColor" 
-    stroke-width="2"
-  />
-</svg>
-
+  <div class="">
+    {title}
+  </div>
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 22 14" 
+    fill="none" 
+    class="h-6 w-6 lg:h-8 lg:w-8 transform transition-transform duration-300 text-beige-500"
+  >
+    <path 
+      d="M21 1.54065L11 11.5406L1 1.54065" 
+      stroke="currentColor" 
+      stroke-width="2"
+    />
+  </svg>
 </button>
 
 <!-- Indholdet der vises når accordion åbnes -->
-<div class="panel bg-transparent p-4 transition-all duration-300 hidden">
-  <p class="mb-4 text-beige-500 text-p-small-mobil lg:text-p-small-desktop">
+<div class="panel bg-transparent p-4 transition-all duration-300 hidden pl-0">
+  <p class="mb-4 text-beige-500 text-p-small-mobil lg:text-p-small-desktop pl-0">
     {content}
   </p>
 
-  <div class="block lg:hidden">
+  <div class="block lg:hidden pl-0">
     <IconButton text="Læs mere" variant="secondary-negative" size="small" />
   </div>
-  
 
-  <div class="hidden lg:block">
+  <div class="hidden lg:block pl-0">
     <IconButton text="Læs mere" variant="secondary-negative" size="large" />
   </div>
-  
+</div>
 
 <!-- JavaScript: Toggle panel -->
 <script>
@@ -62,4 +60,5 @@ const {
     });
   });
 </script>
+
 

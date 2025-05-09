@@ -19,9 +19,9 @@ const {
 
 <!-- Accordion-knap -->
 <button
-  class="accordion3-btn w-full p-4 text-left border-t border-green-500 flex items-center justify-between focus:outline-none text-green-500 text-h2-mobil uppercase font-gloock lg:text-h2-desktop"
+  class="accordion3-btn w-full pl-0 pr-4 py-4 text-left border-t border-green-500 flex items-center justify-between focus:outline-none text-green-500 text-h2-mobil uppercase font-gloock lg:text-h2-desktop"
 >
-  <div class="max-w-3 lg:max-w-[80%]">{Title3}</div>
+  <div class="max-w-[50%] lg:max-w-[80%]">{Title3}</div>
   <svg 
   xmlns="http://www.w3.org/2000/svg" 
   viewBox="0 0 22 14" 
@@ -38,7 +38,7 @@ const {
 </button>
 
 <!-- Accordion-panel -->
-<div class="accordion3-panel hidden transition-all duration-300 bg-transparent p-4">
+<div class="accordion3-panel hidden transition-all duration-300 bg-transparent px-0 py-4">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
   <!-- Venstre kolonne -->
@@ -59,7 +59,7 @@ const {
     </div>
 
     <!-- Højre kolonne -->
-    <div class="lg:pt-spacebar32 flex flex-col gap-10">
+    <div class="lg:pt-spacebar32 flex flex-col gap-10 pr-6">
       <h3 class="text-green-500 font-bold text-lg lg:text-h6-desktop font-dmsans">{RightHeading3}</h3>
       <ul class="list-disc text-red-900 list-outside marker:text-red-500 text-p-small-mobil lg:text-p-small-desktop space-y-4">
         {BulletPoints3.map((point) => (
