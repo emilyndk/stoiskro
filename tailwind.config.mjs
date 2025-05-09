@@ -116,7 +116,7 @@ export default {
         "h7-mobil": [
           "12px",
           {
-            lineHeight: "31",
+            lineHeight: "auto",
             fontWeight: "400",
             fontFamily: "dmsans",
             textTransform: "",
@@ -270,7 +270,7 @@ export default {
         "h7-desktop": [
           "24px",
           {
-            lineHeight: "31",
+            lineHeight: "auto",
             fontWeight: "400",
             fontFamily: "dmsans",
             textTransform: "",

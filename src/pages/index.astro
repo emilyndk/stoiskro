@@ -12,13 +12,47 @@ import Forsamtale from "../components/Forsamtale.astro"
 
 import Inputfield from '../components/Inputfield.astro';
 import Overskrift from "../components/Overskrift.astro";
+import TextDot from "../components/TextDot.astro";
 import Textbox from "../components/Textbox.astro";
 ---
 
 <MainLayout title="Stoisk Ro">
 	
    
+    <section
+    class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop"
+    >
+    <div class="col-start-2 col-span-10">
+        
+    <Overskrift text="jeg kan hjælpe"></Overskrift>
+  
 
+        <div class="flex flex-col items-start gap-[16px] lg:gap-[32px] ">
+        <h6
+            class="font-dmsans text-h7-mobil lg:text-h7-desktop text-green-500 uppercase"
+        >
+            med problematikker indenfor
+        </h6>
+        <div class="flex flex-row justify-between lg:w-full items-start">
+        <div class="flex flex-wrap gap-[8px] max-w-[179px] lg:max-w-[500px]">
+        <TextDot input="depression"></TextDot>
+        <TextDot input="angst"></TextDot>
+        <TextDot input="ptsd"></TextDot>
+        <TextDot input="parforhold"></TextDot>
+        <TextDot input="traume"></TextDot>
+        <TextDot input="selvvard"></TextDot>
+        <TextDot input="vrede"></TextDot>
+        <TextDot input="livskrise"></TextDot>
+        <TextDot input="stress"></TextDot>
+        <TextDot input="ledelse"></TextDot>
+        </div>
+    <img class="lg:hidden" src="/img/stress.svg" alt="Stress Illustration">
+    <img class="hidden lg:block" src="/img/stress-d.svg" alt="Stress Illustration">
+
+        </div>
+        </div>
+    </div>
+    </section>
 
 
 
