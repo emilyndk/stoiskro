@@ -21,10 +21,20 @@ const {
 <button
   class="accordion3-btn w-full p-4 text-left border-t border-green-500 flex items-center justify-between focus:outline-none text-green-500 text-h2-mobil uppercase font-gloock lg:text-h2-desktop"
 >
-  <div>{Title3}</div>
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 transform transition-transform duration-300 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-  </svg>
+  <div class="max-w-3 lg:max-w-[80%]">{Title3}</div>
+  <svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  viewBox="0 0 22 14" 
+  fill="none" 
+  class="h-6 w-6 lg:h-8 lg:w-8 transform transition-transform duration-300 text-red-500"
+>
+  <path 
+    d="M21 1.54065L11 11.5406L1 1.54065" 
+    stroke="currentColor" 
+    stroke-width="2"
+  />
+</svg>
+
 </button>
 
 <!-- Accordion-panel -->
@@ -36,7 +46,7 @@ const {
     {LeftSections3.map((section) => (
       <div>
         {section.heading && (
-          <h3 class=" lg:pt-spacebar32 text-green-500 font-dmsans uppercase text-h5-mobil lg:text-h5-desktop mb-2">{section.heading}</h3>
+          <h3 class="lg:pt-spacebar32 text-green-500 font-dmsans uppercase text-h5-mobil lg:text-h5-desktop mb-2">{section.heading}</h3>
         )}
         <p class="text-red-900 text-p-regular-mobil lg:text-p-regular-desktop">{section.text}</p>
       </div>
