@@ -1,0 +1,25 @@
+---
+const {
+  topText = "Øverste tekst",
+  bottomText = "Nederste tekst",
+  image1Src = "/img/stoisk1.webp",
+  image1Alt = "statue af filosof",
+  image2Src = "/img/stoisk2.webp",
+  image2Alt = "buste af filosof",
+} = Astro.props;
+---
+
+<div class="text-red-900">
+  <p class="text-right text-caption-mobil lg:text-caption-desktop lg:pb-spacebard136">
+    {topText}
+  </p>
+
+  <div>
+    <img class="w-full lg:pb-spacebard136" src={image1Src} alt={image1Alt} />
+    <img class="w-full lg:pb-spacebard136" src={image2Src} alt={image2Alt} />
+  </div>
+
+  <p class="text-right text-caption-mobil lg:text-caption-desktop">
+    {bottomText}
+  </p>
+</div>

@@ -1,0 +1,29 @@
+---
+import IconButton from "../components/Button.astro";
+
+---
+
+<section>
+
+  <p class="pb-spacebarm16 lg:pb-spacebar32 text-p-regular-mobil lg:text-p-regular-desktop text-red-900">
+    <slot />
+  </p>
+
+  <!-- Mobil-knap -->
+  <div class="block lg:hidden">
+    <IconButton text="Tilbage" variant="secondary-right" size="small" />
+  </div>
+
+  <!-- Desktop-knap -->
+  <div class="hidden lg:block">
+    <IconButton text="Tilbage" variant="secondary-right" size="large" />
+  </div>
+</section>
+
+
+
+
+
+
+
+
