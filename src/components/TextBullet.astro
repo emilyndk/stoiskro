@@ -10,10 +10,10 @@ const {
 const headerColor = color === "beige" ? "text-beige-500" : "text-green-500";
 const textColor = color === "beige" ? "text-beige-500" : "text-red-900";
 ---
-<div class="grid gap-4">
-  <h3 class={`sm:text-h3-mobil uppercase lg:text-h3-desktop ${headerColor}`}>{subheader}</h3>
+<div class="grid gap-5">
+  <h3 class={`sm:text-h3-mobil lg:text-h3-desktop ${headerColor}`}>{subheader}</h3>
   <p class={`sm:text-p-regular-mobil lg:text-p-regular-desktop ${textColor}`}>{text}</p>
-  <ul class="list-disc text-beige-500 list-inside text-p-small-mobil lg:text-p-small-desktop space-y-4">
+  <ul class="list-disc text-beige-500 list-inside text-p-regular-mobil lg:text-p-regular-desktop space-y-4">
     {BulletPoints3.map((point) => (
       <li>{point}</li>
     ))}
