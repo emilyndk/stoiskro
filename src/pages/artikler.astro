@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import DotText from "../components/DotText.astro";
 import Articlecard from "../components/Articlecard.astro";
 import Overskrift from "../components/Overskrift.astro";
+import EmnerSamlet from "../components/EmnerSamlet.astro";
 ---
 
 <MainLayout title="Artikler">
@@ -13,23 +14,16 @@ import Overskrift from "../components/Overskrift.astro";
 
 <div class="col-start-2 col-span-10">
   <Overskrift text="vælg et emne"></Overskrift>
-
-<div class="flex flex-col lg:flex-row lg:justify-between gap-[32px]">
-
-<div class="flex flex-wrap gap-[8px] lg:gap-[16px] lg:flex-col lg:flex-nowrap">
-    <DotText input="depression"></DotText>
-    <DotText input="angst"></DotText>
-    <DotText input="ptsd"></DotText>
-    <DotText input="parforhold"></DotText>
-    <DotText input="selvvard"></DotText>
-    <DotText input="vrede"></DotText>
-    <DotText input="livskrise"></DotText>
-    <DotText input="stress"></DotText>
-
-</div>
+  </div>
+<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-2">
+  <EmnerSamlet></EmnerSamlet>
+  </div>
 
 
-<div class="flex flex-col gap-[32px] items-start lg:flex-row lg:self-end">
+
+
+
+<div class="col-start-2 lg:col-start-7 lg:col-span-11 col-span-9 lg: flex flex-col gap-[32px] items-start lg:flex-row lg:self-end">
 
     <Articlecard
     url="/"
@@ -50,9 +44,9 @@ import Overskrift from "../components/Overskrift.astro";
 
 </div>
 
-</div>
 
-</div>
+
+
 
 </section>
 

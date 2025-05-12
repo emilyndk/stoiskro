@@ -1,12 +1,15 @@
 ---
-const { input } = Astro.props;
+import Link from "./Link.astro";
+
+const { input, href="#" } = Astro.props;
+
 ---
 
 <div class="flex flex-row gap-[8px] items-center ">
    
     <div class="rounded-full bg-red-500 w-[3px] h-[3px] lg:w-[4px] lg:h-[4px]"></div>
-    <p
-    class="lowercase  font-dmsans text-link-mobil lg:text-link-desktop font-bold text-green-500"
+    <a href={href}
+    class="lowercase hover:underline  font-dmsans text-link-mobil lg:text-link-desktop font-bold text-green-500"
   >
     {input}
   </p>

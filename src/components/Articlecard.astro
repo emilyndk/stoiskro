@@ -13,14 +13,14 @@ const { text, url = "#", btnurl ="#", imgSrc = "", alt = "", h4 } = Astro.props;
           class=""
         />
         <!-- Overlay + knap -->
-    <div class="absolute bg-black/20 inset-0 flex items-center justify-center opacity-5 group-hover:opacity-100 transition-opacity duration-300 z-10">
+    <div class="absolute bg-black/20 inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
        <div class="flex flex-col items-center justify-center w-12 h-12 rounded-full bg-red-500"><img src="/img/arrow.svg" alt="Arrow"></div>
        
       </div>
     </div>
 
 
-  </div>
+  
   <h4 class="text-h4-desktop font-dmsans text-green-500">{h4}</h1>
   <p class="text-p-small-mobil lg:text-p-small-desktop font-dmsans text-red-900 font-regular transition-hover duration-300 ease-in-out group-hover:border-b border-green-500 pb-[8px] ">
     {text}
