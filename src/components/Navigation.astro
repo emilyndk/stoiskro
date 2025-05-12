@@ -3,15 +3,13 @@ import Link from "./Link.astro";
 import Button from "./Button.astro";
 ---
 
-<section class="grid grid-cols-grid-mobil mx-margin-mobil gap-m fixed z-50 w-full lg:grid-cols-grid-desktop lg:gap-gap-desktop lg:mx-margin-desktop">
-  <header
-    class="col-start-1 col-span-11 flex flex-row justify-between items-center z-50  pt-[32px]"
-  >
-   <a href="/"> 
+<div class="pt-[32px] grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
+ 
+   <a class="col-start-1 col-span-1 lg:col-span-2" href="/"> 
     <img
       id="logo"
       class="lg:hidden"
-      src="/img/logo-default.svg"
+      src="/img/logo-default-m.svg"
       alt="Stoisk Ro logo"
     />
 
@@ -24,7 +22,7 @@ import Button from "./Button.astro";
 
 </a>
 
-    <div class="" id="burger-toggle">
+    <div class="col-start-12" id="burger-toggle">
       <img
         id="icon-open"
         class="cursor-pointer lg:w-[40px] hover:opacity-40 transition-opacity ease-in-out duration-500"
@@ -39,8 +37,9 @@ import Button from "./Button.astro";
         alt="Luk menu ikon"
       />
     </div>
-  </header>
-</section>
+
+  </div>
+
 
 <div
   id="overlay-m"
