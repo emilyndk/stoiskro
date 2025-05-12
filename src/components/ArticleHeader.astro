@@ -1,0 +1,10 @@
+---
+const {
+  heading = "D.23/5-25",
+  imageSrc = "/img/stoisk3.webp",
+  imageAlt = "buste i sort hvid",
+} = Astro.props;
+---
+ 
+ <h3 class="pb-spacebarm16 lg:pb-spacebar32 text-h3-mobil lg:text-h3-desktop text-green-500">{heading}</h3>
+  <img class="pb-spacebar32 lg:pb-0 w-full" src={imageSrc} alt={imageAlt} />

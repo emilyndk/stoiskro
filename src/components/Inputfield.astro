@@ -42,25 +42,26 @@ const variantStyles = {
 ---
 
 <div class="mb-4">
-    <label for={id} class={`${variantStyles[variant].label} ${sizeStyles[size].label}`}>
-      {label}
-      {required && <span class="text-red-500">*</span>}
-    </label>
-  
-    <input
-      id={id}
-      type={type}
-      placeholder={placeholder}
-      required={required}
-      class={`w-full border-0 border-b bg-transparent ${variantStyles[variant].input} ${sizeStyles[size].input} focus:outline-none focus:ring-0 focus:shadow-none`}
-    />
-  
-    {helpText && (
-      <p class={`mt-1 ${variantStyles[variant].helpText} ${sizeStyles[size].helpText}`}>
-        {helpText}
-      </p>
-    )}
-  </div>
+  <label for={id} class={`${variantStyles[variant].label} ${sizeStyles[size].label} pl-0`}>
+    {label}
+    {required && <span class="text-red-500">*</span>}
+  </label>
+
+  <input
+    id={id}
+    type={type}
+    placeholder={placeholder}
+    required={required}
+    class={`w-full border-0 border-b bg-transparent pl-0 text-left ${variantStyles[variant].input} ${sizeStyles[size].input} focus:outline-none focus:ring-0 focus:shadow-none`}
+  />
+
+  {helpText && (
+    <p class={`mt-1 ${variantStyles[variant].helpText} ${sizeStyles[size].helpText} pl-0`}>
+      {helpText}
+    </p>
+  )}
+</div>
+
   
   
 

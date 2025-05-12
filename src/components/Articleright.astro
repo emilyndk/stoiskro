@@ -1,0 +1,31 @@
+---
+import IconButton from "../components/Button.astro"
+const {
+  topText = "Øverste tekst",
+  bottomText = "Nederste tekst",
+  image1Src = "/img/stoisk1.webp",
+  image1Alt = "statue af filosof",
+  image2Src = "/img/stoisk2.webp",
+  image2Alt = "buste af filosof",
+} = Astro.props;
+---
+
+<div class="text-red-900">
+  <p class="pb-spacebarm16 lg:pb-spacebar32  text-right text-caption-mobil lg:text-caption-desktop">
+    {topText}
+  </p>
+
+  <div>
+    <img class="w-full pb-spacebar32 lg:pb-spacebard136" src={image1Src} alt={image1Alt} />
+    <img class=" pb-spacebarm16 w-full lg:pb-spacebar32" src={image2Src} alt={image2Alt} />
+  </div>
+
+  <p class=" pb-spacebarm16 lg:pb-0 text-right text-caption-mobil lg:text-caption-desktop">
+    {bottomText}
+  </p>
+
+   <!-- Mobil-knap -->
+   <div class="block lg:hidden">
+    <IconButton text="Tilbage" variant="secondary-right" size="small" href="/artikler" />
+  </div>
+</div>

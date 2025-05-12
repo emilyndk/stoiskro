@@ -1,8 +1,12 @@
 ---
-const { text } = Astro.props;
----
+const { text, color = "green" } = Astro.props;
 
-<div class="sm: mb-[16px] lg: mb-[32px]">
-<h2 class="sm:text-h2-mobile font-gloock uppercase lg:text-h2-desktop text-green-500">{text}
-</h2>
+const textColorClass = color === "beige"
+  ? "text-beige-500"
+  : "text-green-500"; // fallback til grøn
+---
+<div class="mb-[8px] lg:mb-[16px]">
+  <h2 class={`sm:text-h2-mobile font-gloock uppercase lg:text-h2-desktop ${textColorClass}`}>
+    {text}
+  </h2>
 </div>

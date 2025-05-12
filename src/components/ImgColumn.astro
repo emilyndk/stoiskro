@@ -1,0 +1,19 @@
+---
+import IconButton from "../components/Button.astro"
+
+const {
+  imageSrc = "/img/om1.webp",
+  imageAlt = "Standard billedebeskrivelse",
+} = Astro.props;
+---
+<img class="pb-spacebarm16 lg:pb-spacebar32" src={imageSrc} alt={imageAlt} class="w-full" />
+
+<div class="block lg:hidden">
+<IconButton text="Læs mere" variant="secondaryLeft" size="small">
+</IconButton>
+</div>
+
+<div class="hidden lg:block">
+<IconButton text="Læs mere" variant="secondaryLeft" size="large">
+</IconButton>
+</div>
