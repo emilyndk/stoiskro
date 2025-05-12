@@ -1,11 +1,113 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
-
+import Textbox from "../components/Textbox.astro";
+import Overskrift from "../components/Overskrift.astro";
+import Footer from "../components/Footer.astro"
+import IconButton from "../components/Button.astro"
+import ImageButton from "../components/ImgColumn.astro"
+import AccordionService from "../components/AccordionService.astro";
+import Forsamtale from "../components/Forsamtale.astro";
+import Articlecard from "../components/Articlecard.astro";
 ---
 
 <MainLayout  title="Stoisk Ro">
 
+  <section class="py-spacebarm64 lg:py-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64]gap-gap-mobil lg:gap-gap-desktop">
 
-
+    
+      <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
+        <Overskrift text="Hej, mit navn er Artjom" color="green" />
+    </div>
   
+    <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
+        
+      <Textbox subheader="jeg er samtaleteraput" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti. sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum." color="green" />
+  </div>
+
+
+    <div class="col-start-2 col-span-10 lg:col-start-9 lg:col-span-2">
+      <ImageButton
+      imageSrc="/img/artjom2.webp"
+      imageAlt="Artjom sidder i en stol"
+      />
+      </div>
+
+  </section>
+
+  <section class="py-spacebarm64 lg:py-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500 px-[16px] lg:px-[64]  gap-gap-mobil lg:gap-gap-desktop">
+    <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+      <Overskrift text="Terapi og forløb" color="beige" />
+      <Textbox subheader="lorem ipsum" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque." color="beige" />
+
+      <div class="lg:pt-spacebar32 hidden lg:block">
+        <IconButton text="Læs mere" variant="secondary-negative" size="large" href="/terapi" />
+      </div>
+    
+      </div>
+      <div class="pt-spacebar32 lg:pt-0 col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
+    <AccordionService></AccordionService>
+    <div class=" pt-spacebarm16 block lg:hidden">
+      <IconButton text="Læs mere" variant="secondary-negative" size="small" href="/terapi" />
+    </div>
+      </div>
+  
+  </section>
+
+  	<!-- forsamtale sat op i forhold til grid -->
+
+<section class="py-spacebar32 lg:py-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-beige-500 px-[16px] lg:px-[64]  gap-gap-mobil lg:gap-gap-desktop">
+	<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+	<Overskrift text="Passer kemien?" color="green" />
+</div>
+		<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+		<Textbox subheader="Gratis forsamtale" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque." color="green" />
+	</div>
+	<div class="pt-16 lg:pt-0 col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
+     <Forsamtale></Forsamtale>
+	</div>
+	
+</section>	 
+
+<section class="pb-spacebar32 lg:pb-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-beige-500 px-[16px] lg:px-[64]  gap-gap-mobil lg:gap-gap-desktop">
+  <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
+    <Overskrift text="Nyeste artikler" color="green" />
+  </div>
+  <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-3">
+    <Textbox subheader="lorem ipsum" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque." color="green" />
+
+    <div class="lg:pt-spacebar32 hidden lg:block">
+      <IconButton text="Gå til artikler" variant="secondaryLeft" size="large" href="/artikler" />
+    </div>
+    </div>
+
+    <div class="flex gap-2 col-start-2 col-span-10 lg:col-start-7 lg:col-span-4">
+
+    <Articlecard
+    url="/"
+    imgSrc="/img/selvvaerd.svg"
+    alt="Illustration"
+    h4="Selvvard"
+    text="Jorem ipsum dolor sit amet, consectetur adipiscing elitjj jbkbklklknn. "
+    btnurl="/"
+    />
+    <Articlecard
+    url="/"
+    imgSrc="/img/selvvaerd.svg"
+    alt="Illustration"
+    h4="Selvvard"
+    text="Jorem ipsum dolor sit amet, consectetur adipiscing elitjj jbkbklklknn. "
+    btnurl="/"
+  />
+  
+  </div>
+
+
+</section>
+
+<section class="bg-green-500 py-spacebarm64 lg:py-spacebard136">
+
+  <Footer></Footer>
+
+  </section>
+
 </MainLayout>
