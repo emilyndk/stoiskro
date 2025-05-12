@@ -14,7 +14,7 @@ const {
 
 <!-- Accordion-knap -->
 <button
-  class={`accordion w-full p-4 text-left border-t border-t-green-500 flex items-center justify-between focus:outline-none
+  class={`accordion2 w-full p-4 text-left border-t border-t-green-500 flex items-center justify-between focus:outline-none
     ${variant === 'primary'
       ? 'text-green-500 text-h2-mobil uppercase font-gloock lg:text-h2-desktop bg-transparent pl-0'
       : 'text-green-500 text-h2-mobil font-gloock uppercase lg:text-h2-desktop bg-transparent pl-0'}
@@ -49,10 +49,10 @@ const {
         {leftText2}
       </p>
       <div class="block lg:hidden justify-self-end">
-      <IconButton text={buttonText2} variant="primary" size="small" />
+      <IconButton text={buttonText2} variant="primary" size="small" href="/priser" />
     </div>
     <div class="hidden lg:inline-block justify-self-end">
-        <IconButton text={buttonText2} variant="primary" size="large" />
+        <IconButton text={buttonText2} variant="primary" size="large" href="/priser" />
       </div>
     </div>
 
