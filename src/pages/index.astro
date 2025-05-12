@@ -1,170 +1,139 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 import Articlecard from "../components/Articlecard.astro";
 
 import IconButton from "../components/Button.astro";
-import Kontaktform from '../components/Kontaktform.astro';
-import Forsamtale from "../components/Forsamtale.astro"
+import Kontaktform from "../components/Kontaktform.astro";
+import Forsamtale from "../components/Forsamtale.astro";
 
-import Inputfield from '../components/Inputfield.astro';
+import Inputfield from "../components/Inputfield.astro";
 import Overskrift from "../components/Overskrift.astro";
 import TextDot from "../components/TextDot.astro";
 import Textbox from "../components/Textbox.astro";
 
 import PriceList from "../components/PriceList.astro";
-import AccordionService from "../components/AccordionService.astro"
-
+import AccordionService from "../components/AccordionService.astro";
+import Header from "../components/Header.astro";
 ---
 
 <MainLayout title="Stoisk Ro">
-	<section id="nyeste-artikler" class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
-
-        <div class="col-start-2 col-span-10">
-            <Overskrift text="nyeste artikler"></Overskrift>
-            <div class="flex flex-col items-start gap-[16px] lg:gap-[32px] ">
-                <Textbox subheader="lorem ipsum"></Textbox>
-<div class="flex flex-col items-start justify-start">
-    <Articlecard
-  url="/"
-  imgSrc="/img/selvvaerd.svg"
-  alt="Illustration"
-  h4="Selvvard"
-  text="Jorem ipsum dolor sit amet, consectetur adipiscing elitjj jbkbklklknn. "
-  btnurl="/"
-/>
-<Articlecard
-  url="/"
-  imgSrc="/img/selvvaerd.svg"
-  alt="Illustration"
-  h4="Selvvard"
-  text="Jorem ipsum dolor sit amet, consectetur adipiscing elitjj jbkbklklknn. "
-  btnurl="/"
-/>
-</div>
-
-            
-            </div>
-           
-            </div>
-
-    </section>
-   
-    <section
-    class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop"
+  <section
+    id="index-header"
+    class="h-screen grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop"
+  >
+    <div
+      class="col-start-2 col-span-full lg:col-span-9 lg:col-start-2 flex flex-col gap-[64px] items-start justify-start"
     >
-    <div class="col-start-2 col-span-10">
-        
-    <Overskrift text="jeg kan hjælpe"></Overskrift>
-  
+      <img class="lg:hidden" src="/img/index-header-m.svg" alt="Header" />
+      <img class="hidden lg:block" src="/img/index-header.svg" alt="Header" />
 
-        <div class="flex flex-col items-start gap-[16px] lg:gap-[32px] ">
-        <h6
-            class="font-dmsans text-h7-mobil lg:text-h7-desktop text-green-500 uppercase"
-        >
-            med problematikker indenfor
-        </h6>
-        <div class="flex flex-row justify-between lg:w-full items-start">
-        <div class="flex flex-wrap gap-[8px] max-w-[179px] lg:max-w-[500px]">
-        <TextDot input="depression"></TextDot>
-        <TextDot input="angst"></TextDot>
-        <TextDot input="ptsd"></TextDot>
-        <TextDot input="parforhold"></TextDot>
-        <TextDot input="traume"></TextDot>
-        <TextDot input="selvvard"></TextDot>
-        <TextDot input="vrede"></TextDot>
-        <TextDot input="livskrise"></TextDot>
-        <TextDot input="stress"></TextDot>
-        <TextDot input="ledelse"></TextDot>
-        </div>
-    <img class="lg:hidden" src="/img/stress.svg" alt="Stress Illustration">
-    <img class="hidden lg:block" src="/img/stress-d.svg" alt="Stress Illustration">
-
-        </div>
-        </div>
+     
     </div>
-    </section>
 
+    <div class="flex col-start-2 col-span-6 gap-[32px] flex-col items-start justify-start">
+        <Textbox
+          text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulput ate libero et velit interdum, ac aliquet odio mattis. "
+        />
+        <div class="lg:hidden">
+          <Button
+            variant="primary"
+            text="kontakt"
+            size="small"
+            href="/priser"
+          />
+        </div>
+        <div class="hidden lg:block">
+          <Button
+            variant="primary"
+            text="kontakt"
+            size="large"
+            href="/priser"
+          />
+        </div>
+      </div>
+<img class="col-start-8 col-span-10" src="/img/om-header-illustration.svg" alt="Illustration">
 
+  </section>
 
+  <Header h1="Om stoisk ro" imgSrc="/img/om-header-illustration.svg" />
 
-	<h1 class="text-h1-mobil uppercase lg:font-gloock font-bold text-green-500">DM sans</h1>
-	<h1 class="font-gloock">Gloock</h1>
-	<p class="text-p-desktop">P desktop style</p>
+  <h1 class="text-h1-mobil uppercase lg:font-gloock font-bold text-green-500">
+    DM sans
+  </h1>
+  <h1 class="font-gloock">Gloock</h1>
+  <p class="text-p-desktop">P desktop style</p>
 
-	<!-- Skriv her hvilken variant og størrelse du skal bruge ex. primary large -->
+  <!-- Skriv her hvilken variant og størrelse du skal bruge ex. primary large -->
 
-	<IconButton text="Send" variant="primary" size="large">
-    </IconButton>
+  <IconButton text="Send" variant="primary" size="large" />
 
-	<!-- Kontaktform sat op i forhold til grid -->
+  <!-- Kontaktform sat op i forhold til grid -->
 
-<section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500">
-
+  <section
+    class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500"
+  >
     <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6">
-     <Kontaktform></Kontaktform>
-	</div>
-</section>
+      <Kontaktform />
+    </div>
+  </section>
 
-	<!-- forsamtale sat op i forhold til grid -->
+  <!-- forsamtale sat op i forhold til grid -->
 
-<section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-beige-500">
-
+  <section
+    class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-beige-500"
+  >
     <div class="col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
-     <Forsamtale></Forsamtale>
-	</div>
-</section>	 
+      <Forsamtale />
+    </div>
+  </section>
 
+  <Overskrift text="Mit navn er Artjom" />
+  <Textbox
+    subheader="jeg er samtaleterapeut"
+    text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti "
+  />
+  <PriceList
+    title="parterapi"
+    text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "
+    time="55 min"
+    price="1000 kr."
+  />
+  <form class="max-w-sm">
+    <Inputfield
+      id="navn"
+      label="Navn"
+      placeholder="Hanne Hansen"
+      helpText="Her må du gerne skrive dit fulde navn"
+      variant="primary"
+      size="large"
+    />
 
-	<Overskrift text="Mit navn er Artjom"></Overskrift>
-	<Textbox subheader="jeg er samtaleterapeut" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti "></Textbox>
-<PriceList title="parterapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit " time="55 min" price="1000 kr.">
-</PriceList>
-	<form class="max-w-sm">
-		<Inputfield 
-		id="navn"
-		label="Navn"
-		placeholder="Hanne Hansen"
-		helpText="Her må du gerne skrive dit fulde navn"
-		variant="primary"
-		size="large"
-		/>
-	  
-		<Inputfield 
-		id="tlf"
-		label="Telefon"
-		placeholder="22334455"
-		helpText="Her skriver du det nummer du vil ringes op på"
-		variant="secondary"
-		size="small"
-		/>
-	<Textbox subheader="jeg er samtaleterapeut"></Textbox>
-<!-- <UnderoverskriftText 
+    <Inputfield
+      id="tlf"
+      label="Telefon"
+      placeholder="22334455"
+      helpText="Her skriver du det nummer du vil ringes op på"
+      variant="secondary"
+      size="small"
+    />
+    <Textbox subheader="jeg er samtaleterapeut" />
+    <!-- <UnderoverskriftText 
 	underoverskrift="jeg er samtaleterapeut" 
 	text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti 
 sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum."></UnderoverskriftText>  -->
 
+    <section
+      class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500"
+    >
+      <div class="col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
+        <AccordionService />
+      </div>
+    </section>
 
-<section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500">
-<div class="col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
-	<AccordionService>
-
-</AccordionService>
-</div>
-</section>
-
-  
-
-
-
-<a href="/test"> tets </a>
-
-
+    <a href="/test"> tets </a>
+  </form>
 </MainLayout>
-
-
-  
-  

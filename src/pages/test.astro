@@ -14,6 +14,7 @@ import Inputfield from "../components/Inputfield.astro";
 import Overskrift from "../components/Overskrift.astro";
 import Textbox from "../components/Textbox.astro";
 import TextDot from "../components/TextDot.astro";
+import Header from "../components/Header.astro"
 ---
 
 <MainLayout>
@@ -26,62 +27,80 @@ import TextDot from "../components/TextDot.astro";
     btnurl="/"
   />
 
-  <section
-    id="jeg-kan-hjalpe"
-    class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop"
-  >
-    <div class="col-start-2 col-span-10">
-      <Overskrift text="jeg kan hjælpe" />
+  <section id="jeg-kan-hjalpe" class="grid  grid-cols-grid-mobil mx-margin-mobil lg:mx-margin-desktop lg:grid-cols-grid-desktop gap-gap-mobil lg:gap-gap-desktop">
+ 
+<div class="col-start-2 col-span-full lg:col-start-3">
+    <Overskrift text="jeg kan hjælpe" />
+</div>
 
-      <div class="flex flex-col items-start gap-[16px] lg:gap-[32px]">
-        <h6
-          class="font-dmsans text-h7-mobil lg:text-h7-desktop text-green-500 uppercase"
-        >
-          med problematikker indenfor
-        </h6>
-        <div class="flex flex-row justify-between lg:w-full items-start">
-          <div class="flex flex-wrap gap-[8px] max-w-[179px] lg:max-w-[500px]">
-            <TextDot input="depression" />
-            <TextDot input="angst" />
-            <TextDot input="ptsd" />
-            <TextDot input="parforhold" />
-            <TextDot input="traume" />
-            <TextDot input="selvvard" />
-            <TextDot input="vrede" />
-            <TextDot input="livskrise" />
-            <TextDot input="stress" />
-            <TextDot input="ledelse" />
-          </div>
-          <img
-            class="lg:hidden"
-            src="/img/stress.svg"
-            alt="Stress Illustration"
-          />
-          <img
-            class="hidden lg:block"
-            src="/img/stress-d.svg"
-            alt="Stress Illustration"
-          />
+<div class="col-start-2 col-span-6 lg:col-span-6 lg:col-start-3">
+<Textbox subheader="med problematikker indenfor" />
+
+</div>
+<div class="col-start-2 col-span-6 lg:col-span-6 lg:col-start-3">
+       <div class="flex flex-wrap gap-[8px] ">
+          <TextDot input="depression" />
+          <TextDot input="angst" />
+          <TextDot input="ptsd" />
+          <TextDot input="parforhold" />
+          <TextDot input="traume" />
+          <TextDot input="selvvard" />
+          <TextDot input="vrede" />
+          <TextDot input="livskrise" />
+          <TextDot input="stress" />
+          <TextDot input="ledelse" />
         </div>
-      </div>
     </div>
+   
+
+      
+      <div class="col-start-8 col-span-10 lg:col-start-9">
+        <img
+          class="lg:hidden"
+          src="/img/stress.svg"
+          alt="Stress Illustration"
+        />
+        <img
+          class="hidden lg:block"
+          src="/img/stress-d.svg"
+          alt="Stress Illustration"
+        />
+      </div>
+    
   </section>
 
   <section
     id="nyeste-artikler"
-    class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop"
+    class=""
   >
-    <div class="col-start-2 col-span-10">
-      <Overskrift text="nyeste artikler" />
-      
-      <div class="flex flex-col lg:flex-row items-start gap-[16px] lg:gap-[32px] lg:justify-between">
-       <div class="flex flex-col items-start gap-[32px] justify-start lg:max-w-[400px]"> 
-        <Textbox subheader="lorem ipsum" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. " />
-        <div class="hidden lg:block">
-            <Button text="se alle" size="large" variant="secondaryLeft" href="/" />
+<div class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
+  <div class="col-start-2 lg:col-start-3 col-span-10">
+    <Overskrift text="nyeste artikler" />
+  </div>
+</div>
+
+
+<div class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
+        <div
+          class="col-start-2 lg:col-start-3 col-span-11 lg:col-span-5 flex flex-col items-start gap-[32px] justify-start"
+        >
+          <Textbox
+            subheader="lorem ipsum"
+            text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. "
+          />
+          <div class="hidden lg:block">
+            <Button
+              text="se alle"
+              size="large"
+              variant="secondaryLeft"
+              href="/"
+            />
+          </div>
         </div>
-    </div>
-        <div class="flex flex-col lg:flex-row lg:gap-[8px] items-start justify-start">
+
+        <div
+          class="col-start-2 lg:col-start-7 col-span-9 flex flex-col lg:flex-row lg:gap-[8px] items-start justify-start"
+        >
           <Articlecard
             url="/"
             imgSrc="/img/selvvaerd.svg"
@@ -99,10 +118,54 @@ import TextDot from "../components/TextDot.astro";
             btnurl="/"
           />
         </div>
-<div class="lg:hidden">
-        <Button text="se alle" size="small" variant="secondaryLeft" href="/" />
+        <div class="lg:hidden col-start-2 col-span-full">
+          <Button
+            text="se alle"
+            size="small"
+            variant="secondaryLeft"
+            href="/"
+          />
+        </div>
     </div>
+   
+  </section>
+
+
+  <section
+  id="index-header"
+  class="h-screen grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop"
+>
+  <div
+    class="col-start-2 col-span-full lg:col-span-9 lg:col-start-2 flex flex-col gap-[64px] items-start justify-start"
+  >
+    <img class="lg:hidden" src="/img/index-header-m.svg" alt="Header" />
+    <img class="hidden lg:block" src="/img/index-header.svg" alt="Header" />
+
+   
+  </div>
+
+  <div class="flex col-start-2 col-span-6 gap-[32px] flex-col items-start justify-start">
+      <Textbox
+        text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulput ate libero et velit interdum, ac aliquet odio mattis. "
+      />
+      <div class="lg:hidden">
+        <Button
+          variant="primary"
+          text="kontakt"
+          size="small"
+          href="/priser"
+        />
+      </div>
+      <div class="hidden lg:block">
+        <Button
+          variant="primary"
+          text="kontakt"
+          size="large"
+          href="/priser"
+        />
       </div>
     </div>
-  </section>
+<img class="col-start-8 col-span-10" src="/img/om-header-illustration.svg" alt="Illustration">
+
+</section>
 </MainLayout>
