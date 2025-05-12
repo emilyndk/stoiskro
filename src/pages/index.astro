@@ -14,16 +14,26 @@ import Inputfield from '../components/Inputfield.astro';
 import Overskrift from "../components/Overskrift.astro";
 import TextDot from "../components/TextDot.astro";
 import Textbox from "../components/Textbox.astro";
-
-import PriceList from "../components/PriceList.astro";
 import AccordionService from "../components/AccordionService.astro"
+<<<<<<< HEAD
 import HeaderRegular from "../components/HeaderRegular.astro";
+=======
+import AccordionTerapi from "../components/AccordionTerapi.astro"
+import AccordionVirksomhed from "../components/AccordionVirksomhed.astro";
+import PriceList from "../components/PriceList.astro";
+
+
+>>>>>>> master
 
 ---
 
 <MainLayout title="Stoisk Ro">
+<<<<<<< HEAD
 <HeaderRegular title="Om stoisk ro"></HeaderRegular>
 	<section id="nyeste-artikler" class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
+=======
+<section id="nyeste-artikler" class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
+>>>>>>> master
 
         <div class="col-start-2 col-span-10">
             <Overskrift text="nyeste artikler"></Overskrift>
@@ -54,6 +64,15 @@ import HeaderRegular from "../components/HeaderRegular.astro";
             </div>
 
     </section>
+
+
+
+
+
+
+
+
+	</section>
    
     <section
     class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop"
@@ -90,13 +109,6 @@ import HeaderRegular from "../components/HeaderRegular.astro";
     </div>
     </section>
 
-
-
-
-	<h1 class="text-h1-mobil uppercase lg:font-gloock font-bold text-green-500">DM sans</h1>
-	<h1 class="font-gloock">Gloock</h1>
-	<p class="text-p-desktop">P desktop style</p>
-
 	<!-- Skriv her hvilken variant og størrelse du skal bruge ex. primary large -->
 
 	<IconButton text="Send" variant="primary" size="large">
@@ -104,8 +116,20 @@ import HeaderRegular from "../components/HeaderRegular.astro";
 
 	<!-- Kontaktform sat op i forhold til grid -->
 
-<section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500">
-
+<section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500 px-[16px] lg:px-[64]  gap-gap-mobil lg:gap-gap-desktop">
+	<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+		<Overskrift text="Kontakt mig" color="beige" />
+	</div>
+			<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3">
+			<Textbox subheader="" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque." color="beige" />
+			
+			<div class="pb-[32px] pt-[32px] lg:pb-0 text-beige-500 font-dmsans text-caption-mobil lg:text-caption-desktop">
+			<p>Mulighedsvej 45</p>
+			<p>2300 København S</p>
+			<p>+45 45454545</p>
+			<p>johndoe@gmail.com</p>
+		    </div>
+		</div>
     <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6">
      <Kontaktform></Kontaktform>
 	</div>
@@ -113,36 +137,26 @@ import HeaderRegular from "../components/HeaderRegular.astro";
 
 	<!-- forsamtale sat op i forhold til grid -->
 
-<section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-beige-500">
-
-    <div class="col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
+<section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-beige-500 px-[16px] lg:px-[64]  gap-gap-mobil lg:gap-gap-desktop">
+	<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+	<Overskrift text="Passer kemien?" color="green" />
+</div>
+		<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+		<Textbox subheader="lorem ipsum" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque." color="green" />
+	</div>
+	<div class="pt-16 lg:pt-0 col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
      <Forsamtale></Forsamtale>
 	</div>
+	
 </section>	 
 
 
-	<Overskrift text="Mit navn er Artjom"></Overskrift>
+<Overskrift text="Min overskrift" color="beige" />
+
 	<Textbox subheader="jeg er samtaleterapeut" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti "></Textbox>
 <PriceList title="parterapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit " time="55 min" price="1000 kr.">
 </PriceList>
-	<form class="max-w-sm">
-		<Inputfield 
-		id="navn"
-		label="Navn"
-		placeholder="Hanne Hansen"
-		helpText="Her må du gerne skrive dit fulde navn"
-		variant="primary"
-		size="large"
-		/>
-	  
-		<Inputfield 
-		id="tlf"
-		label="Telefon"
-		placeholder="22334455"
-		helpText="Her skriver du det nummer du vil ringes op på"
-		variant="secondary"
-		size="small"
-		/>
+
 	<Textbox subheader="jeg er samtaleterapeut"></Textbox>
 <!-- <UnderoverskriftText 
 	underoverskrift="jeg er samtaleterapeut" 
@@ -150,17 +164,42 @@ import HeaderRegular from "../components/HeaderRegular.astro";
 sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum."></UnderoverskriftText>  -->
 
 
-<section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500">
-<div class="col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
-	<AccordionService>
+<section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500 px-[16px] lg:px-[64]  gap-gap-mobil lg:gap-gap-desktop">
+	<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+		<Overskrift text="Terapi og forløb" color="beige" />
+		<Textbox subheader="lorem ipsum" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque." color="beige" />
 
-</AccordionService>
-</div>
+    </div>
+    <div class="pt-spacebar32 lg:pt-0 col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
+	<AccordionService></AccordionService>
+    </div>
+
 </section>
 
-  
 
+<section class="lg:pt-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64]  gap-gap-mobil lg:gap-gap-desktop">
 
+<div class="col-start-2 col-span-10">
+
+<AccordionVirksomhed></AccordionVirksomhed>
+
+</div>
+
+</section>
+
+<section class="lg:pt-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64]  gap-gap-mobil lg:gap-gap-desktop">
+
+	<div>
+
+	</div>
+
+	<div class="col-start-2 col-span-10">
+	
+	<AccordionTerapi></AccordionTerapi>
+	
+	</div>
+	
+</section>
 
 <a href="/test"> tets </a>
 
