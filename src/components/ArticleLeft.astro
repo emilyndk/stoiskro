@@ -9,14 +9,9 @@ import IconButton from "../components/Button.astro";
     <slot />
   </p>
 
-  <!-- Mobil-knap -->
-  <div class="block lg:hidden">
-    <IconButton text="Tilbage" variant="secondary-right" size="small" />
-  </div>
-
   <!-- Desktop-knap -->
   <div class="hidden lg:block">
-    <IconButton text="Tilbage" variant="secondary-right" size="large" />
+    <IconButton text="Tilbage" variant="secondary-right" size="large"  href="/artikler" />
   </div>
 </section>
 

@@ -1,4 +1,5 @@
 ---
+import IconButton from "../components/Button.astro"
 const {
   topText = "Øverste tekst",
   bottomText = "Nederste tekst",
@@ -10,16 +11,21 @@ const {
 ---
 
 <div class="text-red-900">
-  <p class="text-right text-caption-mobil lg:text-caption-desktop lg:pb-spacebard136">
+  <p class="pb-spacebarm16 lg:pb-spacebar32  text-right text-caption-mobil lg:text-caption-desktop">
     {topText}
   </p>
 
   <div>
-    <img class="w-full lg:pb-spacebard136" src={image1Src} alt={image1Alt} />
-    <img class="w-full lg:pb-spacebard136" src={image2Src} alt={image2Alt} />
+    <img class="w-full pb-spacebar32 lg:pb-spacebard136" src={image1Src} alt={image1Alt} />
+    <img class=" pb-spacebarm16 w-full lg:pb-spacebar32" src={image2Src} alt={image2Alt} />
   </div>
 
-  <p class="text-right text-caption-mobil lg:text-caption-desktop">
+  <p class=" pb-spacebarm16 lg:pb-0 text-right text-caption-mobil lg:text-caption-desktop">
     {bottomText}
   </p>
+
+   <!-- Mobil-knap -->
+   <div class="block lg:hidden">
+    <IconButton text="Tilbage" variant="secondary-right" size="small" href="/artikler" />
+  </div>
 </div>
