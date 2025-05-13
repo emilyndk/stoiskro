@@ -50,7 +50,9 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
   
     <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5 pb-spacebar32 lg:pb-0">
         
-      <Textbox subheader="Jeg er samtaleteraput" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti. sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum." color="green" />
+      <Textbox subheader="Jeg er samtaleteraput" color="green">
+        <p>Skab ro, fokus og handlekraft i en travl hverdag. Med afsæt i stoisk tænkning og praktiske værktøjer hjælper disse forløb medarbejdere og teams med at forebygge stress, træffe bedre beslutninger og håndtere følelser med overblik og styrke. Forløbene tilbydes i forskellige formater, så I kan vælge den pakke, der passer bedst til jeres virksomhed og behov.</p>
+    </Textbox>
   </div>
 
 
@@ -68,7 +70,11 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
       <Overskrift text="Terapi og forløb" color="beige" />
     </div>
     <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
-      <Textbox subheader="lorem ipsum" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque." color="beige" />
+      <Textbox subheader="Filosofisk samtaleterapi & Kognitiv adfærdsterapi" color="beige">
+        <p class="text-beige-500">Stoisk Ro kombinerer stoisk filosofi med kognitiv adfærdsterapi (CBT og REBT) for at hjælpe dig med at opnå sindsro, klarhed og bedre håndtering af tanker og følelser. <br> <br> Udgangspunktet er, at det ikke er selve begivenhederne, der skaber lidelse – men hvordan vi opfatter dem.
+          Gennem samtale, psykoedukation og konkrete øvelser får du redskaber til at håndtere bl.a. stress, angst, vrede og lavt selvværd – og til at leve et mere balanceret og meningsfuldt liv.
+          Læs mere om de enkelte terapiformer og hvordan de kan hjælpe dig.</p>
+    </Textbox>
 
       <div class="lg:pt-spacebar32 hidden lg:block">
         <IconButton text="Læs mere" variant="secondary-negative" size="large" href="/terapi" />
@@ -89,7 +95,9 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
 
     <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5"><Overskrift text="Jeg kan hjælpe"></Overskrift></div>
     <div class="col-start-2 col-span-6 lg:col-start-3 lg:col-span-4">
-    <Textbox subheader="Med problematikker indenfor:"></Textbox>
+      <Textbox subheader="Med problematikker indenfor" color="green">
+        
+    </Textbox>
     <div class="">
    <YdelserSamlet></YdelserSamlet>
   </div>
@@ -112,7 +120,11 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
 	<Overskrift text="Passer kemien?" color="green" />
 </div>
 		<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
-		<Textbox subheader="Gratis forsamtale" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque." color="green" />
+      <Textbox subheader="Gratis forsamtale" color="green">
+        <p>Du har mulighed for at booke en gratis og uforpligtende telefonisk samtale, hvor vi kort taler om dine behov, ønsker og de udfordringer, du står med. <br> <br>
+          Samtalen giver dig indblik i, hvordan jeg arbejder, og hvad du kan forvente af et forløb. <br>  Skriv via formularen og jeg ringer dig op for at aftale nærmere. </p> <br>
+      
+    </Textbox>
 	</div>
 	<div class="pt-16 lg:pt-0 col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
      <Forsamtale></Forsamtale>
@@ -125,7 +137,9 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
     <Overskrift text="Nyeste artikler" color="green" />
   </div>
   <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-3 pb-spacebar32 lg:pb-0 ">
-    <Textbox subheader="lorem ipsum" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque." color="green" />
+    <Textbox subheader="Læs seneste indlæg" color="green">
+      <p>Opdag de nyeste artikler om mental sundhed, filosofi og personlig udvikling – direkte på forsiden. Få indsigter og praktiske værktøjer til at styrke din trivsel og livskvalitet.</p>
+  </Textbox>
 
     <div class="lg:pt-spacebar32 hidden lg:block">
       <IconButton text="Gå til artikler" variant="secondaryLeft" size="large" href="/artikler" />

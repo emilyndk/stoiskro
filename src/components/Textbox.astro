@@ -1,15 +1,17 @@
 ---
+// TextSection.astro
 const {
   subheader,
-  text,
   color = "green", // "green" eller "beige"
 } = Astro.props;
 
-// Dynamiske farveklasser
 const headerColor = color === "beige" ? "text-beige-500" : "text-green-500";
 const textColor = color === "beige" ? "text-beige-500" : "text-red-900";
 ---
-<div class="">
+<div>
   <h3 class={`text-h3-mobil lg:text-h3-desktop pb-spacebarm16 ${headerColor}`}>{subheader}</h3>
-  <p class={`sm:text-p-regular-mobil lg:text-p-regular-desktop ${textColor}`}>{text}</p>
+  <div class={`sm:text-p-small-mobil lg:text-p-small-desktop text-red-500 ${textColor}`}>
+    <slot />
+  </div>
 </div>
+
