@@ -16,18 +16,18 @@ import PriceList from "../components/PriceList.astro"
 
 
 
-<section id="priser" class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop py-[64px] lg:py[136px]">
+<section id="priser" class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px] lg:py[136px]">
 
- <div class="col-start-2 col-span-10 lg:col-start-2"><Overskrift text="priser"></Overskrift></div>
- <div>
-    <PriceList price="1000kr" title="individuel terapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "></PriceList>
-    <PriceList price="1000kr" title="individuel terapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "></PriceList>
-    <PriceList price="1000kr" title="individuel terapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "></PriceList>
-    <PriceList price="1000kr" title="individuel terapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "></PriceList>
+ <div class="col-start-2 col-span-10"><Overskrift text="priser"></Overskrift></div>
+
+ <div class="col-start-2 col-span-10">
+    <PriceList time="50min" price="1000kr" title="individuel terapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "></PriceList>
+    <PriceList time="50min" price="1000kr" title="individuel terapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "></PriceList>
+    <PriceList time="50min" price="1000kr" title="individuel terapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "></PriceList>
+    <PriceList time="50min" price="1000kr" title="individuel terapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "></PriceList>
  </div>
 
 </section>
-
 
 
 
@@ -54,7 +54,7 @@ import PriceList from "../components/PriceList.astro"
 
 
 <section id="find-vej" class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop py-[64px] lg:py[136px]">
-<div class="col-start-2 col-span-10 lg:col-start-3"><Overskrift text="find vej"></Overskrift></div>
+<div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-10"><Overskrift text="find vej"></Overskrift></div>
 
 <iframe 
   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.888642551422!2d12.568337615927676!3d55.676096980533454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46525308941f4e81%3A0x400f7d1c6975850!2sK%C3%B8benhavn!5e0!3m2!1sen!2sdk!4v1680000000000" 
