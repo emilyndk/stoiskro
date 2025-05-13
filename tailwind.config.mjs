@@ -6,6 +6,22 @@ export default {
 
   theme: {
     extend: {
+
+      keyframes: {
+        'slide-in-mobile': {
+          '0%': { transform: 'translateY(-50%) translateX(200%)' },
+          '100%': { transform: 'translateY(-50%) translateX(-70px)' },
+        },
+        'slide-in-desktop': {
+          '0%': { transform: 'translateY(-50%) translateX(200%)' },
+          '100%': { transform: 'translateY(-50%) translateX(-270px)' },
+        },
+      },
+      animation: {
+        'slide-in-mobile': 'slide-in-mobile 1.5s ease-out forwards',
+        'slide-in-desktop': 'slide-in-desktop 1.5s ease-out forwards',
+      },
+
       colors: {
         transparent: "transparent",
         current: "currentColor",
@@ -69,7 +85,7 @@ export default {
           },
         ],
         "h2-mobil": [
-          "20px",
+          "30px",
           {
             fontWeight: "400",
             fontFamily: "gloock",
@@ -77,7 +93,7 @@ export default {
           },
         ],
         "h3-mobil": [
-          "15px",
+          "20px",
           {
             fontWeight: "400",
             fontFamily: "dmsans",
@@ -208,6 +224,15 @@ export default {
 
         // desktop fonte
 
+        "h1-display": [
+          "160px",
+          {
+            fontWeight: "400",
+            fontFamily: "gloock",
+            textTransform: "uppercase",
+          },
+        ],
+
         "h1-desktop": [
           "130px",
           {
@@ -225,11 +250,11 @@ export default {
           },
         ],
         "h3-desktop": [
-          "30px",
+          "32px",
           {
             fontWeight: "400",
             fontFamily: "dmsans",
-            textTransform: "uppercase",
+        
           },
         ],
         "h4-desktop": [

@@ -8,11 +8,40 @@ import ImageButton from "../components/ImgColumn.astro"
 import AccordionService from "../components/AccordionService.astro";
 import Forsamtale from "../components/Forsamtale.astro";
 import Articlecard from "../components/Articlecard.astro";
+import YdelserSamlet from "../components/YdelserSamlet.astro"
+import Image from "../components/Image.astro"
+import HeaderDisplay from "../components/HeaderDisplay.astro";
 ---
 
 <MainLayout  title="Stoisk Ro">
 
-  <section class="py-spacebarm64 lg:py-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64]gap-gap-mobil lg:gap-gap-desktop">
+  <section class=" grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px] gap-gap-mobil lg:gap-gap-desktop">
+<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-12">
+  <HeaderDisplay></HeaderDisplay>
+</div>
+
+<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+  <p class="text-p-regular-mobil lg:text-p-regular-desktop text-red-900 pb-spacebar32 ">Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulput ate libero et velit interdum, ac aliquet odio mattis. </p>
+   
+  <div class="block lg:hidden"> 
+    <IconButton text="Kontakt" variant="primary" size="small" href="/priser#kontakt" />
+  </div>
+
+  <div class="hidden lg:block"> 
+    <IconButton text="Kontakt" variant="primary" size="large" href="/priser#kontakt" />
+  </div>
+</div>
+
+<div class="col-start-7 col-span-4 lg:col-start-9 lg:col-span-2">
+  <Image
+  imageSrc="/img/headerline.svg"
+  imageAlt="Abstrakt figur med streg og cirkel"
+  />
+ </div>
+
+</section>
+
+  <section class="py-spacebarm64 lg:pb-spacebard136 lg:pt-spacebar32 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px] gap-gap-mobil lg:gap-gap-desktop">
 
     
       <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
@@ -21,7 +50,7 @@ import Articlecard from "../components/Articlecard.astro";
   
     <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
         
-      <Textbox subheader="jeg er samtaleteraput" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti. sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum." color="green" />
+      <Textbox subheader="Jeg er samtaleteraput" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti. sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum." color="green" />
   </div>
 
 
@@ -34,7 +63,7 @@ import Articlecard from "../components/Articlecard.astro";
 
   </section>
 
-  <section class="py-spacebarm64 lg:py-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500 px-[16px] lg:px-[64]  gap-gap-mobil lg:gap-gap-desktop">
+  <section class="py-spacebarm64 lg:py-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500 px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop">
     <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
       <Overskrift text="Terapi og forløb" color="beige" />
       <Textbox subheader="lorem ipsum" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque." color="beige" />
@@ -53,9 +82,30 @@ import Articlecard from "../components/Articlecard.astro";
   
   </section>
 
+
+  <section id="jeg-kan-hjalpe" class="pt-[32px] lg:pt-[136px] grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
+
+    <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5"><Overskrift text="Jeg kan hjælpe"></Overskrift></div>
+    <div class="col-start-2 col-span-6 lg:col-start-3 lg:col-span-4">
+    <Textbox subheader="Med problematikker indenfor:"></Textbox>
+    <div class="">
+   <YdelserSamlet></YdelserSamlet>
+  </div>
+  </div>
+
+    <div class=" col-start-8 col-span-5 lg:w-full lg:col-start-9 lg:col-span-2">
+   <Image
+   imageSrc="/img/ydelser-illustration.svg"
+   imageAlt="Abstrakt figur med meget i hovedet"
+   />
+  </div>
+    
+    
+    </section>
+
   	<!-- forsamtale sat op i forhold til grid -->
 
-<section class="py-spacebar32 lg:py-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-beige-500 px-[16px] lg:px-[64]  gap-gap-mobil lg:gap-gap-desktop">
+<section class="py-spacebar32 lg:py-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-beige-500 px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop">
 	<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
 	<Overskrift text="Passer kemien?" color="green" />
 </div>
@@ -68,7 +118,7 @@ import Articlecard from "../components/Articlecard.astro";
 	
 </section>	 
 
-<section class="pb-spacebar32 lg:pb-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-beige-500 px-[16px] lg:px-[64]  gap-gap-mobil lg:gap-gap-desktop">
+<section class="pb-spacebar32 lg:pb-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-beige-500 px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop">
   <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
     <Overskrift text="Nyeste artikler" color="green" />
   </div>
