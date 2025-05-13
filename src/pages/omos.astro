@@ -1,14 +1,145 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Overskrift from "../components/Overskrift.astro";
+import Header from "../components/Header.astro";
+import Button from "../components/Button.astro";
+import Textbox from "../components/Textbox.astro";
+import Image from "../components/Image.astro";
+import Inputfield from "../components/Inputfield.astro";
 ---
 
 <MainLayout title="Om stoisk ro">
 
-<section>
+<Header h1="om stoisk ro" imgSrc="/img/om-header-illustration.svg"></Header>
 
-    <Overskrift text="filosofisk samtaleterapi"></Overskrift>
+ <section class="py-spacebarm64 lg:py-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64]gap-gap-mobil lg:gap-gap-desktop">
+
+    
+      <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
+        <Overskrift text="Filosofisk samtaleterapi" color="green" />
+    </div>
+  
+    <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
+        
+      <Textbox subheader="Hvad er det?" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti. sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum." color="green" />
+  </div>
+
+
+    <div class="col-start-2 pt-[16px] lg:pt-0 col-span-10 lg:col-start-9 lg:col-span-2">
+      <Image
+      imageSrc="/img/books.webp"
+      imageAlt="Bøger"
+      />
+      </div>
+
+    <div class="lg:hidden col-start-2 col-span-5 pt-[16px]"> <Button text="Læs mere" size="small" variant="secondaryLeft" href="/artikler"></Button></div>
+     <div class="lg:block hidden pt-[32px]  col-start-9 col-span-2"> <Button text="Læs mere" size="large" variant="secondaryLeft" href="/artikler"></Button></div>
+
+  </section>
+
+
+
+
+
+
+
+  
+
+
+<section id="kontakt" class="bg-green-500 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px] py-[64px] lg:py[136px]">
+
+
+    <div class="col-start-2 col-span-10 lg:col-start-2"><Overskrift color="beige" text="min baggrund"></Overskrift></div>
+<div class="flex flex-col items-start justify-start gap-[32px] col-start-2 col-span-10 lg:col-start-2 lg:col-span-5"><Textbox color="beige" subheader="personlige rejse" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque."></Textbox>
+
+
+
+
+<Textbox color="beige" subheader="uddannelse" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti "></Textbox>
+</div>
+
+<img class="col-start-2 w-full col-span-10 lg:col-start-8 lg:col-span-4" src="/img/artjom-portrait.webp" alt="Artjom portrat">
+
+
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="passer-kemien" class="py-spacebarm64 lg:py-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64]gap-gap-mobil lg:gap-gap-desktop">
+
+    
+      <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
+        <Overskrift text="passer kemien?" color="green" />
+    </div>
+  
+    <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
+        
+      <Textbox subheader="dorem ipsum dollor" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque." color="green" />
+  </div>
+
+
+    <div class="col-start-2 pt-[16px] lg:pt-0 col-span-10 lg:col-start-9 lg:col-span-2">
+     <div class="lg:hidden"> <Inputfield  id = "input-id"
+  label = "Input"
+  helpText = ""
+  type = "text"
+  
+  placeholder = "Message"
+  variant = "primary"
+  size = "small">
+</Inputfield>
+
+ <Inputfield  id = "input-id"
+  label = "Telefon"
+  helpText = ""
+  type = "text"
+  
+  placeholder = "Skriv dit telefonnummer..."
+  variant = "primary"
+  size = "small">
+</Inputfield>
+
+
+</div>
+
+ <div class="lg:block hidden"> <Inputfield  id = "input-id"
+  label = "Input"
+  helpText = ""
+  type = "text"
+  
+  placeholder = "Message"
+  variant = "primary"
+  size = "large">
+</Inputfield>
+
+ <Inputfield  id = "input-id"
+  label = "Telefon"
+  helpText = ""
+  type = "text"
+  
+  placeholder = "Skriv dit telefonnummer..."
+  variant = "primary"
+  size = "large">
+</Inputfield>
+
+
+</div>
+      </div>
+
+<div class="lg:hidden col-start-8 col-span-4"><Button variant="primary" text="send" size="small" type="submit"></Button></div>
+      <div class="hidden lg:block col-start-10 col-span-1"><Button variant="primary" text="send" size="large" type="submit"></Button></div>
+
+    </section>
 
 
 </MainLayout>
