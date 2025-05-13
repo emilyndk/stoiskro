@@ -1,0 +1,111 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import ArticleLeft from "../components/ArticleLeft.astro"
+import ArticleRight from "../components/Articleright.astro"
+import ArticleHeader from "../components/ArticleHeader.astro";
+import Overskrift from "../components/Overskrift.astro";
+
+---
+
+<MainLayout title="Artikel Stoicisme">
+
+    	<!-- Article header åbning sat op i forhold til grid -->
+
+<section class="lg:pt-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64]  gap-gap-mobil lg:gap-gap-desktop">
+	<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+
+<Overskrift text="Stoicisme" color="green" />
+
+<ArticleHeader
+	heading="Dato"
+	imageSrc="/img/stoisk3.webp"
+	imageAlt="buste i sort hvid"
+	/>
+
+	</div>
+</section>
+
+	<!-- Full Article med to colonner sat op i forhold til grid -->
+
+    <section id="stoicisme" class="lg:py-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64]  gap-gap-mobil lg:gap-gap-desktop">
+        <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+            
+        
+        <ArticleLeft
+            title="Stoicisme som Terapi"
+            backHref="/artikler"
+          
+            headingIntro="En Filosofi til Psykisk Robusthed"
+            heading1="Hvad er stoicisme – og hvorfor som terapi?"
+            heading2="Stoicisme og moderne psykologi"
+            heading3="Centrale stoiske øvelser med terapeutisk effekt"
+            heading4="Hvordan kan stoicisme hjælpe med mentale udfordringer?"
+            headingConclusion="Konklusion"
+          >
+            <Fragment slot="intro">
+                I en tid, hvor mange søger psykologisk balance i en kaotisk verden, vinder en antik filosofi ny popularitet: stoicismen. Men stoicisme er ikke blot et filosofisk tankesæt – det kan også ses som en praktisk terapiform. Dens fokus på selvindsigt, følelsesmæssig regulering og værdibaseret handling gør den både relevant og anvendelig for moderne mennesker, der ønsker at styrke deres mentale sundhed.
+            </Fragment>
+          
+            <Fragment slot="section1">
+                Stoicismen blev udviklet i det antikke Grækenland og senere videreført af romerske tænkere som Seneca, Epiktet og Marcus Aurelius. Centralt i stoicismen er ideen om at skelne mellem det, vi kan kontrollere (vores tanker, handlinger, reaktioner), og det, vi ikke kan (andres adfærd, uheld, sygdom).
+
+                Som terapiform tilbyder stoicismen et indre anker: Den hjælper os med at håndtere modgang, kriser og følelsesmæssigt kaos ved at flytte opmærksomheden væk fra det ukontrollerbare – og hen imod det, vi faktisk kan gøre noget ved.
+            </Fragment>
+          
+            <Fragment slot="section2">
+                Flere af stoicismens teknikker har klare paralleller til moderne kognitive terapiformer, især kognitiv adfærdsterapi (CBT). Det er ikke en tilfældighed – en af grundlæggerne af CBT, Albert Ellis, var inspireret af stoikerne, især Epiktet, der sagde:
+                “Det er ikke tingene selv, der forstyrrer os, men vores vurderinger af dem.”
+                
+                CBT arbejder netop med at identificere og omstrukturere uhensigtsmæssige tanker. På samme måde foreslår stoicismen, at vi undersøger og korrigerer vores indre fortællinger – fx idéen om at “jeg ikke kan klare det her” – og erstatter dem med realistiske og konstruktive perspektiver.
+            </Fragment>
+          
+            <Fragment slot="section3">
+                <li class=" p-0 list-inside">Negativ visualisering:
+                Forestil dig, hvordan noget kunne gå galt – ikke for at bekymre dig, men for at blive mindre sårbar over for tab. Det skaber taknemmelighed og forberedelse, ikke frygt.</li>
+                
+                <li class="list-inside">Dikotomi af kontrol:
+                Spørg dig selv: “Er dette inden for min kontrol?” Hvis svaret er nej, så slip det. Dette kan dæmpe angst og give ro.</li>
+                
+                <li class="list-inside">Daglig refleksion:
+                Mange stoikere skrev dagbøger (bl.a. Marcus Aurelius). Refleksion over dagen, egne reaktioner og intentioner kan fremme selvindsigt og udvikling.</li>
+                
+                <li class="list-inside">Frivillig ubehag:
+                Ved bevidst at opsøge små ubehageligheder – f.eks. kulde, faste eller fysisk anstrengelse – træner man sit sind i at være robust og mindre afhængigt af komfort.</li>
+
+            </Fragment>
+          
+            <Fragment slot="section4">
+                Selvom stoicisme ikke er en erstatning for behandling af alvorlige psykiske lidelser, kan den fungere som et værdifuldt supplement for personer, der kæmper med:
+
+                <li class="list-inside">Angst og bekymring (ved at reducere behovet for kontrol)</li>
+            
+                <li class="list-inside">Lavt selvværd (ved at fokusere på egen indsats frem for ydre vurdering)</li>
+            
+                <li class="list-inside">Stress og overbelastning (ved at skabe indre struktur og afklare værdier)</li> <br>
+            
+            Den stoiske tilgang giver individet en følelse af indre agenthed – at man selv har magt til at vælge, hvordan man forholder sig til livets uundgåelige udfordringer.
+            </Fragment>
+          
+            <Fragment slot="conclusion">
+                Stoicismen er mere end gammel filosofi – det er et mentalt træningsprogram med terapeutisk værdi. Dens redskaber er tidløse og kræver ikke avanceret teori for at virke. Den stoiske vej handler ikke om at undgå følelser, men om at håndtere dem med ro, klarhed og værdighed. I en tid med konstant pres og forstyrrelse kan stoicismen være en stille, men stærk allieret.
+            </Fragment>
+        </ArticleLeft>
+        
+        
+        </div>	
+        
+        <div class="col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
+        
+        <ArticleRight
+          topText="Stoicisme lærer os at finde indre ro ved at fokusere på det, vi kan kontrollere, og acceptere det, vi ikke kan. Denne filosofi fremmer dyd, fornuft og disciplin som vejen til et harmonisk liv. En tidløs påmindelse om styrken i sindets kontrol."
+          bottomText="Stoicisme opstod i det 3. århundrede f.Kr. med Zeno fra Kition og har siden formet vestlig filosofi. Den lærer os at leve i overensstemmelse med naturen, fokusere på det, vi kan kontrollere, og acceptere livets uundgåelige udfordringer med ro. En filosofi, der stadig inspirerer i dag."
+          image1Src="/img/stoisk2.webp"
+          image1Alt="Billede af buste i sten"
+          image2Src="/img/stoisk1.webp"
+          image2Alt="Statue i sten"
+        />
+        </div>
+        </section>
+
+
+</MainLayout>

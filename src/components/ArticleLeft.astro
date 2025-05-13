@@ -1,19 +1,92 @@
 ---
 import IconButton from "../components/Button.astro";
 
+const {
+  title = "",
+  backHref = "/artikler",
+  headingIntro = "",
+  heading1 = "",
+  heading2 = "",
+  heading3 = "",
+  heading4 = "",
+  headingConclusion = "",
+} = Astro.props;
 ---
 
-<section>
+<section class="space-y-5">
+  {title && (
+    <h1 class="text-h3-mobile lg:text-h3-desktop uppercase  font-dmsans text-green-500">
+      {title}
+    </h1>
+  )}
 
-  <p class="pb-spacebarm16 lg:pb-spacebar32 text-p-regular-mobil lg:text-p-regular-desktop text-red-900">
-    <slot />
+  <!-- Introduktion -->
+  {headingIntro && (
+    <h2 class="text-h5-mobile lg:text-h5-desktop font-dmsans text-green-500">
+      {headingIntro}
+    </h2>
+  )}
+  <p class="pb-spacebarm16 text-p-small-mobil lg:text-p-small-desktop font-dmsans text-red-900">
+    <slot name="intro" />
+  </p>
+
+  <!-- Sektion 1 -->
+  {heading1 && (
+    <h2 class="text-h5-mobile lg:text-h5-desktop font-dmsans text-green-500">
+      {heading1}
+    </h2>
+  )}
+  <p class="pb-spacebarm16 text-p-small-mobil lg:text-p-small-desktop font-dmsans text-red-900">
+    <slot name="section1" />
+  </p>
+
+  <!-- Sektion 2 -->
+  {heading2 && (
+    <h2 class="text-h5-mobile lg:text-h5-desktop   font-dmsans text-green-500">
+      {heading2}
+    </h2>
+  )}
+  <p class="pb-spacebarm16 text-p-small-mobil lg:text-p-small-desktop font-dmsans text-red-900">
+    <slot name="section2" />
+  </p>
+
+  <!-- Sektion 3 -->
+  {heading3 && (
+    <h2 class="text-h5-mobile lg:text-h5-desktop   font-dmsans text-green-500">
+      {heading3}
+    </h2>
+  )}
+  <p class="text-p-small-mobil lg:text-p-small-desktop font-dmsans text-red-900">
+    <slot name="section3" />
+  </p>
+
+  <!-- Sektion 4 -->
+  {heading4 && (
+    <h2 class="text-h5-mobile lg:text-h5-desktop  font-dmsans text-green-500">
+      {heading4}
+    </h2>
+  )}
+  <p class="pb-spacebarm16 text-p-small-mobil lg:text-p-small-desktop font-dmsans text-red-900">
+    <slot name="section4" />
+  </p>
+
+  <!-- Konklusion -->
+  {headingConclusion && (
+    <h2 class="text-h5-mobile lg:text-h5-desktop   font-dmsans text-green-500">
+      {headingConclusion}
+    </h2>
+  )}
+  <p class="pb-spacebarm16 text-p-small-mobil lg:text-p-small-desktop font-dmsans text-red-900">
+    <slot name="conclusion" />
   </p>
 
   <!-- Desktop-knap -->
   <div class="hidden lg:block">
-    <IconButton text="Tilbage" variant="secondary-right" size="large"  href="/artikler" />
+    <IconButton text="Tilbage" variant="secondary-right" size="large" href={backHref} />
   </div>
 </section>
+
+
 
 
 

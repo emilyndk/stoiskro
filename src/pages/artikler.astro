@@ -5,7 +5,7 @@ import Articlecard from "../components/Articlecard.astro";
 import Overskrift from "../components/Overskrift.astro";
 import Header from "../components/Header.astro";
 import EmnerSamlet from "../components/EmnerSamlet.astro";
-import Image from "astro/components/Image.astro";
+import IconButton from "../components/Button.astro"
 ---
 
 <MainLayout title="Artikler">
@@ -41,6 +41,11 @@ import Image from "astro/components/Image.astro";
     text="Jorem ipsum dolor sit amet, consectetur adipiscing elitjj jbkbklklknn. "
     btnurl="/"
   />
+
+  <div class="lg:hidden py-spacebarm16 lg:py-0">
+    <IconButton text="Læs her" size="small" variant="secondaryLeft" href="/stoicisme"></IconButton>
+    </div>
+
   <Articlecard
   url="/"
   imgSrc="/img/selvvaerd.svg"
@@ -49,6 +54,10 @@ import Image from "astro/components/Image.astro";
   text="Jorem ipsum dolor sit amet, consectetur adipiscing elitjj jbkbklklknn. "
   btnurl="/"
 />
+
+<div class="lg:hidden py-spacebarm16 lg:py-0">
+  <IconButton text="Læs her" size="small" variant="secondaryLeft" href="/stoicisme"></IconButton>
+  </div>
 
 </div>
 
