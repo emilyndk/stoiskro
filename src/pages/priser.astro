@@ -5,7 +5,8 @@ import Textbox from "../components/Textbox.astro"
 import Overskrift from "../components/Overskrift.astro"
 import Kontaktform from "../components/Kontaktform.astro"
 import Link from "../components/Link.astro"
-import PriceList from "../components/PriceList.astro"
+import PriceL from "../components/PriceLeft.astro"
+import PriceR from "../components/PriceRight.astro"
 
 
 ---
@@ -14,22 +15,63 @@ import PriceList from "../components/PriceList.astro"
 
 <Header h1="priser og kontakt" imgSrc="/img/priser-header-illustration-d.svg"></Header>
 
+<!-- Sektion priser -->
 
-
-<section id="priser" class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px] lg:py[136px]">
+<section id="priser" class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop gap-gap-mobil lg:gap-gap-desktop px-[16px] lg:px-[64px] py-spacebar32 lg:py-[136px]">
 
  <div class="col-start-2 col-span-10"><Overskrift text="priser"></Overskrift></div>
 
- <div class="col-start-2 col-span-10">
-    <PriceList time="50min" price="1000kr" title="individuel terapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "></PriceList>
-    <PriceList time="50min" price="1000kr" title="individuel terapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "></PriceList>
-    <PriceList time="50min" price="1000kr" title="individuel terapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "></PriceList>
-    <PriceList time="50min" price="1000kr" title="individuel terapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "></PriceList>
+
+ <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3 pb-spacebarm16 lg:pb-spacebar32">
+
+    <PriceL title="Individuel terapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "></PriceL>
+
  </div>
+
+ <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6 self-end pb-spacebarm16 lg:pb-spacebar32">
+    <PriceR time="55min" price="1000kr" />
+    
+  </div>
+
+
+  <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3 pb-spacebarm16 lg:pb-spacebar32">
+
+    <PriceL title="Individuel terapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "></PriceL>
+
+ </div>
+
+ <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6 self-end pb-spacebarm16 lg:pb-spacebar32">
+    <PriceR time="55min" price="1000kr" />
+    
+  </div>
+  
+  <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3 pb-spacebarm16 lg:pb-spacebar32">
+
+    <PriceL title="Individuel terapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "></PriceL>
+
+ </div>
+
+ <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6 self-end pb-spacebarm16 lg:pb-spacebar32">
+    <PriceR time="55min" price="1000kr" />
+    
+  </div>
+  
+  <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3">
+
+    <PriceL title="Individuel terapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "></PriceL>
+
+ </div>
+
+ <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6 self-end">
+    <PriceR time="55min" price="1000kr" />
+    
+  </div>
+  
 
 </section>
 
 
+<!-- Sektion Kontakt -->
 
 <section id="kontakt" class="bg-green-500 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px] py-[64px] lg:py[136px]">
 
@@ -52,10 +94,13 @@ import PriceList from "../components/PriceList.astro"
 
 </section>
 
+<!-- sektion kort -->
 
-<section id="find-vej" class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop py-[64px] lg:py[136px]">
+
+<section id="find-vej" class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil gap-gap-mobil lg:gap-gap-desktop py-[64px] lg:py[136px]">
 <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-10"><Overskrift text="find vej"></Overskrift></div>
 
+<div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-8">
 <iframe 
   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.888642551422!2d12.568337615927676!3d55.676096980533454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46525308941f4e81%3A0x400f7d1c6975850!2sK%C3%B8benhavn!5e0!3m2!1sen!2sdk!4v1680000000000" 
  
@@ -63,10 +108,10 @@ import PriceList from "../components/PriceList.astro"
 
   loading="lazy" 
   referrerpolicy="no-referrer-when-downgrade"
-  class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-10"
+  class="lg:w-full lg:h-[500px]"
 ></iframe>
 
-
+</div>
 
 </section>
 

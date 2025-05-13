@@ -15,7 +15,7 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
 
 <MainLayout  title="Stoisk Ro">
 
-  <section class=" grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px] gap-gap-mobil lg:gap-gap-desktop">
+  <section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px] gap-gap-mobil lg:gap-gap-desktop">
 <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-12">
   <HeaderDisplay></HeaderDisplay>
 </div>
@@ -48,7 +48,7 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
         <Overskrift text="Hej, mit navn er Artjom" color="green" />
     </div>
   
-    <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
+    <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5 pb-spacebar32 lg:pb-0">
         
       <Textbox subheader="Jeg er samtaleteraput" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti. sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum." color="green" />
   </div>
@@ -74,7 +74,7 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
         <IconButton text="Læs mere" variant="secondary-negative" size="large" href="/terapi" />
       </div>
     </div>
-    
+
       <div class="pt-spacebar32 lg:pt-0 col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
     <AccordionService></AccordionService>
     <div class=" pt-spacebarm16 block lg:hidden">
@@ -124,7 +124,7 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
   <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
     <Overskrift text="Nyeste artikler" color="green" />
   </div>
-  <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-3">
+  <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-3 pb-spacebar32 lg:pb-0 ">
     <Textbox subheader="lorem ipsum" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque." color="green" />
 
     <div class="lg:pt-spacebar32 hidden lg:block">
@@ -132,7 +132,7 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
     </div>
     </div>
 
-    <div class="flex gap-2 col-start-2 col-span-10 lg:col-start-7 lg:col-span-4">
+    <div class="lg:flex gap-2 col-start-2 col-span-10 lg:col-start-7 lg:col-span-4">
 
     <Articlecard
     url="/"
@@ -142,6 +142,12 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
     text="Jorem ipsum dolor sit amet, consectetur adipiscing elitjj jbkbklklknn. "
     btnurl="/"
     />
+
+    <div class="lg:hidden py-spacebarm16 lg:py-0">
+      <IconButton text="Læs her" size="small" variant="secondaryLeft" href="/article"></IconButton>
+      </div>
+
+
     <Articlecard
     url="/"
     imgSrc="/img/selvvaerd.svg"
@@ -150,6 +156,12 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
     text="Jorem ipsum dolor sit amet, consectetur adipiscing elitjj jbkbklklknn. "
     btnurl="/"
   />
+
+  <div class="lg:hidden py-spacebarm16 lg:py-0" >
+    <IconButton text="Læs her" size="small" variant="secondaryLeft" href="/article"></IconButton>
+    </div>
+
+
   
   </div>
 

@@ -1,0 +1,14 @@
+---
+const { time, price } = Astro.props;
+---
+
+<!-- Mobile border (vises kun på små skærme) -->
+<div class="block lg:hidden border-b border-green-500 mb-2"></div>
+
+<div class="flex w-full bg-transparent gap-4 justify-end items-end">
+  <p>{time}</p>
+  <h6 class="text-h6-mobil text-green-500 lg:text-h6-desktop translate-y-[2px]">{price}</h6>
+</div>
+
+<!-- Desktop border (vises kun på store skærme) -->
+<div class="hidden lg:block border-b border-green-500 mt-2"></div>
