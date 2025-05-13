@@ -12,8 +12,13 @@ import PriceList from "../components/PriceList.astro"
 
 <MainLayout title="Priser & Kontakt">
 
-<Header h1="priser og kontakt" imgSrc="/img/priser-header-illustration-d.svg"></Header>
 
+<div id="priser-header" class="grid grid-cols-grid-mobil pt-spacebar32 lg:pt-spacebar136 lg:grid-cols-grid-desktop mx-margin-mobil grid-rows-1 lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
+  <div class="col-start-2 col-span-8 lg:col-start-2 lg:col-span-6">
+    <Header h1="priser og kontakt" />
+  </div>
+  <img class="col-start-8 col-span-2  lg:col-start-8 lg:col-span-3" src="/img/priser-header-illustration-d.svg" alt="Illustration" />
+</div>
 
 
 <section id="priser" class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px] lg:py[136px]">
