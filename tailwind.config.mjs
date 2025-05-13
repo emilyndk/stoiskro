@@ -14,7 +14,7 @@ export default {
         },
         'slide-in-desktop': {
           '0%': { transform: 'translateY(-50%) translateX(200%)' },
-          '100%': { transform: 'translateY(-50%) translateX(-270px)' },
+          '100%': { transform: 'translateY(-50%) translateX(-250px)' },
         },
       },
       animation: {
@@ -225,7 +225,7 @@ export default {
         // desktop fonte
 
         "h1-display": [
-          "160px",
+          "130px",
           {
             fontWeight: "400",
             fontFamily: "gloock",
