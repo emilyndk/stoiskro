@@ -2,7 +2,7 @@
 // Du kan sende props ind, hvis du vil gøre teksten dynamisk fx
 const { title = "STOISK", highlight = "RO", subtitle = "FILOSOFISK SAMTALETERAPI" } = Astro.props;
 ---
-<section class="relative overflow-hidden py-spacebarm64 lg:py-[136px]">
+<section class="relative overflow-hidden pt-spacebarm64 lg:pt-[136px]">
     <h1 class="relative text-h1-mobil lg:text-h1-display font-gloock uppercase text-green-500 inline-block">
       {title}&nbsp;
       <span class="relative inline-block">
@@ -17,6 +17,5 @@ const { title = "STOISK", highlight = "RO", subtitle = "FILOSOFISK SAMTALETERAPI
         <span class="relative z-50 text-beige-500 color-burn ">{highlight}</span>
       </span>
     </h1>
-    <h3 class="pt-spacebar32 text-h3-mobil lg:text-h3-desktop text-green-500 font-sans">{subtitle}</h3>
+    <h3 class="pt-spacebar16 text-h3-mobil lg:text-h3-desktop text-green-500 font-sans">{subtitle}</h3>
   </section>
-
