@@ -3,14 +3,22 @@ import MainLayout from "../layouts/MainLayout.astro";
 import DotText from "../components/DotText.astro";
 import Articlecard from "../components/Articlecard.astro";
 import Overskrift from "../components/Overskrift.astro";
+import Header from "../components/Header.astro";
 import EmnerSamlet from "../components/EmnerSamlet.astro";
+import Image from "astro/components/Image.astro";
 ---
 
 <MainLayout title="Artikler">
 
- 
 
-<section class="pb-spacebar32 lg:pb-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
+<div id="artikler-header" class="grid grid-cols-grid-mobil pt-spacebar32 lg:pt-spacebar136 lg:grid-cols-grid-desktop mx-margin-mobil grid-rows-1 lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
+  <div class="col-start-2 col-span-6 lg:col-start-2 lg:col-span-3">
+    <Header h1="artikler" />
+  </div>
+  <img class="col-start-8 col-span-3 lg:col-start-7 lg:col-span-2" src="/img/artikler-header-illustration.svg" alt="Illustration" />
+</div>
+
+<section class="pb-spacebar32 pt-spacebarm64 lg:pt-spacebard136 lg:pb-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
 
 <div class="col-start-2 col-span-10 pb-spacebar32">
   <Overskrift text="vælg et emne"></Overskrift>
