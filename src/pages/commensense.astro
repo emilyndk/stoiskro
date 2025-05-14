@@ -1,0 +1,201 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import ArticleLeft from "../components/ArticleLeft.astro"
+import ArticleRight from "../components/Articleright.astro"
+import ArticleHeader from "../components/ArticleHeader.astro";
+import Overskrift from "../components/Overskrift.astro";
+
+---
+
+<MainLayout title="Sund fornuft">
+
+    	<!-- Article header åbning sat op i forhold til grid -->
+
+<section class="lg:pt-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop">
+	<div class="gsap-header col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+
+<Overskrift text="Bevar din sunde fornuft" color="green" />
+
+<ArticleHeader
+	heading="Dato"
+	imageSrc="/img/feeling3.webp"
+	imageAlt="notesbog med tegning og tekst"
+	/>
+
+	</div>
+</section>
+
+	<!-- Full Article med to colonner sat op i forhold til grid -->
+
+    <section id="commensense" class="lg:py-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop">
+        <div class="gsap-text col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+            
+        
+        <ArticleLeft
+            title="Bevar den sunde fornuft"
+            backHref="/artikler"
+          
+            headingIntro="Den indre kontrol som frihed"
+            heading1="Når hverdagens støj udfordrer sindet"
+            heading2="Flugten fra uroen"
+            heading3="Og dog..."
+            heading4="Hvad er mit ansvar – og hvad er ikke?"
+            headingConclusion="Afsluttende tanker"
+          >
+            <Fragment slot="intro">
+                I alle livets aspekter er det vigtigt, at vi kan bevare kontrollen over os selv. Ifølge mange tænkere, især inden for stoicismen, er kontrol over sig selv den ultimative frihed. <br><br>
+                Udtrykket "Stoisk Ro" inviterer os ind i en verden, hvor vi står op for os selv ved at undgå så mange negative indtryk som muligt, så der skal meget til, før vi bliver rystet.
+            </Fragment>
+          
+            <Fragment slot="section1">
+                Vores hverdag er fyldt med stressorer, og det er ikke altid let at finde ro og stabilitet midt i al tumulten. Ved at fokusere på, hvad der er inden for vores kontrol, og acceptere, hvad der ligger uden for vores kontrol, kan vi finde en vigtig rettesnor.
+            </Fragment>
+          
+            <Fragment slot="section2">
+                Mange mennesker forsøger at fikse sig selv med midler og metoder, der ligger uden for deres kontrolsfære. For eksempel kan man forsøge at dulme smerte ved at indtage euforiserende stoffer, men dette erstatter ikke fornuftens magt.
+                Jeg forstår, at det kan føles som en lettelse at bedøve sig selv nok til, at nerverne falder til ro, men på den anden side inviterer man sig selv til en hårdere tid. Når stoffernes effekt aftager, falder man tilbage til sine sørgmodige tanker, smerter eller sit oprindelige jeg – og det kan virke uudholdeligt. Tænk engang ikke at kunne finde ro i sin egen krop. Det må føles ubærligt og føre til konstant indre. <br><br>
+                Og dog.....
+                Stoicismen byder på sin essentielle dyd – praktisk visdom – som en vejleder.
+                <li class=" p-0 list-inside"> <strong>Def.: Praktisk Visdom</strong> <br> Evnen til at reflektere logisk over, hvordan man bør reagere, opføre sig, tale og handle – så ens handlinger stemmer overens med det gode: venlighed, tilgivelse, omsorg og kærlighed.</li>
+            </Fragment>
+          
+            <Fragment slot="section3">
+                Stoicismen byder på sin essentielle dyd – praktisk visdom – som en vejleder.
+                <li class=" p-0 list-inside"> <strong>Def.: Praktisk Visdom</strong> <br> Evnen til at reflektere logisk over, hvordan man bør reagere, opføre sig, tale og handle – så ens handlinger stemmer overens med det gode: venlighed, tilgivelse, omsorg og kærlighed.</li>
+
+            </Fragment>
+          
+            <Fragment slot="conclusion">
+                Den spontane tilgang til livet – hvor vi følger vores impulser uden refleksion – kan virke naturlig. Men i praksis fører den ofte til frustration, stress og indre kaos. <br> <br> Når vi ikke stopper op og reflekterer over vores egne reaktioner, kan vi ende med at føle os som ofre for vores egne følelser, uden at forstå, at vi selv har nøglen til at bryde mønsteret. <br>
+                At opnå en mere reflekteret måde at leve på kræver ikke, at vi fornægter vores følelser, men at vi lærer at arbejde med dem. <br> Filosofien tilbyder os redskaber til dette – ikke som en teoretisk øvelse, men som en praksis, vi kan anvende i vores daglige liv. <br>
+                For i sidste ende er frihed ikke fraværet af følelser, men evnen til at styre dem med visdom.
+            </Fragment>
+        </ArticleLeft>
+        
+        
+        </div>	
+        
+        <div class="gsap-image col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
+        
+        <ArticleRight
+          topText=""
+          bottomText=""
+          image1Src="/img/feeling1.webp"
+          image1Alt="notesbog"
+          image2Src="/img/feeling5.webp"
+          image2Alt="Billede af buste i sten"
+        />
+       
+        
+            <ArticleRight
+              topText=""
+              bottomText=""
+              image1Src="/img/feeling4.webp"
+              image1Alt="mand sidder ved vandet"
+              image2Src="/img/feeling2.webp"
+              image2Alt="Sten balancerer ovenpå hinanden"
+             
+            />
+            </div>
+        </section>
+
+
+</MainLayout>
+
+<script>
+    import gsap from "gsap";
+    
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    
+    
+    gsap.registerPlugin(ScrollTrigger);
+    
+    gsap.utils.toArray(".gsap-header").forEach((el) => {
+      gsap.from(el as HTMLElement, {
+        scrollTrigger: {
+          trigger: el as HTMLElement,
+          start: "top center",
+        },
+        opacity: 0,
+        x: -40,
+        delay: 0.2,
+        ease: "power1.out",
+        duration: 1,
+      });
+    });
+    
+    gsap.registerPlugin(ScrollTrigger);
+    
+    gsap.utils.toArray(".gsap-text").forEach((el) => {
+      gsap.from(el as HTMLElement, {
+        scrollTrigger: {
+          trigger: el as HTMLElement,
+          start: "top center",
+        },
+        opacity: 0,
+        x: -40,
+        delay: 0.3,
+        ease: "power1.out",
+        duration: 1,
+      });
+    });
+    
+    gsap.registerPlugin(ScrollTrigger);
+    
+    gsap.utils.toArray(".gsap-accordion").forEach((el) => {
+      gsap.from(el as HTMLElement, {
+        scrollTrigger: {
+          trigger: el as HTMLElement,
+          start: "top center",
+        },
+        opacity: 0,
+        y: 50,
+        delay: 0.6,
+        ease: "power1.out",
+        duration: 1,
+      });
+    });
+    
+    gsap.registerPlugin(ScrollTrigger);
+    
+    gsap.utils.toArray(".gsap-image").forEach((el) => {
+      gsap.from(el as HTMLElement, {
+        scrollTrigger: {
+          trigger: el as HTMLElement,
+          start: "top center",
+        },
+        opacity: 0,
+        y: -40,
+        delay: 0.2,
+        ease: "power1.out",
+        duration: 1,
+      });
+    });
+    
+    gsap.registerPlugin(ScrollTrigger);
+    
+    gsap.utils.toArray(".gsap-button").forEach((el) => {
+      gsap.from(el as HTMLElement, {
+        scrollTrigger: {
+          trigger: el as HTMLElement,
+          start: "top center",
+        },
+        opacity: 0,
+        y: 50,
+        delay: 0.4,
+        ease: "power1.out",
+        duration: 1,
+      });
+    });
+    
+    gsap.from(".fade-in", {
+      opacity: 0,
+      y: 30,
+      delay: 0.5,
+      duration: 1,
+      stagger: 0.2, // forskudt animation
+      ease: "power2.out",
+    });
+    
+    
+    </script>
