@@ -53,7 +53,6 @@ const { title } = Astro.props;
   const greenSections = Array.from(document.querySelectorAll('.green-section'))
     .filter(section => !section.closest('footer'));
 
-  // Holder styr på hvilke sektioner der er synlige
   const visibleSections = new Set();
 
   const updateLogo = () => {
@@ -68,19 +67,19 @@ const { title } = Astro.props;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.intersectionRatio >= 0.5) {
+      if (entry.isIntersecting) {
         visibleSections.add(entry.target);
       } else {
         visibleSections.delete(entry.target);
       }
     });
 
-    // Tjek om nogen stadig er synlige
     updateLogo();
   }, {
-    threshold: [0, 0.1, 0.9], // observer både ved 0%, 10% og 90%
+    threshold: 0.1, // vi ser om mindst 10% af en sektion er synlig
   });
 
   greenSections.forEach(section => observer.observe(section));
 </script>
+
 
