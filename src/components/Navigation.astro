@@ -4,19 +4,32 @@ import Button from "./Button.astro";
 ---
 
 <div class="pt-[32px] grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
- 
+ <div id="logo-probe" class="fixed top-4 left-4 w-px h-px z-[-1] pointer-events-none"></div>
    <a class="col-start-1 col-span-1 lg:col-span-2" href="/"> 
     <img
       id="logo"
-      class="lg:hidden"
+      class="lg:hidden transition-opacity ease-in-out duration-300"
       src="/img/logo-default-m.svg"
       alt="Stoisk Ro logo"
     />
 
     <img
     id="logo-d"
-    class="hidden lg:block"
+    class="hidden lg:block transition-opacity ease-in-out duration-300"
     src="/img/logo-default-l.svg"
+    alt="Stoisk Ro logo"
+  />
+
+   <img
+    id="logo-d-negative"
+    class="hidden transition-opacity ease-in-out duration-300 "
+    src="/img/logo-negative-d.svg"
+    alt="Stoisk Ro logo"
+  />
+   <img
+    id="logo-m-negative"
+    class="hidden "
+    src="/img/logo-negative-m.svg transition-opacity ease-in-out duration-300"
     alt="Stoisk Ro logo"
   />
 
