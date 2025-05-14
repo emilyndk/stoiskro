@@ -28,7 +28,7 @@ import Overskrift from "../components/Overskrift.astro";
 	<!-- Full Article med to colonner sat op i forhold til grid -->
 
     <section id="commensense" class="lg:py-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop">
-        <div class="gsap-text col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+        <div class="gsap-text col-start-2 col-span-10 lg:col-start-2 lg:col-span-5 ">
             
         
         <ArticleLeft
@@ -75,7 +75,7 @@ import Overskrift from "../components/Overskrift.astro";
         
         </div>	
         
-        <div class="gsap-image col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
+        <div class="gsap-image col-start-2 col-span-10 lg:col-start-8 lg:col-span-4 sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-beige-500">
         
         <ArticleRight
           topText=""
@@ -85,18 +85,7 @@ import Overskrift from "../components/Overskrift.astro";
           image2Src="/img/feeling5.webp"
           image2Alt="Billede af buste i sten"
         />
-       
-        
-            <ArticleRight
-              topText=""
-              bottomText=""
-              image1Src="/img/feeling4.webp"
-              image1Alt="mand sidder ved vandet"
-              image2Src="/img/feeling2.webp"
-              image2Alt="Sten balancerer ovenpå hinanden"
-             
-            />
-            </div>
+        <div class="h-[100vh]"></div><!-- afstandsstykket -->
         </section>
 
 
