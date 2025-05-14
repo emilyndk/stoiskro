@@ -1,130 +1,145 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro"
-import Header from "../components/Header.astro"
-import Textbox from "../components/Textbox.astro"
-import Overskrift from "../components/Overskrift.astro"
-import Kontaktform from "../components/Kontaktform.astro"
-import Link from "../components/Link.astro"
-import PriceL from "../components/PriceLeft.astro"
-import PriceR from "../components/PriceRight.astro"
-
-
+import MainLayout from "../layouts/MainLayout.astro";
+import Header from "../components/Header.astro";
+import Textbox from "../components/Textbox.astro";
+import Overskrift from "../components/Overskrift.astro";
+import Kontaktform from "../components/Kontaktform.astro";
+import Link from "../components/Link.astro";
+import PriceL from "../components/PriceLeft.astro";
+import PriceR from "../components/PriceRight.astro";
 ---
 
 <MainLayout title="Priser & Kontakt">
-
-
-
-<div id="priser-header" class="grid grid-cols-grid-mobil pt-spacebar32 lg:pt-spacebar136 lg:grid-cols-grid-desktop mx-margin-mobil grid-rows-1 lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
-  <div class="col-start-2 col-span-8 lg:col-start-2 lg:col-span-6">
-    <Header h1="priser og kontakt" />
-  </div>
-  <img class="col-start-8 col-span-2  lg:col-start-8 lg:col-span-3" src="/img/priser-header-illustration-d.svg" alt="Illustration" />
-</div>
-
-<!-- Sektion priser -->
-
-<section id="priser" class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop gap-gap-mobil lg:gap-gap-desktop px-[16px] lg:px-[64px] py-spacebar32 lg:py-[136px]">
-
- <div class="col-start-2 col-span-10"><Overskrift text="priser"></Overskrift></div>
-
-
- <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3 pb-spacebarm16 lg:pb-spacebar32">
-
-    <PriceL title="Individuel terapi" text="En-til-en samtaler med fokus på personlig udvikling, indsigt og konkrete redskaber – baseret på stoisk filosofi og kognitiv adfærdsterapi."></PriceL>
-
- </div>
-
- <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6 self-end pb-spacebarm16 lg:pb-spacebar32">
-    <PriceR time="60min" price="700kr" />
-    
+  <div
+    id="priser-header"
+    class="grid grid-cols-grid-mobil pt-spacebar32 lg:pt-spacebar136 lg:grid-cols-grid-desktop mx-margin-mobil grid-rows-1 lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop"
+  >
+    <div class="col-start-2 col-span-8 lg:col-start-2 lg:col-span-6">
+      <Header h1="priser og kontakt" />
+    </div>
+    <img
+      class="col-start-8 col-span-2 lg:col-start-8 lg:col-span-3"
+      src="/img/priser-header-illustration-d.svg"
+      alt="Illustration"
+    />
   </div>
 
+  <!-- Sektion priser -->
 
-  <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3 pb-spacebarm16 lg:pb-spacebar32">
+  <section
+    id="priser"
+    class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop gap-gap-mobil lg:gap-gap-desktop px-[16px] lg:px-[64px] py-spacebar32 lg:py-[136px]"
+  >
+    <div class="col-start-2 col-span-10"><Overskrift text="priser" /></div>
 
-    <PriceL title="Parterapi" text="Samtaler med fokus på kommunikation, forståelse og følelsesmæssig nærhed – med redskaber fra stoisk filosofi og parterapeutisk praksis. "></PriceL>
+    <div
+      class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3 pb-spacebarm16 lg:pb-spacebar32"
+    >
+      <PriceL
+        title="Individuel terapi"
+        text="En-til-en samtaler med fokus på personlig udvikling, indsigt og konkrete redskaber – baseret på stoisk filosofi og kognitiv adfærdsterapi."
+      />
+    </div>
 
- </div>
+    <div
+      class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6 self-end pb-spacebarm16 lg:pb-spacebar32"
+    >
+      <PriceR time="60min" price="700kr" />
+    </div>
 
- <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6 self-end pb-spacebarm16 lg:pb-spacebar32">
-    <PriceR time="90min" price="1300kr" />
-    
-  </div>
-  
-  <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3 pb-spacebarm16 lg:pb-spacebar32">
+    <div
+      class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3 pb-spacebarm16 lg:pb-spacebar32"
+    >
+      <PriceL
+        title="Parterapi"
+        text="Samtaler med fokus på kommunikation, forståelse og følelsesmæssig nærhed – med redskaber fra stoisk filosofi og parterapeutisk praksis. "
+      />
+    </div>
 
-    <PriceL title="Undervisning" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "></PriceL>
+    <div
+      class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6 self-end pb-spacebarm16 lg:pb-spacebar32"
+    >
+      <PriceR time="90min" price="1300kr" />
+    </div>
 
- </div>
+    <div
+      class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3 pb-spacebarm16 lg:pb-spacebar32"
+    >
+      <PriceL
+        title="Undervisning"
+        text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "
+      />
+    </div>
 
- <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6 self-end pb-spacebarm16 lg:pb-spacebar32">
-    <PriceR time="55min" price="1000kr" />
-    
-  </div>
-  
-  <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3">
+    <div
+      class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6 self-end pb-spacebarm16 lg:pb-spacebar32"
+    >
+      <PriceR time="55min" price="1000kr" />
+    </div>
 
-    <PriceL title="Foredrag" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "></PriceL>
+    <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3">
+      <PriceL
+        title="Foredrag"
+        text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "
+      />
+    </div>
 
- </div>
+    <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6 self-end">
+      <PriceR time="55min" price="1000kr" />
+    </div>
+  </section>
 
- <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6 self-end">
-    <PriceR time="55min" price="1000kr" />
-    
-  </div>
-  
+  <!-- Kontaktform sat op i forhold til grid -->
 
-</section>
+  <section
+    class="green-section grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500 px-[16px] lg:px-[64px] gap-gap-mobil lg:gap-gap-desktop py-spacebarm64 lg:py-spacebard136"
+  >
+    <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+      <Overskrift text="Kontakt mig" color="beige" />
+    </div>
+    <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3">
+      <Textbox subheader="" color="beige" />
+      <p class="text-beige-500">
+        Har du noget på hjertet, spørgsmål eller ønsker du blot at tage første
+        skridt? Du er meget velkommen til at skrive lidt om dig selv og dine
+        udfordringer. Jeg læser alle henvendelser med omtanke og svarer dig så
+        snart, jeg kan.
+      </p>
 
-	<!-- Kontaktform sat op i forhold til grid -->
+      <div
+        class="pb-[32px] pt-[32px] lg:pb-0 text-beige-500 font-dmsans text-caption-mobil lg:text-caption-desktop"
+      >
+        <p>Mulighedsvej 45</p>
+        <p>2300 København S</p>
+        <p>+45 45454545</p>
+        <p><a href="mailto:johndoe@gmail.com">johndoe@gmail.com</a></p>
+      </div>
+    </div>
 
-    <section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500 px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop py-spacebarm64 lg:py-spacebard136">
-        <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
-            <Overskrift text="Kontakt mig" color="beige" />
-        </div>
-                <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3">
-                <Textbox subheader="" color="beige" />
-                <p class="text-beige-500">Har du noget på hjertet, spørgsmål eller ønsker du blot at tage første skridt? Du er meget velkommen til at skrive lidt om dig selv og dine udfordringer. Jeg læser alle henvendelser med omtanke og svarer dig så snart, jeg kan.</p>
-                
-                <div class="pb-[32px] pt-[32px] lg:pb-0 text-beige-500 font-dmsans text-caption-mobil lg:text-caption-desktop">
-                <p>Mulighedsvej 45</p>
-                <p>2300 København S</p>
-                <p>+45 45454545</p>
-                <p>johndoe@gmail.com</p>
-              </div>
-            </div>
-    
-        <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6">
-          <Kontaktform />
-        </div>
-      </section>
+    <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6">
+      <Kontaktform />
+    </div>
+  </section>
 
-<!-- sektion kort -->
+  <!-- sektion kort -->
 
+  <section
+    id="find-vej"
+    class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil gap-gap-mobil lg:gap-gap-desktop py-[64px] lg:py[136px]"
+  >
+    <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-10">
+      <Overskrift text="find vej" />
+    </div>
 
-<section id="find-vej" class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil gap-gap-mobil lg:gap-gap-desktop py-[64px] lg:py[136px]">
-<div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-10"><Overskrift text="find vej"></Overskrift></div>
+    <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-8">
+     
 
-<div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-8">
-<iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.888642551422!2d12.568337615927676!3d55.676096980533454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46525308941f4e81%3A0x400f7d1c6975850!2sK%C3%B8benhavn!5e0!3m2!1sen!2sdk!4v1680000000000" 
- 
-  style="border:0;" 
-
-  loading="lazy" 
-  referrerpolicy="no-referrer-when-downgrade"
-  class="lg:w-full lg:h-[500px]"
-></iframe>
-
-</div>
-
-</section>
-
-
-
-
-
-
-
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d72089.94301747468!2d12.513397159708228!3d55.6227091674476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465254b4d3da82f9%3A0x97a79262a6304ea7!2sAmager!5e0!3m2!1sen!2sdk!4v1747206906151!5m2!1sen!2sdk"
+        style="border:0;"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="lg:w-full lg:h-[500px]"></iframe>
+    </div>
+  </section>
 </MainLayout>

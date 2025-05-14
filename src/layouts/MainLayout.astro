@@ -45,6 +45,7 @@ const { title } = Astro.props;
     </footer>
   </body>
 </html>
+
 <script is:inline>
   const mobileLogo = document.getElementById("logo");
   const desktopLogo = document.getElementById("logo-d");
@@ -52,32 +53,34 @@ const { title } = Astro.props;
   const greenSections = Array.from(document.querySelectorAll('.green-section'))
     .filter(section => !section.closest('footer'));
 
-  const fadeSwitch = (imgElement, newSrc) => {
-    if (imgElement.src.endsWith(newSrc)) return; // Undgå unødvendig skift
+  // Holder styr på hvilke sektioner der er synlige
+  const visibleSections = new Set();
 
-    imgElement.style.opacity = '0'; // Fade out
-
-    setTimeout(() => {
-      imgElement.src = newSrc;
-      imgElement.onload = () => {
-        imgElement.style.opacity = '1'; // Fade in efter load
-      };
-    }, 150);
+  const updateLogo = () => {
+    if (visibleSections.size > 0) {
+      mobileLogo.src = "/img/logo-negative-m.svg";
+      desktopLogo.src = "/img/logo-negative-d.svg";
+    } else {
+      mobileLogo.src = "/img/logo-default-m.svg";
+      desktopLogo.src = "/img/logo-default-l.svg";
+    }
   };
 
   const observer = new IntersectionObserver((entries) => {
-    const anyVisible = entries.some(entry => entry.isIntersecting);
+    entries.forEach(entry => {
+      if (entry.intersectionRatio >= 0.5) {
+        visibleSections.add(entry.target);
+      } else {
+        visibleSections.delete(entry.target);
+      }
+    });
 
-    if (anyVisible) {
-      fadeSwitch(mobileLogo, "/img/logo-negative-m.svg");
-      fadeSwitch(desktopLogo, "/img/logo-negative-d.svg");
-    } else {
-      fadeSwitch(mobileLogo, "/img/logo-default-m.svg");
-      fadeSwitch(desktopLogo, "/img/logo-default-l.svg");
-    }
+    // Tjek om nogen stadig er synlige
+    updateLogo();
   }, {
-    threshold: 0.5,
+    threshold: [0, 0.1, 0.9], // observer både ved 0%, 10% og 90%
   });
 
   greenSections.forEach(section => observer.observe(section));
 </script>
+
