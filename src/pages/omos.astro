@@ -11,10 +11,10 @@ import Forsamtale from "../components/Forsamtale.astro";
 <MainLayout title="Om stoisk ro">
 
 <div id="om-header" class="grid grid-cols-grid-mobil pt-spacebar32 lg:pt-spacebar136 lg:grid-cols-grid-desktop mx-margin-mobil grid-rows-1 lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
-  <div class="col-start-2 col-span-8 lg:col-start-2 lg:col-span-7">
+  <div class="gsap-header col-start-2 col-span-8 lg:col-start-2 lg:col-span-7">
     <Header h1="om stoisk ro" />
   </div>
-  <img class="col-start-8 col-span-3 lg:col-start-8 lg:col-span-3" src="/img/om-header-illustration.svg" alt="Illustration" />
+  <img class="gsap-image col-start-8 col-span-3 lg:col-start-8 lg:col-span-3" src="/img/om-header-illustration.svg" alt="Illustration" />
 </div>
 
 
@@ -22,11 +22,11 @@ import Forsamtale from "../components/Forsamtale.astro";
  <section class="py-spacebarm64 lg:py-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64]gap-gap-mobil lg:gap-gap-desktop">
 
     
-      <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
+      <div class="gsap-header col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
         <Overskrift text="Filosofisk samtaleterapi" color="green" />
     </div>
   
-    <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
+    <div class="gsap-text col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
         
       <Textbox subheader="Hvad er det?"color="green" />
       <p>Filosofisk terapi starter med at identificere den tænkning, der fører os til vanskeligheder i livet, og undersøger derefter alternative perspektiver, der kan åbne usete muligheder og fjerne hindringerne, der har forhindret os i at komme positivt frem i vores liv. <br> <br>
@@ -39,15 +39,15 @@ import Forsamtale from "../components/Forsamtale.astro";
   </div>
 
 
-    <div class="col-start-2 pt-[16px] lg:pt-0 col-span-10 lg:col-start-9 lg:col-span-2">
+    <div class="gsap-image col-start-2 pt-[16px] lg:pt-0 col-span-10 lg:col-start-9 lg:col-span-2">
       <Image
       imageSrc="/img/books.webp"
       imageAlt="Bøger"
       />
       </div>
 
-    <div class="lg:hidden col-start-2 col-span-5 pt-[16px]"> <Button text="Læs mere" size="small" variant="secondaryLeft" href="/artikler"></Button></div>
-     <div class="lg:block hidden pt-[32px]  col-start-9 col-span-2"> <Button text="Læs mere" size="large" variant="secondaryLeft" href="/artikler"></Button></div>
+    <div class="gsap-button lg:hidden col-start-2 col-span-5 pt-[16px]"> <Button text="Læs mere" size="small" variant="secondaryLeft" href="/artikler"></Button></div>
+     <div class="gsap-button lg:block hidden pt-[32px]  col-start-9 col-span-2"> <Button text="Læs mere" size="large" variant="secondaryLeft" href="/artikler"></Button></div>
 
   </section>
 
@@ -63,8 +63,8 @@ import Forsamtale from "../components/Forsamtale.astro";
 <section id="kontakt" class="green-section bg-green-500 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px] py-[64px] lg:py[136px]">
 
 
-    <div class="col-start-2 col-span-10 lg:col-start-2"><Overskrift color="beige" text="min baggrund"></Overskrift></div>
-<div class="flex flex-col items-start justify-start gap-[32px] col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+    <div class="gsap-header col-start-2 col-span-10 lg:col-start-2"><Overskrift color="beige" text="min baggrund"></Overskrift></div>
+<div class="gsap-text flex flex-col items-start justify-start gap-[32px] col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
 
 <Textbox color="beige" subheader="personlige rejse">
 <p class="text-beige-500">Jeg har altid været dybt interesseret i menneskets psyke og de udfordringer, vi møder på vores livsrejse. Min egen opvækst, som bød på mange prøvelser, har givet mig en unik forståelse af den psykiske lidelses verden. Det var netop denne erfaring, der ledte mig til filosofien, som har været en kilde til både indsigt og trøst. Filosofien lærte mig, hvordan vi kan fortolke vores liv og verden på forskellige måder, og hvordan vi kan leve et etisk og meningsfuldt liv.</p> <br>
@@ -78,23 +78,23 @@ import Forsamtale from "../components/Forsamtale.astro";
 
 </div>
 
-<img class="col-start-2 w-full col-span-10 lg:col-start-8 lg:col-span-4" src="/img/artjom-portrait.webp" alt="Artjom portrat">
+<img class="gsap-image col-start-2 w-full col-span-10 lg:col-start-8 lg:col-span-4" src="/img/artjom-portrait.webp" alt="Artjom portrat">
 
 
 </section>
 
   <section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-beige-500 px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop py-spacebar32 lg:py-spacebard136">
-    <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+    <div class="gsap-header col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
     <Overskrift text="Passer kemien?" color="green" />
   </div>
-      <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+      <div class="gsap-text col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
       <Textbox subheader="Gratis forsamtale" color="green">
       <p>Du er altid velkommen til en gratis og uforpligtende forsamtale. Her har du mulighed for at mærke efter, stille spørgsmål og finde ud af, om kemien er der.</p> <br>
       <p>Skriv blot dit navn og telefon nummer, så vil jeg ringe dig op så vi kan aftale nærmere</p> <br>
       <p>Med venlig hilsen Artjom</p>
     </Textbox>
     </div>
-    <div class="pt-16 lg:pt-0 col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
+    <div class="gsap-accordion pt-16 lg:pt-0 col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
        <Forsamtale></Forsamtale>
     </div>
     
@@ -104,3 +104,101 @@ import Forsamtale from "../components/Forsamtale.astro";
 
 
 </MainLayout>
+
+<script>
+  import gsap from "gsap";
+  
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  gsap.utils.toArray(".gsap-header").forEach((el) => {
+    gsap.from(el as HTMLElement, {
+      scrollTrigger: {
+        trigger: el as HTMLElement,
+        start: "top center",
+      },
+      opacity: 0,
+      x: -40,
+      delay: 0.2,
+      ease: "power1.out",
+      duration: 1,
+    });
+  });
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  gsap.utils.toArray(".gsap-text").forEach((el) => {
+    gsap.from(el as HTMLElement, {
+      scrollTrigger: {
+        trigger: el as HTMLElement,
+        start: "top center",
+      },
+      opacity: 0,
+      x: -40,
+      delay: 0.3,
+      ease: "power1.out",
+      duration: 1,
+    });
+  });
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  gsap.utils.toArray(".gsap-accordion").forEach((el) => {
+    gsap.from(el as HTMLElement, {
+      scrollTrigger: {
+        trigger: el as HTMLElement,
+        start: "top center",
+      },
+      opacity: 0,
+      y: 50,
+      delay: 0.6,
+      ease: "power1.out",
+      duration: 1,
+    });
+  });
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  gsap.utils.toArray(".gsap-image").forEach((el) => {
+    gsap.from(el as HTMLElement, {
+      scrollTrigger: {
+        trigger: el as HTMLElement,
+        start: "top center",
+      },
+      opacity: 0,
+      y: -40,
+      delay: 0.2,
+      ease: "power1.out",
+      duration: 1,
+    });
+  });
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  gsap.utils.toArray(".gsap-button").forEach((el) => {
+    gsap.from(el as HTMLElement, {
+      scrollTrigger: {
+        trigger: el as HTMLElement,
+        start: "top center",
+      },
+      opacity: 0,
+      y: 50,
+      delay: 0.4,
+      ease: "power1.out",
+      duration: 1,
+    });
+  });
+  
+  gsap.from(".fade-in", {
+    opacity: 0,
+    y: 30,
+    delay: 0.5,
+    duration: 1,
+    stagger: 0.2, // forskudt animation
+    ease: "power2.out",
+  });
+  
+  
+  </script>

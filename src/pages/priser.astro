@@ -14,11 +14,11 @@ import PriceR from "../components/PriceRight.astro";
     id="priser-header"
     class="grid grid-cols-grid-mobil pt-spacebar32 lg:pt-spacebar136 lg:grid-cols-grid-desktop mx-margin-mobil grid-rows-1 lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop"
   >
-    <div class="col-start-2 col-span-8 lg:col-start-2 lg:col-span-6">
+    <div class="gsap-header col-start-2 col-span-8 lg:col-start-2 lg:col-span-6">
       <Header h1="priser og kontakt" />
     </div>
     <img
-      class="col-start-8 col-span-2 lg:col-start-8 lg:col-span-3"
+      class="gsap-image col-start-8 col-span-2 lg:col-start-8 lg:col-span-3"
       src="/img/priser-header-illustration-d.svg"
       alt="Illustration"
     />
@@ -30,10 +30,10 @@ import PriceR from "../components/PriceRight.astro";
     id="priser"
     class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop gap-gap-mobil lg:gap-gap-desktop px-[16px] lg:px-[64px] py-spacebar32 lg:py-[136px]"
   >
-    <div class="col-start-2 col-span-10"><Overskrift text="priser" /></div>
+    <div class="gsap-header col-start-2 col-span-10"><Overskrift text="priser" /></div>
 
     <div
-      class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3 pb-spacebarm16 lg:pb-spacebar32"
+      class="gsap-accordion col-start-2 col-span-10 lg:col-start-2 lg:col-span-3 pb-spacebarm16 lg:pb-spacebar32"
     >
       <PriceL
         title="Individuel terapi"
@@ -42,13 +42,13 @@ import PriceR from "../components/PriceRight.astro";
     </div>
 
     <div
-      class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6 self-end pb-spacebarm16 lg:pb-spacebar32"
+      class="gsap-accordion col-start-2 col-span-10 lg:col-start-6 lg:col-span-6 self-end pb-spacebarm16 lg:pb-spacebar32"
     >
       <PriceR time="60min" price="700kr" />
     </div>
 
     <div
-      class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3 pb-spacebarm16 lg:pb-spacebar32"
+      class="gsap-accordion col-start-2 col-span-10 lg:col-start-2 lg:col-span-3 pb-spacebarm16 lg:pb-spacebar32"
     >
       <PriceL
         title="Parterapi"
@@ -57,13 +57,13 @@ import PriceR from "../components/PriceRight.astro";
     </div>
 
     <div
-      class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6 self-end pb-spacebarm16 lg:pb-spacebar32"
+      class="gsap-accordion col-start-2 col-span-10 lg:col-start-6 lg:col-span-6 self-end pb-spacebarm16 lg:pb-spacebar32"
     >
       <PriceR time="90min" price="1300kr" />
     </div>
 
     <div
-      class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3 pb-spacebarm16 lg:pb-spacebar32"
+      class="gsap-accordion col-start-2 col-span-10 lg:col-start-2 lg:col-span-3 pb-spacebarm16 lg:pb-spacebar32"
     >
       <PriceL
         title="Undervisning"
@@ -72,19 +72,19 @@ import PriceR from "../components/PriceRight.astro";
     </div>
 
     <div
-      class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6 self-end pb-spacebarm16 lg:pb-spacebar32"
+      class="gsap-accordion col-start-2 col-span-10 lg:col-start-6 lg:col-span-6 self-end pb-spacebarm16 lg:pb-spacebar32"
     >
       <PriceR time="55min" price="1000kr" />
     </div>
 
-    <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3">
+    <div class="gsap-accordion col-start-2 col-span-10 lg:col-start-2 lg:col-span-3">
       <PriceL
         title="Foredrag"
         text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "
       />
     </div>
 
-    <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6 self-end">
+    <div class="gsap-accordion col-start-2 col-span-10 lg:col-start-6 lg:col-span-6 self-end">
       <PriceR time="55min" price="1000kr" />
     </div>
   </section>
@@ -94,10 +94,10 @@ import PriceR from "../components/PriceRight.astro";
   <section
     class="green-section grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500 px-[16px] lg:px-[64px] gap-gap-mobil lg:gap-gap-desktop py-spacebarm64 lg:py-spacebard136"
   >
-    <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+    <div class="gsap-header col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
       <Overskrift text="Kontakt mig" color="beige" />
     </div>
-    <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3">
+    <div class="gsap-text col-start-2 col-span-10 lg:col-start-2 lg:col-span-3">
       <Textbox subheader="" color="beige" />
       <p class="text-beige-500">
         Har du noget på hjertet, spørgsmål eller ønsker du blot at tage første
@@ -107,7 +107,7 @@ import PriceR from "../components/PriceRight.astro";
       </p>
 
       <div
-        class="pb-[32px] pt-[32px] lg:pb-0 text-beige-500 font-dmsans text-caption-mobil lg:text-caption-desktop"
+        class="gsap-text pb-[32px] pt-[32px] lg:pb-0 text-beige-500 font-dmsans text-caption-mobil lg:text-caption-desktop"
       >
         <p>Mulighedsvej 45</p>
         <p>2300 København S</p>
@@ -116,7 +116,7 @@ import PriceR from "../components/PriceRight.astro";
       </div>
     </div>
 
-    <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6">
+    <div class="gsap-accordion col-start-2 col-span-10 lg:col-start-6 lg:col-span-6">
       <Kontaktform />
     </div>
   </section>
@@ -127,11 +127,11 @@ import PriceR from "../components/PriceRight.astro";
     id="find-vej"
     class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil gap-gap-mobil lg:gap-gap-desktop py-[64px] lg:py[136px]"
   >
-    <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-10">
+    <div class="gsap-header col-start-2 col-span-10 lg:col-start-3 lg:col-span-10">
       <Overskrift text="find vej" />
     </div>
 
-    <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-8">
+    <div class="gsap-image col-start-2 col-span-10 lg:col-start-3 lg:col-span-8">
      
 
       <iframe
@@ -143,3 +143,101 @@ import PriceR from "../components/PriceRight.astro";
     </div>
   </section>
 </MainLayout>
+
+<script>
+    import gsap from "gsap";
+    
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    
+    
+    gsap.registerPlugin(ScrollTrigger);
+    
+    gsap.utils.toArray(".gsap-header").forEach((el) => {
+      gsap.from(el as HTMLElement, {
+        scrollTrigger: {
+          trigger: el as HTMLElement,
+          start: "top center",
+        },
+        opacity: 0,
+        x: -40,
+        delay: 0.2,
+        ease: "power1.out",
+        duration: 1,
+      });
+    });
+    
+    gsap.registerPlugin(ScrollTrigger);
+    
+    gsap.utils.toArray(".gsap-text").forEach((el) => {
+      gsap.from(el as HTMLElement, {
+        scrollTrigger: {
+          trigger: el as HTMLElement,
+          start: "top center",
+        },
+        opacity: 0,
+        x: -40,
+        delay: 0.3,
+        ease: "power1.out",
+        duration: 1,
+      });
+    });
+    
+    gsap.registerPlugin(ScrollTrigger);
+    
+    gsap.utils.toArray(".gsap-accordion").forEach((el) => {
+      gsap.from(el as HTMLElement, {
+        scrollTrigger: {
+          trigger: el as HTMLElement,
+          start: "top center",
+        },
+        opacity: 0,
+        y: 50,
+        delay: 0.6,
+        ease: "power1.out",
+        duration: 1,
+      });
+    });
+    
+    gsap.registerPlugin(ScrollTrigger);
+    
+    gsap.utils.toArray(".gsap-image").forEach((el) => {
+      gsap.from(el as HTMLElement, {
+        scrollTrigger: {
+          trigger: el as HTMLElement,
+          start: "top center",
+        },
+        opacity: 0,
+        y: -40,
+        delay: 0.2,
+        ease: "power1.out",
+        duration: 1,
+      });
+    });
+    
+    gsap.registerPlugin(ScrollTrigger);
+    
+    gsap.utils.toArray(".gsap-button").forEach((el) => {
+      gsap.from(el as HTMLElement, {
+        scrollTrigger: {
+          trigger: el as HTMLElement,
+          start: "top center",
+        },
+        opacity: 0,
+        y: 50,
+        delay: 0.4,
+        ease: "power1.out",
+        duration: 1,
+      });
+    });
+    
+    gsap.from(".fade-in", {
+      opacity: 0,
+      y: 30,
+      delay: 0.5,
+      duration: 1,
+      stagger: 0.2, // forskudt animation
+      ease: "power2.out",
+    });
+    
+    
+    </script>
