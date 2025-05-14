@@ -31,7 +31,7 @@ import PriceR from "../components/PriceRight.astro"
 
  <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3 pb-spacebarm16 lg:pb-spacebar32">
 
-    <PriceL title="Individuel terapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "></PriceL>
+    <PriceL title="Individuel terapi" text="En-til-en samtaler med fokus på personlig udvikling, indsigt og konkrete redskaber – baseret på stoisk filosofi og kognitiv adfærdsterapi."></PriceL>
 
  </div>
 
@@ -43,7 +43,7 @@ import PriceR from "../components/PriceRight.astro"
 
   <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3 pb-spacebarm16 lg:pb-spacebar32">
 
-    <PriceL title="Parterapi" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit "></PriceL>
+    <PriceL title="Parterapi" text="Samtaler med fokus på kommunikation, forståelse og følelsesmæssig nærhed – med redskaber fra stoisk filosofi og parterapeutisk praksis. "></PriceL>
 
  </div>
 
@@ -77,29 +77,28 @@ import PriceR from "../components/PriceRight.astro"
 
 </section>
 
+	<!-- Kontaktform sat op i forhold til grid -->
 
-<!-- Sektion Kontakt -->
-
-<section id="kontakt" class="bg-green-500 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px] py-[64px] lg:py[136px]">
-
-
-    <div class="col-start-2 col-span-10 lg:col-start-2"><Overskrift color="beige" text="Kontakt"></Overskrift></div>
-<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-2"><Textbox color="beige" text="Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque."></Textbox>
-</div>
-
-<div class="hidden  lg:block lg:col-start-6 lg:col-span-6"><Kontaktform></Kontaktform></div>
-
-<div class="flex flex-col gap-[12px] items-start justify-start col-start-2 col-span-6 py-[32px] lg:py-0 lg:col-start-2 lg:col-span-1">
-<Link input="Mulighedsvej 45" href="/" variant="navigationthin"></Link>
-<Link input="2300 København S" href="/" variant="navigationthin"></Link>
-<Link input="+45 45454545" href="/" variant="navigationthin"></Link>
-<Link input="johndoe@gmail.com" href="/" variant="navigationthin"></Link>
-</div>
-
-<div class="lg:hidden col-start-2 col-span-10 lg:col-start-6 lg:col-span-6"><Kontaktform></Kontaktform></div>
-
-
-</section>
+    <section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500 px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop py-spacebarm64 lg:py-spacebard136">
+        <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+            <Overskrift text="Kontakt mig" color="beige" />
+        </div>
+                <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-3">
+                <Textbox subheader="" color="beige" />
+                <p class="text-beige-500">Har du noget på hjertet, spørgsmål eller ønsker du blot at tage første skridt? Du er meget velkommen til at skrive lidt om dig selv og dine udfordringer. Jeg læser alle henvendelser med omtanke og svarer dig så snart, jeg kan.</p>
+                
+                <div class="pb-[32px] pt-[32px] lg:pb-0 text-beige-500 font-dmsans text-caption-mobil lg:text-caption-desktop">
+                <p>Mulighedsvej 45</p>
+                <p>2300 København S</p>
+                <p>+45 45454545</p>
+                <p>johndoe@gmail.com</p>
+              </div>
+            </div>
+    
+        <div class="col-start-2 col-span-10 lg:col-start-6 lg:col-span-6">
+          <Kontaktform />
+        </div>
+      </section>
 
 <!-- sektion kort -->
 
