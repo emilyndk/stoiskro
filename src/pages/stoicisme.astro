@@ -4,6 +4,7 @@ import ArticleLeft from "../components/ArticleLeft.astro"
 import ArticleRight from "../components/Articleright.astro"
 import ArticleHeader from "../components/ArticleHeader.astro";
 import Overskrift from "../components/Overskrift.astro";
+import Textbox from "../components/Textbox.astro";
 
 ---
 
@@ -11,26 +12,28 @@ import Overskrift from "../components/Overskrift.astro";
 
     	<!-- Article header åbning sat op i forhold til grid -->
 
-<section class="lg:pt-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop">
-	<div class="gsap-header col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+<section class="lg:pt-spacebar32 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop">
+  <div class="gsap-header col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
 
-<Overskrift text="Stoicisme" color="green" />
+    <Overskrift text="Stoicisme" color="green" />
+  </div>
 
-<ArticleHeader
-	heading="Dato"
-	imageSrc="/img/stoisk3.webp"
-	imageAlt="buste i sort hvid"
-	/>
-
-	</div>
 </section>
 
 	<!-- Full Article med to colonner sat op i forhold til grid -->
 
-    <section id="stoicisme" class="lg:py-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop">
+    <section id="stoicisme" class="lg:pt-spacebar32 pb-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop">
         <div class="gsap-text col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
             
-        
+            <div class="lg:pb-spacebar32">
+            <ArticleHeader 
+              imageSrc="/img/stoisk3.webp"
+              imageAlt="buste i sort hvid"
+              
+              />
+            
+            </div>
+
         <ArticleLeft
             title="Stoicisme som Terapi"
             backHref="/artikler"
@@ -94,7 +97,7 @@ import Overskrift from "../components/Overskrift.astro";
         
         </div>	
         
-        <div class="gsap-image col-start-2 col-span-10 lg:col-start-8 lg:col-span-4 sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-beige-500">
+        <div class="gsap-image col-start-2 col-span-10 lg:col-start-8 lg:col-span-4 lg:sticky lg:top-0 lg:left-0 lg:right-0 lg:bottom-0 lg:h-screen lg:w-full bg-beige-500">
         
         <ArticleRight
           topText="Stoicisme lærer os at finde indre ro ved at fokusere på det, vi kan kontrollere, og acceptere det, vi ikke kan. Denne filosofi fremmer dyd, fornuft og disciplin som vejen til et harmonisk liv. En tidløs påmindelse om styrken i sindets kontrol."

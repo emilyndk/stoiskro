@@ -11,26 +11,27 @@ import Overskrift from "../components/Overskrift.astro";
 
     	<!-- Article header åbning sat op i forhold til grid -->
 
-<section class="lg:pt-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop">
+<section class="lg:pt-spacebar32 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop">
 	<div class="gsap-header col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
 
 <Overskrift text="Når følelserne styrer" color="green" />
-
-<ArticleHeader
-	heading="Dato"
-	imageSrc="/img/feeling3.webp"
-	imageAlt="notesbog med tegning og tekst"
-	/>
 
 	</div>
 </section>
 
 	<!-- Full Article med to colonner sat op i forhold til grid -->
 
-    <section id="feeling" class="lg:py-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop">
+    <section id="feeling" class="lg:pb-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop">
         <div class="gsap-text col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
             
+        <div class="pb-spacebar32">
+        <ArticleHeader
+        heading="Dato"
+        imageSrc="/img/feeling3.webp"
+        imageAlt="notesbog med tegning og tekst"
         
+        />
+      </div>
         <ArticleLeft
             title="Når følelserne styrer"
             backHref="/artikler"
