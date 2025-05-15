@@ -7,32 +7,36 @@ import Button from "./Button.astro";
 
 <div id="logo-probe" class="fixed top-[1.25rem] left-[1rem] w-6 h-6 z-[-1] pointer-events-none"></div>
    
-    <img
-      id="logo"
-      class="lg:hidden transition-opacity ease-in-out duration-300"
-      src="/img/logo-default-m.svg"
-      alt="Stoisk Ro logo"
-    />
+<a href="/" class="col-start-1 col-span-1 lg:col-span-2">
+  <img
+    id="logo-default-m"
+    class="z-[9999] lg:hidden transition-opacity ease-in-out duration-300"
+    src="/img/logo-default-m.svg"
+    alt="Stoisk Ro logo"
+  />
 
-    <img
-    id="logo-d"
-    class="hidden lg:block transition-opacity ease-in-out duration-300"
+  <img
+    id="logo-default-d"
+    class="z-[9999] hidden lg:block transition-opacity ease-in-out duration-300"
     src="/img/logo-default-l.svg"
     alt="Stoisk Ro logo"
   />
 
-   <img
-    id="logo-d-negative"
+  <img
+    id="logo-negative-d"
     class="hidden transition-opacity ease-in-out duration-300"
     src="/img/logo-negative-d.svg"
     alt="Stoisk Ro logo"
   />
-   <img
-    id="logo-m-negative"
-    class="hidden "
-    src="/img/logo-negative-m.svg transition-opacity ease-in-out duration-300"
+
+  <img
+    id="logo-negative-m"
+    class="hidden transition-opacity ease-in-out duration-300"
+    src="/img/logo-negative-m.svg"
     alt="Stoisk Ro logo"
   />
+</a>
+
 <!-- Mobil logoer -->
 
 
