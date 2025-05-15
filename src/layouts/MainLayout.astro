@@ -32,41 +32,58 @@ const { title } = Astro.props;
     <title>{Astro.props.title}</title>
   </head>
   <body class="bg-beige-500">
-    <header id="navbar" class="sticky pb-spacebarm16 top-0 z-[9999] transition-colors duration-300">
+    <header id="navbar" class="top-0 sticky z-50 bg-transparent transition-colors duration-300">
       <Navigation />
     </header>
+    
+    
     
     <main class="">
       <slot />
     </main>
    
-    <footer data-green="true" class="bg-green-500 ">
+    <footer class="bg-green-500 ">
      <Footer />
     </footer>
     <div class="scroll-dot fixed right-5 top-4 w-3 h-3 lg:right-6 lg:top-6 lg:w-6 lg:h-6 bg-red-600 rounded-full z-50 origin-top"></div>
 
 
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const navbar = document.getElementById("navbar");
-        const greenSections = document.querySelectorAll('[data-green="true"]');
 
+import gsap from "gsap";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+      document.addEventListener("DOMContentLoaded", () => {
+   gsap.registerPlugin(ScrollTrigger);
     
-        if (!navbar || greenSections.length === 0) return;
+      const navbar = document.getElementById("navbar");
+       const greenSections = document.querySelectorAll('[data-green="true"]');
     
-        const observer = new IntersectionObserver((entries) => {
-          let isIntersecting = entries.some(entry => entry.isIntersecting);
-    
-          if (isIntersecting) {
-            navbar.classList.add("bg-beige-500");
-          } else {
-            navbar.classList.remove("bg-beige-500");
-          }
-        }, { threshold: 0.1 });
-    
-        greenSections.forEach(section => observer.observe(section));
-      });
+       greenSections.forEach(section => {
+          ScrollTrigger.create({
+          trigger: section,
+           start: "top center",
+            end: "bottom center",
+           onEnter: () => {
+             gsap.to(navbar, {
+            backgroundColor: "#efeae3", // Tailwind's beige-500 (check your exact hex)
+                duration: 0.6,
+               ease: "power2.out"
+              });
+          },
+           onLeaveBack: () => {
+             gsap.to(navbar, {
+              backgroundColor: "transparent",
+               duration: 0.6,
+               ease: "power2.out"
+              });
+           }
+          });
+        });
+       });
     </script>
+    
     
     
     

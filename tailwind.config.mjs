@@ -250,7 +250,7 @@ export default {
           },
         ],
         "h3-desktop": [
-          "32px",
+          "34px",
           {
             fontWeight: "400",
             fontFamily: "dmsans",

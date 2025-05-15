@@ -3,7 +3,7 @@ import Link from "./Link.astro";
 import Button from "./Button.astro";
 ---
 
-<div class="relative z-[-1] pt-[32px] grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:px-[64px] gap-gap-mobil lg:gap-gap-desktop">
+<div class="relative z-[-1] pt-[32px] grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px] gap-gap-mobil lg:gap-gap-desktop">
 
 <div id="logo" class="fixed top-[1.25rem] left-[1rem] w-6 h-6 z-[-1] pointer-events-none"> </div>
    
@@ -37,7 +37,7 @@ import Button from "./Button.astro";
 
       <img
         id="icon-close"
-        class="hidden z-30 cursor-pointer lg:hidden hover:opacity-40 transition-opacity ease-in-out duration-500"
+        class="hidden z-[100] cursor-pointer lg:hidden hover:opacity-40 transition-opacity ease-in-out duration-500"
         src="/img/icon-closed.svg"
         alt="Luk menu ikon"
       />
@@ -45,7 +45,7 @@ import Button from "./Button.astro";
 
 <div
   id="overlay-m"
-  class="bg-red-500 lg:hidden opacity-0 pointer-events-none transition-opacity duration-300 w-screen h-screen fixed z-50 top-0 pt-[32px]"
+  class="bg-red-500 lg:hidden opacity-0 pointer-events-none transition-opacity duration-300 w-screen h-screen fixed z-50 top-0 left-0 pt-[32px]"
 >
   <div class="flex flex-col justify-around w-screen h-screen">
     <div class="flex flex-col items-center gap-[32px]">
