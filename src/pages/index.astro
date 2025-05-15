@@ -15,24 +15,24 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
 
 <MainLayout  title="Stoisk Ro">
 
-  <section class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px] gap-gap-mobil lg:gap-gap-desktop">
+  <section id="" class="grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px] gap-gap-mobil lg:gap-gap-desktop">
 <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-12">
   <HeaderDisplay></HeaderDisplay>
 </div>
 
-<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+<div class="fade-in col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
   <p class="text-p-regular-mobil lg:text-p-regular-desktop text-red-900 pb-spacebar32 ">Velkommen til Stoisk Ro. Her får du et roligt rum til at tænke, mærke og finde vej – med støtte fra stoisk filosofi og samtaleterapi. Sammen udforsker vi det, der fylder, så du kan møde livet med mere ro og klarhed. </p>
    
   <div class="block lg:hidden"> 
     <IconButton text="Kontakt" variant="primary" size="small" href="/priser#kontakt" />
   </div>
 
-  <div class="hidden lg:block"> 
+  <div class="fade-in hidden lg:block"> 
     <IconButton text="Kontakt" variant="primary" size="large" href="/priser#kontakt" />
   </div>
 </div>
 
-<div class="col-start-7 col-span-4 lg:col-start-9 lg:col-span-2">
+<div class="gsap-image col-start-7 col-span-4 lg:col-start-9 lg:col-span-2">
   <Image
   imageSrc="/img/headerline.svg"
   imageAlt="Abstrakt figur med streg og cirkel"
@@ -44,11 +44,11 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
   <section class="py-spacebarm64 lg:pb-spacebard136 lg:pt-spacebar32 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px] gap-gap-mobil lg:gap-gap-desktop">
 
     
-      <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
+      <div class="gsap-header col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
         <Overskrift text="Hej, mit navn er Artjom" color="green" />
     </div>
   
-    <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5 pb-spacebar32 lg:pb-0">
+    <div class="gsap-text col-start-2 col-span-10 lg:col-start-3 lg:col-span-5 pb-spacebar32 lg:pb-0">
         
       <Textbox subheader="Jeg er samtaleteraput" color="green">
         <p>Jeg hjælper mennesker med at finde ro, retning og mening i det, der føles svært. Med baggrund i filosofi, religionsvidenskab og kognitiv adfærdsterapi tilbyder jeg samtaleterapi, hvor refleksion, nærvær og praksis går hånd i hånd. <br> <br>
@@ -58,7 +58,7 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
   </div>
 
 
-    <div class="col-start-2 col-span-10 lg:col-start-9 lg:col-span-2">
+    <div class="gsap-button col-start-2 col-span-10 lg:col-start-9 lg:col-span-2">
       <ImageButton
       imageSrc="/img/artjom2.webp"
       imageAlt="Artjom sidder i en stol"
@@ -68,24 +68,25 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
   </section>
 
   <section class="green-section py-spacebarm64 lg:py-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-green-500 px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop">
-    <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+    <div class="gsap-header col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
       <Overskrift text="Terapi og forløb" color="beige" />
     </div>
-    <div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+    <div class="gsap-text col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
       <Textbox subheader="Filosofisk samtaleterapi & Kognitiv adfærdsterapi" color="beige">
         <p class="text-beige-500">Stoisk Ro kombinerer stoisk filosofi med kognitiv adfærdsterapi (CBT og REBT) for at hjælpe dig med at opnå sindsro, klarhed og bedre håndtering af tanker og følelser. <br> <br> Udgangspunktet er, at det ikke er selve begivenhederne, der skaber lidelse – men hvordan vi opfatter dem.
           Gennem samtale, psykoedukation og konkrete øvelser får du redskaber til at håndtere bl.a. stress, angst, vrede og lavt selvværd – og til at leve et mere balanceret og meningsfuldt liv.
           Læs mere om de enkelte terapiformer og hvordan de kan hjælpe dig.</p>
     </Textbox>
 
-      <div class="lg:pt-spacebar32 hidden lg:block">
+      <div class="gsap-button lg:pt-spacebar32 hidden lg:block">
         <IconButton text="Læs mere" variant="secondary-negative" size="large" href="/terapi" />
       </div>
     </div>
 
-      <div class="pt-spacebar32 lg:pt-0 col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
+      <div class="gsap-accordion pt-spacebar32 lg:pt-0 col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
     <AccordionService></AccordionService>
-    <div class=" pt-spacebarm16 block lg:hidden">
+
+    <div class="gsap-button  pt-spacebarm16 block lg:hidden">
       <IconButton text="Læs mere" variant="secondary-negative" size="small" href="/terapi" />
     </div>
       </div>
@@ -93,19 +94,19 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
   </section>
 
 
-  <section id="jeg-kan-hjalpe" class="pt-[32px] lg:pt-[136px] grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
+  <section class="pt-[32px] lg:pt-[136px] grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
 
-    <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5"><Overskrift text="Jeg kan hjælpe"></Overskrift></div>
-    <div class="col-start-2 col-span-6 lg:col-start-3 lg:col-span-4">
+    <div id="Header" class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5"><Overskrift text="Jeg kan hjælpe"></Overskrift></div>
+    <div  class="gsap-text col-start-2 col-span-6 lg:col-start-3 lg:col-span-4">
       <Textbox subheader="Med problematikker indenfor" color="green">
         
     </Textbox>
-    <div class="">
+    <div class="gsap-accordion">
    <YdelserSamlet></YdelserSamlet>
   </div>
   </div>
 
-    <div class=" col-start-8 col-span-5 lg:w-full lg:col-start-9 lg:col-span-2">
+    <div class="gsap-image col-start-9 col-span-5 lg:w-full lg:col-start-9 lg:col-span-2">
    <Image
    imageSrc="/img/services.svg"
    imageAlt="Abstrakt figur med meget i hovedet"
@@ -118,37 +119,37 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
   	<!-- forsamtale sat op i forhold til grid -->
 
 <section class="py-spacebar32 lg:py-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-beige-500 px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop">
-	<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+	<div class="gsap-header col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
 	<Overskrift text="Passer kemien?" color="green" />
 </div>
-		<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
+		<div class="gsap-text col-start-2 col-span-10 lg:col-start-2 lg:col-span-5">
       <Textbox subheader="Gratis forsamtale" color="green">
         <p>Du har mulighed for at booke en gratis og uforpligtende telefonisk samtale, hvor vi kort taler om dine behov, ønsker og de udfordringer, du står med. <br> <br>
           Samtalen giver dig indblik i, hvordan jeg arbejder, og hvad du kan forvente af et forløb. <br>  Skriv via formularen og jeg ringer dig op for at aftale nærmere. </p> <br>
       
     </Textbox>
 	</div>
-	<div class="pt-16 lg:pt-0 col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
+	<div class="gsap-accordion pt-16 lg:pt-0 col-start-2 col-span-10 lg:col-start-8 lg:col-span-4">
      <Forsamtale></Forsamtale>
 	</div>
 	
 </section>	 
 
 <section class="pb-spacebar32 lg:pb-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop bg-beige-500 px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop">
-  <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
+  <div class=" gsap-header col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
     <Overskrift text="Nyeste artikler" color="green" />
   </div>
-  <div class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-3 pb-spacebar32 lg:pb-0 ">
+  <div class="gsap-text col-start-2 col-span-10 lg:col-start-3 lg:col-span-3 pb-spacebar32 lg:pb-0 ">
     <Textbox subheader="Læs seneste indlæg" color="green">
       <p>Opdag de nyeste artikler om mental sundhed, filosofi og personlig udvikling – direkte på forsiden. Få indsigter og praktiske værktøjer til at styrke din trivsel og livskvalitet.</p>
   </Textbox>
 
-    <div class="lg:pt-spacebar32 hidden lg:block">
+    <div class="gsap-button lg:pt-spacebar32 hidden lg:block">
       <IconButton text="Gå til artikler" variant="secondaryLeft" size="large" href="/artikler" />
     </div>
     </div>
 
-    <div class="col-start-2 col-span-10 lg:col-start-7 lg:col-span-2">
+    <div class="gsap-accordion col-start-2 col-span-10 lg:col-start-7 lg:col-span-2">
 
     <Articlecard
     url="/stoicisme"
@@ -159,13 +160,13 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
     btnurl="/"
     />
 
-    <div class="lg:hidden py-spacebarm16 lg:py-0">
+    <div class="gsap-button lg:hidden py-spacebarm16 lg:py-0">
       <IconButton text="Læs her" size="small" variant="secondaryLeft" href="/article"></IconButton>
       </div>
     </div>
 
 
- <div class="col-start-2 col-span-10 lg:col-start-9 lg:col-span-2">
+ <div class="gsap-accordion col-start-2 col-span-10 lg:col-start-9 lg:col-span-2">
     <Articlecard
     url="/artikler"
     imgSrc="/img/article1.svg"
@@ -175,7 +176,7 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
     btnurl="/"
   />
 
-  <div class="lg:hidden py-spacebarm16 lg:py-0" >
+  <div class="gsap-button lg:hidden py-spacebarm16 lg:py-0" >
     <IconButton text="Læs her" size="small" variant="secondaryLeft" href="/article"></IconButton>
     </div>
 
@@ -191,3 +192,100 @@ import HeaderDisplay from "../components/HeaderDisplay.astro";
 
 
 
+<script>
+import gsap from "gsap";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".gsap-header").forEach((el) => {
+  gsap.from(el as HTMLElement, {
+    scrollTrigger: {
+      trigger: el as HTMLElement,
+      start: "top center",
+    },
+    opacity: 0,
+    x: -40,
+    delay: 0.2,
+    ease: "power1.out",
+    duration: 1,
+  });
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".gsap-text").forEach((el) => {
+  gsap.from(el as HTMLElement, {
+    scrollTrigger: {
+      trigger: el as HTMLElement,
+      start: "top center",
+    },
+    opacity: 0,
+    x: -40,
+    delay: 0.3,
+    ease: "power1.out",
+    duration: 1,
+  });
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".gsap-accordion").forEach((el) => {
+  gsap.from(el as HTMLElement, {
+    scrollTrigger: {
+      trigger: el as HTMLElement,
+      start: "top center",
+    },
+    opacity: 0,
+    y: 50,
+    delay: 0.6,
+    ease: "power1.out",
+    duration: 1,
+  });
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".gsap-image").forEach((el) => {
+  gsap.from(el as HTMLElement, {
+    scrollTrigger: {
+      trigger: el as HTMLElement,
+      start: "top center",
+    },
+    opacity: 0,
+    y: -40,
+    delay: 0.2,
+    ease: "power1.out",
+    duration: 1,
+  });
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".gsap-button").forEach((el) => {
+  gsap.from(el as HTMLElement, {
+    scrollTrigger: {
+      trigger: el as HTMLElement,
+      start: "top center",
+    },
+    opacity: 0,
+    y: 50,
+    delay: 0.4,
+    ease: "power1.out",
+    duration: 1,
+  });
+});
+
+gsap.from(".fade-in", {
+  opacity: 0,
+  y: 30,
+  delay: 0.5,
+  duration: 1,
+  stagger: 0.2, // forskudt animation
+  ease: "power2.out",
+});
+
+
+</script>

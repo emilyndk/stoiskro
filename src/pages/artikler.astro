@@ -12,22 +12,22 @@ import IconButton from "../components/Button.astro"
 
 
 <div id="artikler-header" class="grid grid-cols-grid-mobil pt-spacebar32 lg:pt-spacebar136 lg:grid-cols-grid-desktop mx-margin-mobil grid-rows-1 lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
-  <div class="col-start-2 col-span-6 lg:col-start-2 lg:col-span-3">
+  <div class="gsap-header col-start-2 col-span-6 lg:col-start-2 lg:col-span-3">
     <Header h1="artikler" />
   </div>
-  <img class="col-start-8 col-span-3 lg:col-start-7 lg:col-span-2" src="/img/artikler-header-illustration.svg" alt="Illustration" />
+  <img class="gsap-image col-start-8 col-span-3 lg:col-start-7 lg:col-span-2" src="/img/artikler-header-illustration.svg" alt="Illustration" />
 </div>
 
 <section class="pb-spacebar32 pt-spacebarm64 lg:pt-spacebard136 lg:pb-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
 
-<div class="col-start-2 col-span-10 pb-spacebar32">
+<div class="gsap-header col-start-2 col-span-10 pb-spacebar32">
   <Overskrift text="vælg et emne"></Overskrift>
   </div>
-<div class="col-start-2 col-span-10 lg:col-start-2 lg:col-span-2 pb-spacebar32">
+<div class="gsap-text col-start-2 col-span-10 lg:col-start-2 lg:col-span-2 pb-spacebar32">
   <EmnerSamlet></EmnerSamlet>
   </div>
 
-  <div class="col-start-2 col-span-10 lg:col-start-7 lg:col-span-2">
+  <div class="gsap-accordion col-start-2 col-span-10 lg:col-start-7 lg:col-span-2">
 
     <Articlecard
     url="/stoicisme"
@@ -38,13 +38,13 @@ import IconButton from "../components/Button.astro"
     btnurl="/"
     />
 
-    <div class="lg:hidden py-spacebarm16 lg:py-0">
+    <div class="gsap-button lg:hidden py-spacebarm16 lg:py-0">
       <IconButton text="Læs her" size="small" variant="secondaryLeft" href="/article"></IconButton>
       </div>
     </div>
 
 
- <div class="col-start-2 col-span-10 lg:col-start-9 lg:col-span-2">
+ <div class="gsap-accordion col-start-2 col-span-10 lg:col-start-9 lg:col-span-2">
     <Articlecard
     url="/artikler"
     imgSrc="/img/article1.svg"
@@ -54,14 +54,14 @@ import IconButton from "../components/Button.astro"
     btnurl="/"
   />
 
-  <div class="lg:hidden py-spacebarm16 lg:py-0" >
+  <div class="gsap-button lg:hidden py-spacebarm16 lg:py-0" >
     <IconButton text="Læs her" size="small" variant="secondaryLeft" href="/article"></IconButton>
     </div>
 
 
  </div>
 
- <div class="col-start-2 col-span-10 lg:col-start-7 lg:col-span-2">
+ <div class="gsap-accordion col-start-2 col-span-10 lg:col-start-7 lg:col-span-2">
 
   <Articlecard
   url="/"
@@ -72,13 +72,13 @@ import IconButton from "../components/Button.astro"
   btnurl="/"
   />
 
-  <div class="lg:hidden py-spacebarm16 lg:py-0">
+  <div class="gsap-button lg:hidden py-spacebarm16 lg:py-0">
     <IconButton text="Læs her" size="small" variant="secondaryLeft" href="/article"></IconButton>
     </div>
   </div>
 
 
-<div class="col-start-2 col-span-10 lg:col-start-9 lg:col-span-2">
+<div class="gsap-accordion col-start-2 col-span-10 lg:col-start-9 lg:col-span-2">
   <Articlecard
   url="/artikler"
   imgSrc="/img/selvindsigt.svg"
@@ -88,7 +88,7 @@ import IconButton from "../components/Button.astro"
   btnurl="/"
 />
 
-<div class="lg:hidden py-spacebarm16 lg:py-0" >
+<div class="gsap-button lg:hidden py-spacebarm16 lg:py-0" >
   <IconButton text="Læs her" size="small" variant="secondaryLeft" href="/article"></IconButton>
   </div>
 
@@ -100,3 +100,101 @@ import IconButton from "../components/Button.astro"
 
 
 </MainLayout>
+
+<script>
+  import gsap from "gsap";
+  
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  gsap.utils.toArray(".gsap-header").forEach((el) => {
+    gsap.from(el as HTMLElement, {
+      scrollTrigger: {
+        trigger: el as HTMLElement,
+        start: "top center",
+      },
+      opacity: 0,
+      x: -40,
+      delay: 0.2,
+      ease: "power1.out",
+      duration: 1,
+    });
+  });
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  gsap.utils.toArray(".gsap-text").forEach((el) => {
+    gsap.from(el as HTMLElement, {
+      scrollTrigger: {
+        trigger: el as HTMLElement,
+        start: "top center",
+      },
+      opacity: 0,
+      x: -40,
+      delay: 0.3,
+      ease: "power1.out",
+      duration: 1,
+    });
+  });
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  gsap.utils.toArray(".gsap-accordion").forEach((el) => {
+    gsap.from(el as HTMLElement, {
+      scrollTrigger: {
+        trigger: el as HTMLElement,
+        start: "top center",
+      },
+      opacity: 0,
+      y: 50,
+      delay: 0.6,
+      ease: "power1.out",
+      duration: 1,
+    });
+  });
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  gsap.utils.toArray(".gsap-image").forEach((el) => {
+    gsap.from(el as HTMLElement, {
+      scrollTrigger: {
+        trigger: el as HTMLElement,
+        start: "top center",
+      },
+      opacity: 0,
+      y: -40,
+      delay: 0.2,
+      ease: "power1.out",
+      duration: 1,
+    });
+  });
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  gsap.utils.toArray(".gsap-button").forEach((el) => {
+    gsap.from(el as HTMLElement, {
+      scrollTrigger: {
+        trigger: el as HTMLElement,
+        start: "top center",
+      },
+      opacity: 0,
+      y: 50,
+      delay: 0.4,
+      ease: "power1.out",
+      duration: 1,
+    });
+  });
+  
+  gsap.from(".fade-in", {
+    opacity: 0,
+    y: 30,
+    delay: 0.5,
+    duration: 1,
+    stagger: 0.2, // forskudt animation
+    ease: "power2.out",
+  });
+  
+  
+  </script>
