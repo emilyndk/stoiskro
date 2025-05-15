@@ -16,12 +16,6 @@ import Overskrift from "../components/Overskrift.astro";
 
 <Overskrift text="Bevar din sunde fornuft" color="green" />
 
-<ArticleHeader
-	heading="Dato"
-	imageSrc="/img/feeling3.webp"
-	imageAlt="notesbog med tegning og tekst"
-	/>
-
 	</div>
 </section>
 
@@ -29,7 +23,13 @@ import Overskrift from "../components/Overskrift.astro";
 
     <section id="commensense" class="lg:py-spacebard136 grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px]  gap-gap-mobil lg:gap-gap-desktop">
         <div class="gsap-text col-start-2 col-span-10 lg:col-start-2 lg:col-span-5 ">
-            
+          
+          <div class="pb-spacebar32">
+          <ArticleHeader
+	        imageSrc="/img/fornuft2.webp"
+	        imageAlt="notesbog med tegning og tekst"
+	         />
+          </div>
         
         <ArticleLeft
             title="Bevar den sunde fornuft"
@@ -38,9 +38,9 @@ import Overskrift from "../components/Overskrift.astro";
             headingIntro="Den indre kontrol som frihed"
             heading1="Når hverdagens støj udfordrer sindet"
             heading2="Flugten fra uroen"
-            heading3="Og dog..."
-            heading4="Hvad er mit ansvar – og hvad er ikke?"
-            headingConclusion="Afsluttende tanker"
+            heading3="Hvad er mit ansvar – og hvad er ikke?"
+            heading4="De tre fælder vi ofte falder i"
+            headingConclusion="Selvbeherskelse som et bæredygtigt værktøj"
           >
             <Fragment slot="intro">
                 I alle livets aspekter er det vigtigt, at vi kan bevare kontrollen over os selv. Ifølge mange tænkere, især inden for stoicismen, er kontrol over sig selv den ultimative frihed. <br><br>
@@ -60,15 +60,28 @@ import Overskrift from "../components/Overskrift.astro";
             </Fragment>
           
             <Fragment slot="section3">
-                Stoicismen byder på sin essentielle dyd – praktisk visdom – som en vejleder.
-                <li class=" p-0 list-inside"> <strong>Def.: Praktisk Visdom</strong> <br> Evnen til at reflektere logisk over, hvordan man bør reagere, opføre sig, tale og handle – så ens handlinger stemmer overens med det gode: venlighed, tilgivelse, omsorg og kærlighed.</li>
+              Et sted at starte er at stille sig selv spørgsmålet: Er dette inden for min kontrol? Hvis ja, så handler jeg på det. Hvis nej, så vil jeg forsøge at forholde mig indifferent, for jeg kan alligevel ikke gøre noget ved det.
+              Er jeg udsat for uvejr, er det min rolle at finde ud af, hvordan jeg bedst undgår at blive påvirket. Når vi mister vores kontrol, mister vi friheden i os – og det er et ubehageligt og ulykkeligt sted at være.
+
+            </Fragment>
+
+            <Fragment slot="section4">
+
+              Mange mennesker, både dem jeg har mødt og mine klienter, vælger (bevidst eller ubevidst) at ændre på ting, de ikke kan ændre ved at:
+
+              <li class=" p-0 list-inside">Håbe sig igennem livet</li>
+
+               <li class=" p-0 list-inside">Leve efter formodninger</li>
+
+               <li class=" p-0 list-inside">Have store forventninger til verden og andre</li>
+
 
             </Fragment>
           
             <Fragment slot="conclusion">
-                Den spontane tilgang til livet – hvor vi følger vores impulser uden refleksion – kan virke naturlig. Men i praksis fører den ofte til frustration, stress og indre kaos. <br> <br> Når vi ikke stopper op og reflekterer over vores egne reaktioner, kan vi ende med at føle os som ofre for vores egne følelser, uden at forstå, at vi selv har nøglen til at bryde mønsteret. <br>
-                At opnå en mere reflekteret måde at leve på kræver ikke, at vi fornægter vores følelser, men at vi lærer at arbejde med dem. <br> Filosofien tilbyder os redskaber til dette – ikke som en teoretisk øvelse, men som en praksis, vi kan anvende i vores daglige liv. <br>
-                For i sidste ende er frihed ikke fraværet af følelser, men evnen til at styre dem med visdom.
+              For at bevare den sunde fornuft er vi nødt til at anerkende, at livet kræver, at vi følger vores sunde fornuft. For eksempel ved at praktisere tålmodighed eller selvbeherskelse – evnen til at modstå, holde ud og være tålmodig i stunder, hvor situationen virker uudholdelig.
+              Praktiserer vi selvbeherskelse, vil vi opdage, hvor mange ligegyldige bekymringer vi kan undgå. Det er bæredygtigt og fører positive resultater med sig.
+              At have kærlighed til visdom er det samme som at have kærlighed til sig selv, da vi er født som fornuftsvæsener.
             </Fragment>
         </ArticleLeft>
         
@@ -80,9 +93,9 @@ import Overskrift from "../components/Overskrift.astro";
         <ArticleRight
           topText=""
           bottomText=""
-          image1Src="/img/feeling1.webp"
+          image1Src="/img/fornuft1.webp"
           image1Alt="notesbog"
-          image2Src="/img/feeling5.webp"
+          image2Src="/img/fornuft3.webp"
           image2Alt="Billede af buste i sten"
         />
         <div class="h-[100vh]"></div><!-- afstandsstykket -->
