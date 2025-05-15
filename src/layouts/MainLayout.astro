@@ -32,17 +32,19 @@ const { title } = Astro.props;
     <title>{Astro.props.title}</title>
   </head>
   <body class="bg-beige-500">
-    <header class="top-0 sticky z-50">
+    <header class="top-0 sticky z-[10000]">
       <Navigation />
     </header>
 
     <main class="">
       <slot />
     </main>
-
+   
     <footer class="bg-green-500 ">
      <Footer />
     </footer>
+    <div class="scroll-dot fixed right-6 top-6 w-6 h-6 bg-red-600 rounded-full z-50 origin-top"></div>
+
   </body>
 </html>
 
@@ -81,6 +83,20 @@ const { title } = Astro.props;
   });
 
   greenSections.forEach(section => observer.observe(section));
+
+</script>
+
+<script>
+  import { animate, scroll } from "motion";
+
+// Gør kuglen bevægelig ved at animere dens translateY i forhold til scroll
+scroll(
+  animate(".scroll-dot", { transform: ["translateY(0px)", `translateY(90vh)`] }),
+  {
+    target: document.body,
+    offset: ["start start", "end end"],
+  }
+);
 </script>
 
 
