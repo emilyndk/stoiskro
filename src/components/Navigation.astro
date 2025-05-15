@@ -3,43 +3,28 @@ import Link from "./Link.astro";
 import Button from "./Button.astro";
 ---
 
-<div class="relative z-[-1] pt-[32px] grid grid-cols-grid-mobil lg:grid-cols-grid-desktop mx-margin-mobil lg:mx-margin-desktop gap-gap-mobil lg:gap-gap-desktop">
+<div class="relative z-[-1] pt-[32px] grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px] gap-gap-mobil lg:gap-gap-desktop">
 
-<div id="logo-probe" class="fixed top-[1.25rem] left-[1rem] w-6 h-6 z-[-1] pointer-events-none"></div>
+<div id="logo" class="fixed top-[1.25rem] left-[1rem] w-6 h-6 z-[-1] pointer-events-none"> </div>
    
 <a href="/" class="col-start-1 col-span-1 lg:col-span-2">
-  <img
-    id="logo-default-m"
-    class="z-[9999] lg:hidden transition-opacity ease-in-out duration-300"
+
+    <img
+      id="logo-dark"
+      class="hidden lg:block transition duration-300"
+      src="/img/logo-default-l.svg"
+    />
+
+    <img
+    id="logo-dark"
+    class="block lg:hidden transition duration-300"
     src="/img/logo-default-m.svg"
-    alt="Stoisk Ro logo"
   />
-
-  <img
-    id="logo-default-d"
-    class="z-[9999] hidden lg:block transition-opacity ease-in-out duration-300"
-    src="/img/logo-default-l.svg"
-    alt="Stoisk Ro logo"
-  />
-
-  <img
-    id="logo-negative-d"
-    class="hidden transition-opacity ease-in-out duration-300"
-    src="/img/logo-negative-d.svg"
-    alt="Stoisk Ro logo"
-  />
-
-  <img
-    id="logo-negative-m"
-    class="hidden transition-opacity ease-in-out duration-300"
-    src="/img/logo-negative-m.svg"
-    alt="Stoisk Ro logo"
-  />
+ 
 </a>
 
+
 <!-- Mobil logoer -->
-
-
   
 
     <div class="col-start-12 flex justify-end" id="burger-toggle">
@@ -52,18 +37,15 @@ import Button from "./Button.astro";
 
       <img
         id="icon-close"
-        class="hidden z-30 cursor-pointer lg:hidden hover:opacity-40 transition-opacity ease-in-out duration-500"
+        class="hidden z-[100] cursor-pointer lg:hidden hover:opacity-40 transition-opacity ease-in-out duration-500"
         src="/img/icon-closed.svg"
         alt="Luk menu ikon"
       />
     </div>
 
-  </div>
-
-
 <div
   id="overlay-m"
-  class="bg-red-500 lg:hidden opacity-0 pointer-events-none transition-opacity duration-300 w-screen h-screen fixed z-50 top-0 pt-[32px]"
+  class="bg-red-500 lg:hidden opacity-0 pointer-events-none transition-opacity duration-300 w-screen h-screen fixed z-50 top-0 left-0 pt-[32px]"
 >
   <div class="flex flex-col justify-around w-screen h-screen">
     <div class="flex flex-col items-center gap-[32px]">

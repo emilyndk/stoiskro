@@ -1,6 +1,6 @@
 ---
 // Du kan sende props ind, hvis du vil gøre teksten dynamisk fx
-const { title = "STOISK", highlight = "RO", subtitle = "FILOSOFISK SAMTALETERAPI" } = Astro.props;
+const { title = "STOISK", highlight = "RO", subtitle = "Filosofisk samtaleterapi" } = Astro.props;
 ---
 <section class="relative overflow-hidden pt-spacebarm64 lg:pt-[136px] pb-spacebarm16">
     <h1 class="relative text-h1-mobil lg:text-h1-display font-gloock uppercase text-green-500 inline-block">
@@ -17,5 +17,5 @@ const { title = "STOISK", highlight = "RO", subtitle = "FILOSOFISK SAMTALETERAPI
         <span class="relative z-20 text-beige-500 color-burn ">{highlight}</span>
       </span>
     </h1>
-    <h3 class=" pt-spacebarm16 lg:pt-0 text-h3-mobil lg:text-h3-desktop text-green-500 font-sans">{subtitle}</h3>
+    <h3 class="relative -top-2 lg:-top-8 lg:pt-0 w-[137px] lg:w-full text-h3-mobil lg:text-h3-desktop text-green-500 font-sans">{subtitle}</h3>
   </section>

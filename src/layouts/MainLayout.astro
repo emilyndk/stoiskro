@@ -32,10 +32,12 @@ const { title } = Astro.props;
     <title>{Astro.props.title}</title>
   </head>
   <body class="bg-beige-500">
-    <header class="top-0 sticky z-[10000]">
+    <header id="navbar" class="top-0 sticky z-50 bg-transparent transition-colors duration-300">
       <Navigation />
     </header>
-
+    
+    
+    
     <main class="">
       <slot />
     </main>
@@ -43,48 +45,52 @@ const { title } = Astro.props;
     <footer class="bg-green-500 ">
      <Footer />
     </footer>
-    <div class="scroll-dot fixed right-6 top-6 w-6 h-6 bg-red-600 rounded-full z-50 origin-top"></div>
+    <div class="scroll-dot fixed right-5 top-4 w-3 h-3 lg:right-6 lg:top-6 lg:w-6 lg:h-6 bg-red-600 rounded-full z-50 origin-top"></div>
+
+
+    <script>
+
+import gsap from "gsap";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+      document.addEventListener("DOMContentLoaded", () => {
+   gsap.registerPlugin(ScrollTrigger);
+    
+      const navbar = document.getElementById("navbar");
+       const greenSections = document.querySelectorAll('[data-green="true"]');
+    
+       greenSections.forEach(section => {
+          ScrollTrigger.create({
+          trigger: section,
+           start: "top center",
+            end: "bottom center",
+           onEnter: () => {
+             gsap.to(navbar, {
+            backgroundColor: "#efeae3", // Tailwind's beige-500 (check your exact hex)
+                duration: 0.6,
+               ease: "power2.out"
+              });
+          },
+           onLeaveBack: () => {
+             gsap.to(navbar, {
+              backgroundColor: "transparent",
+               duration: 0.6,
+               ease: "power2.out"
+              });
+           }
+          });
+        });
+       });
+    </script>
+    
+    
+    
+    
 
   </body>
 </html>
 
-
-<script is:inline>
-  const mobileLogo = document.getElementById("logo");
-  const desktopLogo = document.getElementById("logo-d");
-
-  const greenSections = Array.from(document.querySelectorAll('.green-section'))
-    .filter(section => !section.closest('footer'));
-
-  const visibleSections = new Set();
-
-  const updateLogo = () => {
-    if (visibleSections.size > 0) {
-      mobileLogo.src = "/img/logo-negative-m.svg";
-      desktopLogo.src = "/img/logo-negative-d.svg";
-    } else {
-      mobileLogo.src = "/img/logo-default-m.svg";
-      desktopLogo.src = "/img/logo-default-l.svg";
-    }
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        visibleSections.add(entry.target);
-      } else {
-        visibleSections.delete(entry.target);
-      }
-    });
-
-    updateLogo();
-  }, {
-    threshold: 0.1, // vi ser om mindst 10% af en sektion er synlig
-  });
-
-  greenSections.forEach(section => observer.observe(section));
-
-</script>
 
 <script>
   import { animate, scroll } from "motion";
@@ -98,5 +104,7 @@ scroll(
   }
 );
 </script>
+
+
 
 
