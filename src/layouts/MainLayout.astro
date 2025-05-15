@@ -88,43 +88,6 @@ scroll(
 );
 </script>
 
-<!-- <script is:inline>
-  const mobileLogo = document.getElementById("logo");
-  const desktopLogo = document.getElementById("logo-d");
 
-  const greenSections = Array.from(document.querySelectorAll('.bg-green-500'))
-    .filter(section => !section.closest('footer'));
-
-  // Holder styr på hvilke sektioner der er synlige
-  const visibleSections = new Set();
-
-  const updateLogo = () => {
-    if (visibleSections.size > 0) {
-      mobileLogo.src = "/img/logo-negative-m.svg";
-      desktopLogo.src = "/img/logo-negative-d.svg";
-    } else {
-      mobileLogo.src = "/img/logo-default-m.svg";
-      desktopLogo.src = "/img/logo-default-l.svg";
-    }
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.intersectionRatio >= 0.5) {
-        visibleSections.add(entry.target);
-      } else {
-        visibleSections.delete(entry.target);
-      }
-    });
-
-    // Tjek om nogen stadig er synlige
-    updateLogo();
-  }, {
-    threshold: [0, 0.1, 0.9], // observer både ved 0%, 10% og 90%
-  });
-
-  greenSections.forEach(section => observer.observe(section));
-
-</script>
 
 
