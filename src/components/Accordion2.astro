@@ -48,9 +48,6 @@ const {
       <p class="mb-spacebar32 text-green-900 text-p-small-mobil lg:text-p-small-desktop">
         <slot name="leftText2"></slot>
       </p>
-      <div class="block lg:hidden justify-self-end">
-      <IconButton text={buttonText2} variant="primary" size="small" href="/priser" />
-    </div>
     <div class="hidden lg:inline-block justify-self-end">
         <IconButton text={buttonText2} variant="primary" size="large" href="/priser" />
       </div>
@@ -59,6 +56,9 @@ const {
     <!-- Højre kolonne -->
     <div class="grid grid-col-1">
       <img src={imageUrl2} alt="Accordion billede" class="flex flex-col justify-self-center self-center w-[300px] lg:w-[400px] h-auto rounded-lg" />
+      <div class="block lg:hidden justify-self-start pt-spacebar32">
+        <IconButton text={buttonText2} variant="primary" size="small" href="/priser" />
+      </div>
     </div>
   </div>
 </div>
