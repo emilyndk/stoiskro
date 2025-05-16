@@ -5,20 +5,22 @@ import Button from "./Button.astro";
 
 <div class="relative z-[-1] pt-[32px] grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px] gap-gap-mobil lg:gap-gap-desktop">
 
-<div id="logo" class="fixed top-[1.25rem] left-[1rem] w-6 h-6 z-[-1] pointer-events-none"> </div>
+<div id="logo" class="fixed top-[1.25rem] left-[1rem] w-6 h-6 z-0 pointer-events-none"> </div>
    
 <a href="/" class="col-start-1 col-span-1 lg:col-span-2">
 
     <img
       id="logo-dark"
       class="hidden lg:block transition duration-300"
-      src="/img/stoisk-ro-logo-default-l.svg"
+      src="/img/logo-default-l.svg"
+      alt="Gå til forsiden"
     />
 
     <img
     id="logo-dark"
     class="block lg:hidden transition duration-300"
-    src="/img/stoisk-ro-logo-default-m.svg"
+    src="/img/logo-default-m.svg"
+    alt="Gå til forsiden"
   />
  
 </a>
@@ -161,14 +163,17 @@ iconClose.addEventListener("click", () => {
 
 // Klik udenfor lukker (kun desktop)
 document.addEventListener("click", (e) => {
+  // Tjek at e.target er en Node, så vi kan bruge contains sikkert
   if (
     window.innerWidth >= 1024 &&
+    e.target instanceof Node &&
     !overlayD.contains(e.target) &&
     !iconOpen.contains(e.target)
   ) {
     toggleMenu(false);
   }
 });
+
 
 
   </script>

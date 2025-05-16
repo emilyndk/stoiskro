@@ -6,7 +6,7 @@ const {
   imageAlt = "Standard billedebeskrivelse",
 } = Astro.props;
 ---
-<img class="pb-spacebarm16 lg:pb-spacebar32" src={imageSrc} alt={imageAlt} class="w-full" />
+<img class="pb-spacebarm16 lg:pb-spacebar32" src={imageSrc} alt={imageAlt} class="w-full" loading="lazy" />
 
 <div class="block lg:hidden">
 <IconButton text="Læs mere" variant="secondaryLeft" size="small">

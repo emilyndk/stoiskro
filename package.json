@@ -19,6 +19,7 @@
     "astro": "^5.7.11",
     "astro-icon": "^1.1.5",
     "autoprefixer": "^10.4.21",
+    "compression": "^1.8.0",
     "free-astro-components": "^1.2.0",
     "gsap": "^3.13.0",
     "lucide": "^0.507.0",
