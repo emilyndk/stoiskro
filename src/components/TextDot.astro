@@ -1,6 +1,7 @@
 ---
-const { input, fakta  } = Astro.props;
+const { input, fakta, overskrift } = Astro.props;
 ---
+
 
 <div class="relative group flex flex-row gap-[8px] items-center">
   <p
@@ -10,25 +11,15 @@ const { input, fakta  } = Astro.props;
   </p>
   <div class="rounded-full bg-red-500 w-[3px] h-[3px] lg:w-[4px] lg:h-[4px]"></div>
 
-  <!-- Fakta-boks -->
-   <div class="hidden lg:block">
+<!-- Fakta-boks -->
+<div class="hidden lg:block">
   <div
     class="absolute top-full left-0 mt-2 w-80 p-4 text-caption-mobil lg:text-caption-desktop bg-green-500 text-beige-500 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition duration-300 z-50"
   >
-  <slot />
+    {overskrift && (
+      <h3 class="font-dmsans text-h5-mobil lg:text-h5-desktop text-beige-500 py-spacebarm16 line">{overskrift}</h3>
+    )}
+    <slot />
   </div>
 </div>
-</div>
 
-<!-- ---
-const { input } = Astro.props;
----
-
-<div class="flex flex-row gap-[8px] items-center ">
-    <p
-      class="lowercase font-dmsans font-bold text-h6-mobil lg:text-h6-desktop text-green-500"
-    >
-      {input}
-    </p>
-    <div class="rounded-full bg-red-500 w-[3px] h-[3px] lg:w-[4px] lg:h-[4px]"></div>
-  </div> -->
