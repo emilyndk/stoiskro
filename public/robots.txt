@@ -1,6 +1,0 @@
-/public/robots.txt
-
-User-agent: *
-Allow: /
-
-Sitemap: https://stoiskro.netlify.app/sitemap.xml
