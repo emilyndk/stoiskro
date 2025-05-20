@@ -15,16 +15,16 @@ const {
 
 <section class="space-y-5">
   {title && (
-    <h1 class="text-h3-mobile lg:text-h3-desktop uppercase  font-dmsans text-green-500">
+    <h3 class="text-h3-mobile lg:text-h3-desktop uppercase  font-dmsans text-green-500">
       {title}
-    </h1>
+    </h3>
   )}
 
   <!-- Introduktion -->
   {headingIntro && (
-    <h2 class="text-h5-mobile lg:text-h5-desktop font-dmsans text-green-500">
+    <h5 class="text-h5-mobile lg:text-h5-desktop font-dmsans text-green-500">
       {headingIntro}
-    </h2>
+    </h5>
   )}
   <p class="pb-spacebarm16 text-p-small-mobil lg:text-p-small-desktop font-dmsans text-red-900">
     <slot name="intro" />
@@ -32,9 +32,9 @@ const {
 
   <!-- Sektion 1 -->
   {heading1 && (
-    <h2 class="text-h5-mobile lg:text-h5-desktop font-dmsans text-green-500">
+    <h5 class="text-h5-mobile lg:text-h5-desktop font-dmsans text-green-500">
       {heading1}
-    </h2>
+    </h5>
   )}
   <p class="pb-spacebarm16 text-p-small-mobil lg:text-p-small-desktop font-dmsans text-red-900">
     <slot name="section1" />
@@ -42,9 +42,9 @@ const {
 
   <!-- Sektion 2 -->
   {heading2 && (
-    <h2 class="text-h5-mobile lg:text-h5-desktop   font-dmsans text-green-500">
+    <h5 class="text-h5-mobile lg:text-h5-desktop   font-dmsans text-green-500">
       {heading2}
-    </h2>
+    </h5>
   )}
   <p class="pb-spacebarm16 text-p-small-mobil lg:text-p-small-desktop font-dmsans text-red-900">
     <slot name="section2" />
@@ -52,9 +52,9 @@ const {
 
   <!-- Sektion 3 -->
   {heading3 && (
-    <h2 class="text-h5-mobile lg:text-h5-desktop   font-dmsans text-green-500">
+    <h5 class="text-h5-mobile lg:text-h5-desktop   font-dmsans text-green-500">
       {heading3}
-    </h2>
+    </h5>
   )}
   <p class="text-p-small-mobil lg:text-p-small-desktop font-dmsans text-red-900">
     <slot name="section3" />
@@ -62,9 +62,9 @@ const {
 
   <!-- Sektion 4 -->
   {heading4 && (
-    <h2 class="text-h5-mobile lg:text-h5-desktop  font-dmsans text-green-500">
+    <h5 class="text-h5-mobile lg:text-h5-desktop  font-dmsans text-green-500">
       {heading4}
-    </h2>
+    </h5>
   )}
   <p class="pb-spacebarm16 text-p-small-mobil lg:text-p-small-desktop font-dmsans text-red-900">
     <slot name="section4" />
@@ -72,9 +72,9 @@ const {
 
   <!-- Konklusion -->
   {headingConclusion && (
-    <h2 class="text-h5-mobile lg:text-h5-desktop   font-dmsans text-green-500">
+    <h5 class="text-h5-mobile lg:text-h5-desktop   font-dmsans text-green-500">
       {headingConclusion}
-    </h2>
+    </h5>
   )}
   <p class="pb-spacebarm16 text-p-small-mobil lg:text-p-small-desktop font-dmsans text-red-900">
     <slot name="conclusion" />
