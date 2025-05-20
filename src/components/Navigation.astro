@@ -10,13 +10,16 @@ import Button from "./Button.astro";
 <a href="/" class="col-start-1 col-span-1 lg:col-span-2">
 
     <img
+    
+    loading="lazy"
       id="logo-dark"
-      class="hidden lg:block max-w-full h-auto transition duration-300"
+      class=" hidden lg:block max-w-full h-auto transition duration-300"
       src="/img/stoisk-ro-logo-default-l.svg"
       alt="Gå til forsiden"
     />
 
     <img
+    loading="lazy"
     id="logo-dark"
     class="block max-w-full h-auto lg:hidden transition duration-300"
     src="/img/stoisk-ro-logo-default-m.svg"
@@ -31,6 +34,7 @@ import Button from "./Button.astro";
 
     <div class="col-start-12 flex justify-end" id="burger-toggle">
       <img
+      loading="lazy"
         id="icon-open"
         class="cursor-pointer max-w-full h-auto lg:w-[40px] hover:opacity-40 transition-opacity ease-in-out duration-500"
         src="/img/icon-open.svg"
@@ -38,6 +42,7 @@ import Button from "./Button.astro";
       />
 
       <img
+      loading="lazy"
         id="icon-close"
         class="hidden max-w-full h-auto z-[100] cursor-pointer lg:hidden hover:opacity-40 transition-opacity ease-in-out duration-500"
         src="/img/icon-closed.svg"
@@ -51,12 +56,12 @@ import Button from "./Button.astro";
 >
   <div class="flex flex-col justify-around w-screen h-screen">
     <div class="flex flex-col items-center gap-[32px]">
-      <Link href="/om-stoisk-ro" input="om Stoisk Ro" variant="navigation" />
-      <Link href="/terapi-amager-kbh" input="jeg tilbyder" variant="navigation" />
-      <Link href="/priser" input="priser" variant="navigation" />
-      <Link href="/artikler" input="artikler" variant="navigation" />
+      <Link href="/om-stoisk-ro/" input="om Stoisk Ro" variant="navigation" />
+      <Link href="/terapi-amager-kbh/" input="jeg tilbyder" variant="navigation" />
+      <Link href="/priser/" input="priser" variant="navigation" />
+      <Link href="/artikler/" input="artikler" variant="navigation" />
       <Link
-        href="/terapi-amager-kbh#virksomheder"
+        href="/terapi-amager-kbh#virksomheder/"
         input="til virksomheder"
         variant="navigation"
       />
@@ -72,17 +77,18 @@ import Button from "./Button.astro";
         <div class="relative right-16">
        <div class="flex flex-col items-end gap-[32px] justify-center">
         <img
+        loading="lazy"
         id="icon-close-d"
         class="max-w-full h-auto cursor-pointer hover:opacity-85 transition-opacity ease-in-out duration-500"
         src="/img/icon-closed.svg"
         alt="Luk menu ikon"
       />
-        <Link href="/om-stoisk-ro" input="om Stoisk Ro" variant="navigation" />
-        <Link href="/terapi-amager-kbh" input="jeg tilbyder" variant="navigation" />
-        <Link href="/priser" input="priser" variant="navigation" />
-        <Link href="/artikler" input="artikler" variant="navigation" />
+        <Link href="/om-stoisk-ro/" input="om Stoisk Ro" variant="navigation" />
+        <Link href="/terapi-amager-kbh/" input="jeg tilbyder" variant="navigation" />
+        <Link href="/priser/" input="priser" variant="navigation" />
+        <Link href="/artikler/" input="artikler" variant="navigation" />
         <Link
-          href="/terapi-amager-kbh#virksomhed"
+          href="/terapi-amager-kbh#virksomhed/"
           input="til virksomheder"
           variant="navigation"
         />
