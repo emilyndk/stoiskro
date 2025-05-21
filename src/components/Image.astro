@@ -2,7 +2,9 @@
 const {
   imageSrc = "/img/om1.webp",
   imageAlt = "Standard billedebeskrivelse",
+  imageWidth,
+  imageHeight
 } = Astro.props;
 ---
 
-<img class="w-full h-auto" src={imageSrc} alt={imageAlt} loading="lazy" />
+<img width={imageWidth} height={imageHeight} class="w-full h-auto" src={imageSrc} alt={imageAlt} loading="lazy" />

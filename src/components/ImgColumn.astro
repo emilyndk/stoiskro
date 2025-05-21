@@ -4,16 +4,19 @@ import IconButton from "../components/Button.astro"
 const {
   imageSrc = "/img/om1.webp",
   imageAlt = "Standard billedebeskrivelse",
+  imageWidth, 
+  imageHeight,
+
 } = Astro.props;
 ---
-<img class="pb-spacebarm16 lg:pb-spacebar32 " src={imageSrc} alt={imageAlt} class="w-full h-auto" loading="lazy" />
+<img class="pb-spacebarm16 lg:pb-spacebar32 " width={imageWidth} height={imageHeight} src={imageSrc} alt={imageAlt} class="w-full h-auto" loading="lazy" />
 
 <div class="block lg:hidden">
-<IconButton text="Læs mere" variant="secondaryLeft" size="small"  href="/om-stoisk-ro/#baggrund/">
+<IconButton  text="Læs mere" variant="secondaryLeft" size="small"  href="/om-stoisk-ro/#baggrund/">
 </IconButton>
 </div>
 
 <div class="hidden lg:block">
-<IconButton text="Læs mere" variant="secondaryLeft" size="large" href="/om-stoisk-ro/#baggrund/">
+<IconButton  text="Læs mere" variant="secondaryLeft" size="large" href="/om-stoisk-ro/#baggrund/">
 </IconButton>
 </div>

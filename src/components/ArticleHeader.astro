@@ -2,7 +2,9 @@
 const {
   imageSrc = "/img/stoisk3.webp",
   imageAlt = "buste i sort hvid",
+  imageWidth,
+   imageHeight
 } = Astro.props;
 ---
  
-  <img class="pb-spacebar32 lg:pb-0 w-full h-auto" src={imageSrc} alt={imageAlt} />
+  <img class="pb-spacebar32 lg:pb-0 w-full h-auto" src={imageSrc} alt={imageAlt} width={imageWidth}  height={imageHeight}  />

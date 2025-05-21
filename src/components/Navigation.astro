@@ -7,10 +7,11 @@ import Button from "./Button.astro";
 
 <div id="logo" class="fixed top-[1.25rem] left-[1rem] w-6 h-6 z-0 pointer-events-none"> </div>
    
-<a href="/" class="col-start-1 col-span-1 lg:col-span-2">
+<a href="/" class="col-start-1 col-span-1 lg:col-span-2 max-w-full">
 
     <img
-    
+    width="102"
+    height="86"
     loading="lazy"
       id="logo-dark"
       class=" hidden lg:block max-w-full h-auto transition duration-300"
@@ -19,6 +20,8 @@ import Button from "./Button.astro";
     />
 
     <img
+    width="26"
+    height="32"
     loading="lazy"
     id="logo-dark"
     class="block max-w-full h-auto lg:hidden transition duration-300"
@@ -34,6 +37,8 @@ import Button from "./Button.astro";
 
     <div class="col-start-12 flex justify-end" id="burger-toggle">
       <img
+      width="30"
+      height="30"
       loading="lazy"
         id="icon-open"
         class="cursor-pointer max-w-full h-auto lg:w-[40px] hover:opacity-40 transition-opacity ease-in-out duration-500"
@@ -42,6 +47,8 @@ import Button from "./Button.astro";
       />
 
       <img
+      width="32"
+      height="31"
       loading="lazy"
         id="icon-close"
         class="hidden max-w-full h-auto z-[100] cursor-pointer lg:hidden hover:opacity-40 transition-opacity ease-in-out duration-500"
@@ -77,6 +84,8 @@ import Button from "./Button.astro";
         <div class="relative right-16">
        <div class="flex flex-col items-end gap-[32px] justify-center">
         <img
+        width="30"
+        height="30"
         loading="lazy"
         id="icon-close-d"
         class="max-w-full h-auto cursor-pointer hover:opacity-85 transition-opacity ease-in-out duration-500"

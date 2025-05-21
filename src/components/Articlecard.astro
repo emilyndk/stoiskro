@@ -1,13 +1,15 @@
 ---
 import Button from "./Button.astro";
 import IconButton from "../components/Button.astro";
-const { text, url = "#", btnurl ="#", imgSrc = "", alt = "", h4 } = Astro.props;
+const { text, url = "#", btnurl ="#", imgSrc = "", alt = "", h4, imageWidth, imageHeight } = Astro.props;
 ---
 
 <a href={url} class="flex flex-col items-start justify-start max-w-full group ">
   <div class="relative overflow-hidden flex items-center justify-center">
     
         <img
+         width={imageWidth}
+   height={imageHeight}
           src={imgSrc}
           alt={alt || "Illustration"}
           class="w-screen h-auto"
