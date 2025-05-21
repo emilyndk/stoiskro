@@ -4,20 +4,24 @@ const {
   topText = "Øverste tekst",
   bottomText = "Nederste tekst",
   image1Src = "/img/stoisk1.webp",
+  image1Width,
+  image1Height,
   image1Alt = "statue af filosof",
   image2Src = "/img/stoisk2.webp",
+  image2Width,
+  image2Height,
   image2Alt = "buste af filosof",
 } = Astro.props;
 ---
 
 <div class="text-red-900">
 
-  <img class="w-full h-auto pb-spacebarm16 lg:pb-spacebar32" src={image1Src} alt={image1Alt} />
+  <img class="w-full h-auto pb-spacebarm16 lg:pb-spacebar32" src={image1Src} alt={image1Alt} width={image1Width} height={image1Height} />
   <p class="pb-spacebarm16 lg:pb-spacebar32  text-right text-caption-mobil lg:text-caption-desktop">
     {topText}
   </p>
 
-  <img class=" pb-spacebarm16 w-full h-auto lg:pb-spacebar32" src={image2Src} alt={image2Alt} />
+  <img class=" pb-spacebarm16 w-full h-auto lg:pb-spacebar32" src={image2Src} alt={image2Alt} width={image2Width} height={image2Height}  />
   <p class=" pb-spacebarm16 lg:pb-0 text-right text-caption-mobil lg:text-caption-desktop">
     {bottomText}
   </p>

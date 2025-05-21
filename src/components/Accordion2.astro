@@ -9,6 +9,8 @@ const {
   rightText2 = "",
   imageUrl2 = "/path/to/image.jpg",
   buttonText2 = "Læs mere",
+  imageWidth,
+  imageHeight
 } = Astro.props;
 ---
 
@@ -55,7 +57,7 @@ const {
 
     <!-- Højre kolonne -->
     <div class="grid grid-col-1">
-      <img src={imageUrl2} alt="Accordion billede" class="flex flex-col justify-self-center self-center w-[300px] lg:w-[400px] h-auto rounded-lg" />
+      <img width={imageWidth} height={imageHeight} src={imageUrl2} alt="Accordion billede" class="flex flex-col justify-self-center self-center w-[300px] lg:w-[400px] h-auto rounded-lg" />
       <div class="block lg:hidden justify-self-start py-spacebar32">
         <IconButton text={buttonText2} variant="primary" size="small" href="/priser/" />
       </div>
