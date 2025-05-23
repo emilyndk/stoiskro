@@ -3,6 +3,7 @@
 import IconButton from './Button.astro';
 
 const {
+  id="accordion-1",
   variant = "primary",
   title2 = "Klik for at åbne",
   leftText2 = "Dette er venstre tekst.",
@@ -16,6 +17,7 @@ const {
 
 <!-- Accordion-knap -->
 <button
+id={id}
   class={`accordion2 w-full p-4 text-left border-t border-t-green-500 flex items-center justify-between focus:outline-none
     ${variant === 'primary'
       ? 'text-green-500 text-h2-mobil uppercase font-gloock lg:text-h2-desktop bg-transparent pl-0'
@@ -65,8 +67,9 @@ const {
   </div>
 </div>
 
-<!-- JavaScript: Toggle panel -->
+
 <script>
+  // Standard toggle på klik
   document.querySelectorAll(".accordion2").forEach((acc) => {
     const panel = acc.nextElementSibling;
     const icon = acc.querySelector("svg");
@@ -75,5 +78,23 @@ const {
       panel?.classList.toggle("hidden");
       icon?.classList.toggle("rotate-180");
     });
+  });
+
+  // Åbn accordion automatisk baseret på URL hash
+  window.addEventListener("DOMContentLoaded", () => {
+    const hash = window.location.hash;
+    if (hash) {
+      const accordionButton = document.querySelector(hash);
+      if (accordionButton && accordionButton.classList.contains("accordion2")) {
+        const panel = accordionButton.nextElementSibling;
+        const icon = accordionButton.querySelector("svg");
+
+        if (panel && panel.classList.contains("hidden")) {
+          panel.classList.remove("hidden");
+          icon?.classList.add("rotate-180");
+          accordionButton.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }
   });
 </script>
