@@ -2,7 +2,6 @@
 import MainLayout from "../layouts/MainLayout.astro"
 import Textbox from "../components/Textbox.astro";
 import Overskrift from "../components/Overskrift.astro";
-import Footer from "../components/Footer.astro"
 import IconButton from "../components/Button.astro"
 import ImageButton from "../components/ImgColumn.astro"
 import AccordionService from "../components/AccordionService.astro";
@@ -113,7 +112,8 @@ Jeg hjælper mennesker med at finde ro, retning og mening i det, der føles svæ
 
   <section class="pt-[32px] lg:py-[136px] grid grid-cols-grid-mobil lg:grid-cols-grid-desktop px-[16px] lg:px-[64px] gap-gap-mobil lg:gap-gap-desktop">
 
-    <div id="Header" class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5"><Overskrift text="Jeg kan hjælpe"></Overskrift></div>
+    <div id="Header" class="gsap-header col-start-2 col-span-10 lg:col-start-3 lg:col-span-5">
+      <Overskrift text="Jeg kan hjælpe"></Overskrift></div>
     <div  class="gsap-text col-start-2 col-span-6 lg:col-start-3 lg:col-span-4">
       <Textbox subheader="Med problematikker indenfor" color="green">
         

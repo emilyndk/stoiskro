@@ -2,10 +2,9 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Overskrift from "../components/Overskrift.astro";
 import Header from "../components/Header.astro";
-import Button from "../components/Button.astro";
 import Textbox from "../components/Textbox.astro";
-import Image from "../components/Image.astro";
 import Forsamtale from "../components/Forsamtale.astro";
+import ImgColumn from "../components/ImgColumn.astro";
 ---
 
 <MainLayout title="Om Stoisk Ro - Filosofisk terapi med Artjom | Stoisk Ro"
@@ -40,18 +39,14 @@ canonical="https://stoiskro.netlify.app/om-stoisk-ro/">
 
 
     <div class="gsap-image col-start-2 pt-[16px] lg:pt-0 col-span-10 lg:col-start-9 lg:col-span-2">
-      <Image
-      width="208"
-      height="435"
-      imageSrc="/img/books.webp"
-      imageAlt="Bøger"
-      imageWidth="208"
-  imageHeight="435"
-      />
+<ImgColumn
+      imageSrc = "/img/books.webp",
+      imageAlt = "Bogreol",
+     imageWidth="407"
+      imageHeight="610"
+    />
       </div>
-
-    <div class="gsap-button lg:hidden col-start-2 col-span-5 pt-[16px]"> <Button text="Læs mere" size="small" variant="secondaryLeft" href="/artikler"></Button></div>
-     <div class="gsap-button lg:block hidden pt-[32px]  col-start-9 col-span-2"> <Button text="Læs mere" size="large" variant="secondaryLeft" href="/artikler"></Button></div>
+  
 
   </section>
 
