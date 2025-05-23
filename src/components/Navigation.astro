@@ -176,9 +176,9 @@ iconClose.addEventListener("click", () => {
   toggleMenu(false);
 });
 
-// Klik udenfor lukker (kun desktop)
+// Klik udenfor 
 document.addEventListener("click", (e) => {
-  // Tjek at e.target er en Node, så vi kan bruge contains sikkert
+
   if (
     window.innerWidth >= 1024 &&
     e.target instanceof Node &&
